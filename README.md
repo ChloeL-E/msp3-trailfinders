@@ -59,32 +59,44 @@ This website has been built using HTML, CSS, Javascript and Python.
 
     -   #### First Time User Goals
 
-        1. As a first time user, I want to be able to easily navigate around the site without the use of the back arrow in the window.
+        1. As a first time user, I want to be able to easily navigate around the site without any errors and without the use of the back arrow in the browser.
         2. As a first time user, I want to be able to search for a hike route.
         3. As a first time user, I want to be able to view details about the chosen route ans see what other users thoughts/recommendations are.
         4. As a first time user, I want to be able to register on the site to get full access and see my profile
-        5. As a first time user, I want to be able to quickly login to the site each time i visit.
+        5. As a first time user, I want to be able to quickly login to the site each time I visit.
         6. As a first time user, I want to be able to add my own hikes to my profile.
-        7. As a first time user, I want to be able to edit or delete my hikes, if i want to.
+        7. As a first time user, I want to be able to edit or delete my hikes, if I want to.
         8. As a first time user, I want to be able to comment/review and rate other users' hikes.
     
     -   #### Returning User Goals
 
-        1. As a 
+        1. As a returning user, I want to be able to easily log into the site to view my profile.
+        2. As a returning user, I want to be abe to keep up-to-date on other users' hikes and comments so that i can stay involved within the community.
+        3. As a returning user, I want to be able to continue to add, edit or delete my hikes.
+        4. As a returning user, I want to find that any new added information follows the design and flow of the website and is easy to access.
 
     -   #### Site Administrator
 
-        1. As a site administrator, I want 
+        1. As the site administrator, I want the user to be able to register and login without any difficulty or error.
+        2. As the site administrator, I want to ensure a user is only able to edit or delete their own posts.
+        3. As the site administrator, I want to ensure the user is able to navigate around the site without raising any errors.
+        4. As the site administrator, I want to ensure that if any errors occur, they are handled gracefully and the user is shown quickly back to the website.
+        5. As the site administrator, I want to ensure user information is handled securely.
+        6. As the site administrator, I want to know that any future site developments can easily be adapted/added to the site.
 
 - - - 
 
 ## Design
 
 -   ### Colour Scheme
-    * 
+
+    * Northern Trailfinders aims to help the user explore and enjoy the stunning countryside, specifically in the North East of England. 
+    * The themes of the site are nature, relaxation, exploration and enjoying exercising outdoors. 
+    * The colour palette was chosen for its calm and earthy tones. It was also important to make sure there was enough contrast within the palette to ensure no issues with accessibility.
 
 -   ### Typography
-    * 
+
+    * Noto 
 
 -   ### Imagery
     * 
