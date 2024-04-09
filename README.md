@@ -8,7 +8,7 @@
 
 
 
-This game has been built using HTML, CSS and Javascript.
+This website has been built using HTML, CSS, Javascript and Python.
 
 ![Responsive Mockup]()
 
@@ -59,7 +59,14 @@ This game has been built using HTML, CSS and Javascript.
 
     -   #### First Time User Goals
 
-        1. 
+        1. As a first time user, I want to be able to easily navigate around the site without the use of the back arrow in the window.
+        2. As a first time user, I want to be able to search for a hike route.
+        3. As a first time user, I want to be able to view details about the chosen route ans see what other users thoughts/recommendations are.
+        4. As a first time user, I want to be able to register on the site to get full access and see my profile
+        5. As a first time user, I want to be able to quickly login to the site each time i visit.
+        6. As a first time user, I want to be able to add my own hikes to my profile.
+        7. As a first time user, I want to be able to edit or delete my hikes, if i want to.
+        8. As a first time user, I want to be able to comment/review and rate other users' hikes.
     
     -   #### Returning User Goals
 
