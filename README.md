@@ -6,7 +6,9 @@
 
 # Northern Trailfinders
 
+This project was designed for Milestone Project 3 of Code Institutes' Diploma in Web Development.
 
+Northern Trailfinders is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to search the North East of England for different hikes, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together. 
 
 This website has been built using HTML, CSS, Javascript and Python.
 
