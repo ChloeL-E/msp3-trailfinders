@@ -21,7 +21,7 @@ class User(db.Model):
 class Hike(db.Model):
     """
     schema for Category model
-    """ 
+    """
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
     image_url = db.Column(db.String)
@@ -29,12 +29,15 @@ class Hike(db.Model):
     elevation = db.Column(db.String, nullable=False)
     difficulty = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey("user.id", ondelete="CASCADE"), nullable=False) 
-    category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(
+        "user.id", ondelete="CASCADE"), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey(
+        "category.id", ondelete="CASCADE"), nullable=False)
 
-    class Category(db.Model):
-        """
-        schema for Category model
-        """
-        id = db.Column(db.Integer, primary_key=True)
-        type = db.Column(db.String, nullable=False)
+
+class Category(db.Model):
+    """
+    schema for Category model
+    """
+    id = db.Column(db.Integer, primary_key=True)
+    type = db.Column(db.String, nullable=False)
