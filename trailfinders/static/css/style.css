@@ -19,7 +19,7 @@
 
 .logo_text,
 .navbar-brand {
-    font-family: "Caveat", "Noto Serif", sans-serif;
+    font-family: "Caveat";
 }
 
 .logo_text{
@@ -34,3 +34,17 @@ body {
     background-repeat: no-repeat;
     background-image: url("/static/media/images/hadrianswall.webp");
   }
+
+  .container {
+    margin-top: 400px;
+}
+
+header h1, p {
+    color: var(--dark_green);
+    font-weight:600;
+}
+
+.card {
+    width: 50%;
+    background-color: rgba(202, 210, 197,0.6);
+}
