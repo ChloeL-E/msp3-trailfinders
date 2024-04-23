@@ -1,0 +1,24 @@
+
+/*------- GOOGLE FONT IMPORT -------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+/*------- ROOT VARIABLES -------*/
+:root {
+    font-family: "Noto Serif";
+}
+
+.navbar-brand {
+    font-family: "Caveat", "Noto Serif", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
