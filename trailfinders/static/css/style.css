@@ -17,8 +17,9 @@
     font-size: 30px;
 }
 
-.bg-image {
+.hero-image {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: url("../images/hadrianswall.webp");
   }
