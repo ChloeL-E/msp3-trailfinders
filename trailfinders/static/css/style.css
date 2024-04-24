@@ -17,12 +17,12 @@
 }
 
 
-.logo_text,
+.logo-text,
 .navbar-brand {
     font-family: "Caveat";
 }
 
-.logo_text{
+.logo-text{
     font-weight: 700;
     font-size: 40px;
     color: var(--dark_green);
@@ -35,16 +35,45 @@ body {
     background-image: url("/static/media/images/hadrianswall.webp");
   }
 
-  .container {
-    margin-top: 400px;
+.card-placement{
+    margin-top: 100px;
 }
 
-header h1, p {
+header h1 {
     color: var(--dark_green);
     font-weight:600;
+    font-family: "Caveat";
+}
+
+footer a {
+    text-decoration: none;
 }
 
 .card {
-    width: 50%;
-    background-color: rgba(202, 210, 197,0.6);
+    width: 40%;
+    background-color: rgba(132, 169, 140, 0.7);
+    padding: 15px;
+    margin: 100px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: rgba(255,255,255,0.3);
+    padding-top: 20px;
+}
+
+footer h3 {
+    font-family: "Caveat";
+    font-weight: 600;
+    color: var(--dark_green);
+}
+
+.socials {
+    height:20px;
+    width:20px;
+    color:var(--light_green);
+}
+
+li::marker {
+    content: none;
 }
