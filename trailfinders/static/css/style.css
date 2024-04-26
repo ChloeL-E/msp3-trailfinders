@@ -68,6 +68,16 @@ footer h3 {
     color: var(--dark_green);
 }
 
+.footer-links {
+    padding: 0;
+}
+
+.footer-links li a {
+    font-family: var(--font-family);
+    color: black;
+    align-items: center;
+}
+
 .socials {
     height:20px;
     width:20px;
