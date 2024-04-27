@@ -38,7 +38,7 @@ def register():
     """
     Registers new user
 
-    Checks user not already registered by checking 
+    Checks user not already registered by checking
     that the username and email not already stored in db.
     Flashed messages will keep the user informed.
 
@@ -59,7 +59,8 @@ def login():
     Returns:
         If both correct, will redirect to profile page.
         If incorrect, will redirect to login page with flashed message.
-        If username does not exist will redirect to register page with flashed message.
+        If username does not exist will redirect to register page with flashed
+        message.
     """
 
 
