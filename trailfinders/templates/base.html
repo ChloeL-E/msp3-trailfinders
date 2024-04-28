@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="A community site for people in the search of a beautiful walk in North-Eastern England">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -22,7 +23,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 
   <!-- PAGE TITLE -->
-  <title>Northern Trailfinders</title>
+  <title>Take A Hike</title>
 
 </head>
 
@@ -30,7 +31,7 @@
   <div class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color:  rgba(255,255,255,0.1)">
       <div class="container-fluid">
-        <a class="navbar-brand logo-text" href="#">NorthernTrailfinders</a>
+        <a class="navbar-brand logo-text" href="#">TakeAHike</a>
         <!--Hamburger toggler-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,6 +47,9 @@
             {% if session.user %}
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="">My Hikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Search Hikes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="">Logout</a>
@@ -76,7 +80,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm">
-            <h3>NorthernTrailfinders</h3>
+            <h3>TakeAHike</h3>
             <p class="copyright">
               <span>© 2024</span>
             </p>
@@ -84,8 +88,8 @@
           <div class="col-sm">
             <h3>Hikes</h3>
             <ul class="footer-links">
-              <li><a href="">Search Posts</a></li>
-              <li><a href="">Create a Post</a></li>
+              <li><a href="">Search Hikes</a></li>
+              <li><a href="">My Profile</a></li>
             </ul>
           </div>
           <div class="col-sm">
