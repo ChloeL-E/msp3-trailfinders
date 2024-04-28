@@ -1,18 +1,28 @@
 {%  extends "base.html" %}
 {% block content %}
 
-<header class="container card-placement">
+<header id="index-hero-image">
+    <div class="container card-placement">
     <div class="row align-items-center justify-content-center text-center">
         <div class="card">
-            <h1 class="text-center">Welcome to Northern Trailfinders!</h1>
+            <h1 class="text-center">Welcome to Take A Hike!</h1>
             <p class="text-center">Search for a hike, share your experiences and meet new friends.</p>
             <p class="text-center">Join our club to begin exploring our community.</p>
             <p class="text-center">Now Let's Go Walking!</p>
         </div>
     </div>
-
+    </div>
 </header>
 <section>
-    
+    <!-- Bootstrap5 search bar -->
+    <div class="input-group">
+        <div class="form-outline" data-mdb-input-init>
+          <input type="search" id="form1" class="form-control" placeholder="Search Hikes..."/>
+          <label class="form-label" for="form1"></label>
+        </div>
+        <button type="button" class="btn" data-mdb-ripple-init>
+            <img class="search-logo" src="/static/media/images/icons/search-line-icon.svg">
+          </button>
+      </div>
 </section>
 {% endblock %}
