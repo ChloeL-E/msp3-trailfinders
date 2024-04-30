@@ -4,8 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
-
 /*------- ROOT VARIABLES -------*/
 :root {
     font-family: "Noto Serif";
@@ -16,10 +14,14 @@
     --pale_green: #CAD2C5;
 }
 
-
+/*------- NAVBAR-------*/
 .logo-text,
 .navbar-brand {
     font-family: "Caveat";
+}
+
+.navbar {
+    background-color:  rgba(255,255,255, 0.1);
 }
 
 .logo-text{
@@ -34,39 +36,47 @@
     color: var(--dark_green);
 }
 
+.show {
+    display: block !important;
+  }  
+
+.navbar.show {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hide {
+    display: none;
+}
+
+/*------- INDEX PAGE -------*/
+
 #index-hero-image {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("/static/media/images/hadrianswall.webp");
     margin-top: -100px;
-    height: 80vh;
+    height: 90vh;
   }
 
-.card-placement{
-    margin-top: 100px;
-}
-
-header h1 {
+header h1,
+h2 {
     color: var(--dark_green);
     font-weight:600;
     font-family: "Caveat";
 }
 
-footer a {
-    text-decoration: none;
-}
-
-.card {
-    width: 40%;
+.index-card {
+    width: 50%;
     background-color: rgba(132, 169, 140, 0.7);
     padding: 15px;
-    margin: 100px;
-    border-radius: 5px;
+    margin: 200px;
+    border: 1px solid var(--dark_green);
 }
 
 .input-group {
     justify-content: center;
+    margin-top: 10px;
 }
 
 .form-outline {
@@ -81,6 +91,26 @@ footer a {
     height: 20px;
     width: 20px;
 }
+
+h2 {
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.position-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-post {
+    margin-right: 50px;
+    margin-top: 75px;
+}
+
+/*------- FOOTER -------*/
 
 footer {
     background-color: rgba(255,255,255);
@@ -101,6 +131,7 @@ footer h3 {
     font-family: var(--font-family);
     color: black;
     align-items: center;
+    text-decoration: none;
 }
 
 .socials {

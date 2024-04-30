@@ -1,30 +1,22 @@
-// keep track of previous scroll position
-let prevScrollPos = window.pageYOffset;
+/**
+ * Function taken from SheCodes and adapted to project
+ * Function to hide navbar when scrolling down and show 
+ * navbar when scrolling up
+ */
 
-window.addEventListener('scroll', function () {
-    // current scroll position
-    const currentScrollPos = window.pageYOffset;
+document.addEventListener("DOMContentLoaded", function () {
+    let prevScrollPos = window.pageYOffset;
 
-    if (prevScrollPos > currentScrollPos) {
-        // user has scrolled up
-        document.querySelector('.navbar').classList.add('show');
-    } else {
-        // user has scrolled down
-        document.querySelector('.navbar').classList.remove('show');
-    }
+    window.addEventListener('scroll', function () {
+        const currentScrollPos = window.pageYOffset;
 
-    // update previous scroll position
-    prevScrollPos = currentScrollPos;
-});
+        if (prevScrollPos > currentScrollPos) {
+            document.querySelector('.navbar').classList.add('show');
+        } else {
+            document.querySelector('.navbar').classList.remove('show');
+            document.querySelector('.navbar').classList.add('hide')
+        }
 
-// Initialization for ES Users - Bootrap search bar
-import {
-    Input,
-    Ripple,
-    initMDB
-} from "mdb-ui-kit";
-
-initMDB({
-    Input,
-    Ripple
+        prevScrollPos = currentScrollPos;
+    });
 });
