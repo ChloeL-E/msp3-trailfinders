@@ -9,10 +9,10 @@
   <meta name="A community site for people in the search of a beautiful walk in North-Eastern England">
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
 
   <!-- STYLESHEETS -->
   <!-- Bootstrap Stylesheet v 5.3.0 -->
@@ -29,7 +29,7 @@
 
 <body>
   <div class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color:  rgba(255,255,255,0.1)">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand logo-text" href="#">Take A Hike <img class="logo"
             src="/static/media/images/icons/adventure-icon.svg"></a>
@@ -69,52 +69,52 @@
       </div>
 
     </nav>
-  
-  <!--MAIN CONTENT-->
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
+    
+    <!--MAIN CONTENT-->
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
 
-  <!--FOOTER-->
-  <footer class="mt-auto sticky-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          <h3>TakeAHike</h3>
-          <p class="copyright">
-            <span>© 2024</span>
-          </p>
-        </div>
-        <div class="col-sm">
-          <h3>Hikes</h3>
-          <ul class="footer-links">
-            <li><a href="">Search Hikes</a></li>
-            <li><a href="">My Profile</a></li>
-          </ul>
-        </div>
-        <div class="col-sm">
-          <h3>Join Us!</h3>
-          <ul class="footer-links">
-            <li><a href="">Register</a></li>
-            <li><a href="">Sign In</a></li>
-          </ul>
-        </div>
-        <div class="col-sm">
-          <h3>Socials</h3>
-          <ul>
-            <li><a href="https://www.linkedin.com/signup"><img class="socials"
-                  src="/static/media/images/icons/linkedin.svg"></a></li>
-            <li><a href="https://en-gb.facebook.com/"><img class="socials"
-                  src="/static/media/images/icons/facebook.svg"></a></li>
-            <li><a href="https://www.instagram.com/"><img class="socials"
-                  src="/static/media/images/icons/instagram.svg"></a></li>
-          </ul>
+    <!--FOOTER-->
+    <footer class="mt-auto sticky-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h3>TakeAHike</h3>
+            <p class="copyright">
+              <span>© 2024</span>
+            </p>
+          </div>
+          <div class="col-sm">
+            <h3>Hikes</h3>
+            <ul class="footer-links">
+              <li><a href="">Search Hikes</a></li>
+              <li><a href="">My Profile</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h3>Join Us!</h3>
+            <ul class="footer-links">
+              <li><a href="">Register</a></li>
+              <li><a href="">Sign In</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h3>Socials</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/signup"><img class="socials"
+                    src="/static/media/images/icons/linkedin.svg"></a></li>
+              <li><a href="https://en-gb.facebook.com/"><img class="socials"
+                    src="/static/media/images/icons/facebook.svg"></a></li>
+              <li><a href="https://www.instagram.com/"><img class="socials"
+                    src="/static/media/images/icons/instagram.svg"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>
   <!--JAVASCRIPT-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
