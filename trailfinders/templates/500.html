@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="A community site for people in the search of a beautiful walk in North-Eastern England">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
+
+  <!-- STYLESHEETS -->
+  <!-- Bootstrap Stylesheet v 5.3.0 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Stylesheet-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+
+  <!-- PAGE TITLE -->
+  <title>Take A Hike</title>
+
+</head>
+
+<body>
+  <div class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+      <div class="container-fluid">
+        <img class="logo" src="/static/media/images/icons/adventure-icon.svg">
+        <a class="navbar-brand logo-text" href="#"><em>Take a Hike</em></a>
+
+        <!-- MOBILE DEVICES -->
+        <!-- Hamburger toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+          <!-- Navbar links -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Go Walking to be visible to all users -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Go Walking!</a>
+            </li>
+            {% if session.user %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">My Hikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Search Hikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Logout</a>
+            </li>
+            <!-- Login/Register only shown if user not loggin in -->
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="">Register</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+    <div style="height:86px">
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <h1>Oops! It looks like this page took a hike!</h1>
+        <p>505 Error: Page not found</p>
+        
+        <a class="btn btn-lg" href="{{ url_for('home') }}">Home</a>
+    </main>
+</div>
+</body>
+
+</html>
