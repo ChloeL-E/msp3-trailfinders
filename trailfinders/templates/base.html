@@ -29,19 +29,24 @@
 
 <body>
   <div class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg fixed-top">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
       <div class="container-fluid">
-        <a class="navbar-brand logo-text" href="#">Take A Hike <img class="logo"
-            src="/static/media/images/icons/adventure-icon.svg"></a>
-        <!--Hamburger toggler-->
+        <img class="logo" src="/static/media/images/icons/adventure-icon.svg">
+        <a class="navbar-brand logo-text" href="#"><em>Take a Hike</em></a>
+
+        <!-- MOBILE DEVICES -->
+        <!-- Hamburger toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <!--Navbar links-->
+
+          <!-- Navbar links -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <!--Go Walking to be visible to all users-->
+            <!-- Go Walking to be visible to all users -->
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Go Walking!</a>
             </li>
@@ -55,7 +60,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="">Logout</a>
             </li>
-            <!-- Login/Register only shown if user not loggin in-->
+            <!-- Login/Register only shown if user not loggin in -->
             {% else %}
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="">Login</a>
@@ -69,14 +74,16 @@
       </div>
 
     </nav>
-    
-    <!--MAIN CONTENT-->
+    <div style="height:86px">
+    </div>
+
+    <!-- MAIN CONTENT -->
     <main>
       {% block content %}
       {% endblock %}
     </main>
 
-    <!--FOOTER-->
+    <!-- FOOTER -->
     <footer class="mt-auto sticky-bottom">
       <div class="container">
         <div class="row">
@@ -102,7 +109,8 @@
           </div>
           <div class="col-sm">
             <h3>Socials</h3>
-            <ul>
+            <div class="row">
+            <ul class="socials">
               <li><a href="https://www.linkedin.com/signup"><img class="socials"
                     src="/static/media/images/icons/linkedin.svg"></a></li>
               <li><a href="https://en-gb.facebook.com/"><img class="socials"
@@ -110,6 +118,7 @@
               <li><a href="https://www.instagram.com/"><img class="socials"
                     src="/static/media/images/icons/instagram.svg"></a></li>
             </ul>
+          </div>
           </div>
         </div>
       </div>

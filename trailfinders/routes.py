@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, session
 from trailfinders import app, db
 from trailfinders.models import User, Hike, Category
 import flask_login as fl
@@ -68,5 +68,8 @@ def login():
 def logout():
     """
     Function which clears the session user.
-    Flashed message to inform user they are logged out
+    Redirect logged out user to home page.
     """
+    def logout():
+        session.clear()
+        return redirect(url_for("home"))
