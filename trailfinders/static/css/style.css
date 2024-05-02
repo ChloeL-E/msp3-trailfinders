@@ -95,6 +95,17 @@ h2 {
     height: 30px;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .register {
+    margin-right: 20px;
+  }
+
 .btn {
     background-color: var(--light_green);
 }
