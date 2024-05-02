@@ -96,15 +96,15 @@
           <div class="col-sm">
             <h3>Hikes</h3>
             <ul class="footer-links">
-              <li><a href="">Search Hikes</a></li>
+              <li><a href="{{ url_for('home') }}">Search Hikes</a></li>
               <li><a href="">My Profile</a></li>
             </ul>
           </div>
           <div class="col-sm">
             <h3>Join Us!</h3>
             <ul class="footer-links">
-              <li><a href="">Register</a></li>
-              <li><a href="">Sign In</a></li>
+              <li><a href="{{ url_for('register') }}">Register</a></li>
+              <li><a href="{{ url_for('login') }}">Login</a></li>
             </ul>
           </div>
           <div class="col-sm">
