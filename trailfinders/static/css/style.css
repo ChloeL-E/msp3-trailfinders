@@ -68,6 +68,7 @@
   }
 
 header h1,
+h1,
 h2 {
     color: var(--dark_green);
     font-weight:500;
@@ -135,6 +136,25 @@ h2 {
     width: 100%;
     object-fit: cover;
 }
+
+/*------- LOGIN -------*/
+
+#hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/static/media/images/hadrianswall.webp");
+    margin-top: -100px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.form-style {
+    height: 200px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255, 0.6);
+}
+
 
 /*------- FOOTER -------*/
 
