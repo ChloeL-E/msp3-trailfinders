@@ -18,15 +18,16 @@ def get_user(id):
 
     Returns:
         A user object from a query on user table.
+        Flask stores the data in session.
     """
     return User.query.get(int(id))
 
 
-# home page
+# index.html
 @app.route("/")
 def home():
     """
-    Home function
+    Home function.
 
     Returns:
         Renders the template for the home page.
@@ -38,7 +39,7 @@ def home():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    Registers new user
+    Registers new user.
 
     Checks username not already in use.
     Flashed messages will keep the user informed.
@@ -51,9 +52,9 @@ def register():
         # Checking to see if username already exists
         existing_user = User.query.filter(User.username == request.form.get
                                           ('username').lower().all())
-
+        # is username exists, redirect user to register
         if existing_user:
-            flash("This username already exisits")
+            flash("This username already exists")
             return redirect(url_for("register.html"))
         # Create a new instance of a user
         new_user = User(
@@ -105,7 +106,9 @@ def login():
         return render_template("login.html")
 
 
-# logout
+# logout.html
+@app.route("/logout")
+@fl.login_required
 def logout():
     """
     Function which clears the session user.
