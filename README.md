@@ -150,7 +150,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 
          * 
 
-        ![Play page]()
+        ![]()
 
     -    #### 
          * 
@@ -159,7 +159,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 
     -    #### 
          *  
-         ![How to Play modal]()
+         ![]()
 
     -    #### 
          *  
@@ -186,7 +186,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 -   ### Frameworks, Libraries & Programs Used
 
     * [Google Fonts](https://fonts.google.com/) were used to import the 'Fuzzy Bubbles' font into the style.css file which is used on all pages throughout the project. 
-    * [Font Awesome]( https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css) was used on all pages throughout the website to add icons for aesthetic and UX purposes
+    * []() was used on all pages throughout the website to add icons for aesthetic and UX purposes
     * Gitpod was the IDE used to build the project. Git was used for version control.
     * [GitHub](https://github.com/) is used to store the projects code after being pushed from Git.
     * [Balsamiq](https://balsamiq.com/) was used to create the wireframes to support in the design process.

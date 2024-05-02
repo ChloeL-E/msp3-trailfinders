@@ -55,12 +55,12 @@ def register():
         # is username exists, redirect user to register
         if existing_user:
             flash("This username already exists")
-            return redirect(url_for("register.html"))
+            return redirect(url_for("register"))
         # Create a new instance of a user
         new_user = User(
-            username=request.form('username'),
-            email=request.form('email'),
-            pwd=generate_password_hash(request.form('password'))
+            username=request.form.get('username'),
+            email=request.form.get('email'),
+            pwd=generate_password_hash(request.form.get('password'))
         )
 
         # Add new user instance into db
@@ -70,9 +70,9 @@ def register():
         # Inform user that the registration was successful,
         # Redirect to login page
         flash("Fantastic! You're now registered, please login")
-        return render_template(url_for("login.html"))
+        return render_template(url_for("login"))
 
-    return render_template(url_for("register.html"))
+    return render_template("register.html")
 
 
 # login.html
@@ -91,16 +91,18 @@ def login():
         message.
     """
     if request.method == "POST":
-        username = request.form('username')
-        pwd = generate_password_hash(request.form('password'))
-        user = User.query.filter(User.username == request.form.get('username')
-                                 .lower().all())
-        if username and pwd:
-            fl.login_user(user)
+        # Get username and password from request form
+        username = request.form.get('username')
+        password = request.form.get('password')
+        user = User.query.filter_by(username=username.lower()).first()
+        # Check if username and password are correct
+        if username and check_password_hash(user.password, password):
+            fl.login_user(user)  # login user
             flash(f"Welcome {'username'}, you're logged in. Happy Hiking!")
             return redirect(url_for("home"))
         else:
-            flash()
+            # Incorrect, redirect to login
+            flash("Invalid username and/or password, please try again")
             return render_template("login.html")
     else:
         return render_template("login.html")
@@ -114,5 +116,6 @@ def logout():
     Function which clears the session user.
     Redirect logged out user to home page.
     """
-    session.clear()
-    return redirect(url_for("home"))
+    fl.logout_user()  # logout user
+    flash("You have successfully logged out. Come visit us again soon!")
+    return redirect(url_for("home"))  # Redirect to home
