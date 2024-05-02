@@ -63,10 +63,10 @@
             <!-- Login/Register only shown if user not loggin in -->
             {% else %}
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Login</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Register</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('register') }}">Register</a>
             </li>
             {% endif %}
           </ul>
@@ -85,11 +85,10 @@
 
     <!-- FOOTER -->
     <footer class="mt-auto sticky-bottom">
-      <div class="container">
         <div class="row">
           <div class="col-sm">
-            <h3>TakeAHike</h3>
-            <p class="copyright">
+            <h3 class="ml-3">TakeAHike</h3>
+            <p class="copyright ml-3">
               <span>© 2024</span>
             </p>
           </div>
@@ -117,8 +116,7 @@
                     src="/static/media/images/icons/facebook.svg"></a></li>
               <li><a href="https://www.instagram.com/"><img class="socials"
                     src="/static/media/images/icons/instagram.svg"></a></li>
-            </ul>
-          </div>
+            </ul>F
           </div>
         </div>
       </div>
