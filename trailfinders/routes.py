@@ -98,7 +98,7 @@ def login():
         # Check if username and password are correct
         if username and check_password_hash(user.password, password):
             fl.login_user(user)  # login user
-            flash(f"Welcome {'username'}, you're logged in. Happy Hiking!")
+            flash(f"Welcome {username}, you're logged in. Happy Hiking!")
             return redirect(url_for("home"))
         else:
             # Incorrect, redirect to login
