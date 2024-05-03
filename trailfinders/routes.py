@@ -19,6 +19,7 @@ def home():
     return render_template("index.html")
 
 
+# register.html
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
@@ -33,38 +34,29 @@ def register():
 
     if request.method == "POST":
         # Checking to see if username already exists
-        existing_user = User.query.filter(User.username == request.form.get('username').lower()).first()
-        
-        # If username exists, redirect user to register
+        existing_user = User.query.filter(User.username == request.form.get
+                                          ('username').lower()).all()
+        # is username exists, redirect user to register
         if existing_user:
             flash("This username already exists")
             return redirect(url_for("register"))
-        
-        try:
-            # Create a new instance of a user
-            new_user = User(
-                username=request.form.get('username'),
-                email=request.form.get('email'),
-                pwd=generate_password_hash(request.form.get('password'))
-            )
+        # Create a new instance of a user
+        new_user = User(
+            username=request.form.get('username'),
+            email=request.form.get('email'),
+            pwd=generate_password_hash(request.form.get('password'))
+        )
 
-            # Add new user instance into db session
-            db.session.add(new_user)
-            db.session.commit()  # Commit changes to persist them
+        # Add new user instance into db
+        db.session.add(new_user)
+        db.session.commit()
 
-            # Inform user that the registration was successful,
-            # Redirect to login page
-            flash("Fantastic! You're now registered, please login")
-            return redirect(url_for("login"))
-
-        except Exception as e:
-            # Rollback changes in case of error
-            db.session.rollback()
-            flash(f"An error occurred: {str(e)}")
-            return redirect(url_for("register"))
+        # Inform user that the registration was successful,
+        # Redirect to login page
+        flash("Fantastic! You're now registered, please login")
+        return redirect(url_for("login"))
 
     return render_template("register.html")
-
 
 
 # load current user
