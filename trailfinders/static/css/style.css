@@ -149,12 +149,15 @@ h2 {
 }
 
 .form-style {
-    height: 200px;
+    height: 300px;
     width: 500px;
     margin: 0 auto;
     background-color: rgba(255,255,255, 0.6);
 }
 
+.director {
+    margin-right: 10px;
+}
 
 /*------- FOOTER -------*/
 
