@@ -1,21 +1,23 @@
 {%  extends "base.html" %}
+
 {% block content %}
-<header id="hero-image">
-</header>
+
+<!--<header id="hero-image">
+</header>-->
 <section>
   <h1 class="text-center mt-1">Login</h1>
+  <div style="background-color:red">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div>
+            <h4 class="mt-4 text-white">{{ message }}</h4>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
   <div class="form-style">
-    <div style="background-color:red">
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          {% for message in messages %}
-            <div>
-              <h4 class="mt-4 text-white">{{ message }}</h4>
-            </div>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}
-    </div>
     <!-- Login form -->
     <form>
       <!-- Input for username -->
@@ -38,4 +40,5 @@
     <a class="btn btn-primary mt-3" href="{{ url_for('register') }}">Register</a>
   </div>
 </section>
+
 {% endblock %}

@@ -70,7 +70,7 @@ def register():
         # Inform user that the registration was successful,
         # Redirect to login page
         flash("Fantastic! You're now registered, please login")
-        return render_template(url_for("login"))
+        return redirect(url_for("login"))
 
     return render_template("register.html")
 
@@ -103,7 +103,7 @@ def login():
         else:
             # Incorrect, redirect to login
             flash("Invalid username and/or password, please try again")
-            return render_template("login.html")
+            return redirect(url_for("login"))  # Redirect to login page
     else:
         return render_template("login.html")
 
