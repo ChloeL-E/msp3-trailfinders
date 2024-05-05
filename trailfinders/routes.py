@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for, flash
+from flask import (render_template, request, redirect, url_for, flash)
 from werkzeug.security import generate_password_hash, check_password_hash
 from trailfinders import app, db
 from trailfinders.models import User, Hike, Category
@@ -34,10 +34,9 @@ def register():
 
     if request.method == "POST":
         # Checking to see if username already exists
-        existing_user = User.query.filter(User.username == request.form.get
-                                          ('username').lower()).all()
+        user_exists = User.query.filter(User.username == request.form.get('username').lower()).all()
         # is username exists, redirect user to register
-        if existing_user:
+        if user_exists:
             flash("This username already exists")
             return redirect(url_for("register"))
         # Create a new instance of a user
@@ -54,7 +53,7 @@ def register():
         # Inform user that the registration was successful,
         # Redirect to login page
         flash("Fantastic! You're now registered, please login")
-        return redirect(url_for("login"))
+        return redirect(url_for("home"))
 
     return render_template("register.html")
 

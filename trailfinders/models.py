@@ -10,14 +10,11 @@ class User(db.Model):
     email = db.Column(db.String(63), nullable=False)
     password = db.Column(db.String(20), unique=True, nullable=False)
     admin = db.Column(db.Boolean, default=False, nullable=False)
-    hike_id = db.Column(db.Integer, db.ForeignKey(
-        "hike.id", ondelete="CASCADE"), nullable=False)
-    hike = db.relationship(
-        'Hike', backref='user', cascade="all, delete")
+    hikes = db.relationship('Hike', backref='user', cascade="all, delete")
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self.user
+        return self.username
 
 
 class Hike(db.Model):
@@ -31,16 +28,15 @@ class Hike(db.Model):
     elevation = db.Column(db.String, nullable=False)
     difficulty = db.Column(db.String, nullable=False)
     description = db.Column(db.Text, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey(
-        "user.id", ondelete="CASCADE"), nullable=False)
-    category_id = db.Column(db.Integer, db.ForeignKey(
-        "category.id", ondelete="CASCADE"), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey
+                        ("user.id", ondelete="CASCADE"), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey
+                            ("category.id", ondelete="CASCADE"), nullable=False)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return "#{0} - Title: {1} | Distance: {2}" | "Difficulty:{3}".format(
-            self.id, self.title, self.distance, self.difficulty
-        )
+        return "#{0} - Title: {1} | Distance: {2} | Difficulty: {3}".format(
+            self.id, self.title, self.distance, self.difficulty)
 
 
 class Category(db.Model):
