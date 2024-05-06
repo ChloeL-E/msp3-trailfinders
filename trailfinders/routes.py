@@ -43,7 +43,7 @@ def register():
         new_user = User(
             username=request.form.get('username'),
             email=request.form.get('email'),
-            pwd=generate_password_hash(request.form.get('password'))
+            password=generate_password_hash(request.form.get('password'))
         )
 
         # Add new user instance into db
