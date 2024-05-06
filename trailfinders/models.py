@@ -46,7 +46,7 @@ class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     hike = db.relationship(
-        'Hike', backref='user', cascade="all, delete")
+        'Hike', backref='categories', cascade="all, delete")
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
