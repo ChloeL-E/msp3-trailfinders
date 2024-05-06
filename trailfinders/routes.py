@@ -23,10 +23,11 @@ def home():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    Registers new user.
+    Function to register a new user.
 
     Checks username not already in use.
     Flashed messages will keep the user informed.
+    If username not already in use will create new user instance
 
     Returns:
         Registers new user.
@@ -34,7 +35,8 @@ def register():
 
     if request.method == "POST":
         # Checking to see if username already exists
-        user_exists = User.query.filter(User.username == request.form.get('username').lower()).all()
+        user_exists = User.query.filter(User.username == request.form.get
+                                        ('username').lower()).all()
         # is username exists, redirect user to register
         if user_exists:
             flash("This username already exists")
@@ -56,6 +58,45 @@ def register():
         return redirect(url_for("home"))
 
     return render_template("register.html")
+
+
+# login.html
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    """
+    Function to login user
+    
+    Checks user is registered by checking username exists and if it does,
+    check that password is correct.
+
+    Returns:
+       If both correct, will redirect to profile page.
+       If incorrect, will redirect to login page with flashed message.
+       If username does not exist will redirect to register page with flashed
+       message.
+    """
+    if request.method == "POST":
+        # Get username and password from request form
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        # Check if both username and password are present
+        if username and password:
+            # Ensure username is lowercase before querying
+            username = username.lower()
+        
+        # Check if username and password are correct
+        user = User.query.filter_by(username=username.lower()).first()
+        if username and check_password_hash(user.password, password):
+            fl.login_user(user)  # login user
+            flash(f"Welcome {username}, you're logged in. Happy Hiking!")
+            return redirect(url_for("home"))
+        else:
+            # Incorrect, redirect to login
+            flash("Invalid username and/or password, please try again")
+            return redirect(url_for("login"))  # Redirect to login page
+    else:
+        return render_template("login.html")
 
 
 # load current user
