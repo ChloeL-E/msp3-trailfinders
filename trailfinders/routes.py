@@ -5,7 +5,15 @@ from trailfinders.models import User, Hike, Category
 import flask_login as fl
 from flask_login import LoginManager
 
-login_manager = LoginManager(app)
+# Flask_Login
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return Users.query.get(int(user_id))
 
 
 # index.html
@@ -92,31 +100,25 @@ def login():
        message.
     """
     if request.method == "POST":
-        # Get username and password from request form
-        username = request.form.get('username')
-        password = request.form.get('password')
-
-        # Ensure username is lowercase before querying
-        # username = username.lower()
-                    
-        # Check if username and password are correct
-        existing_user = User.query.filter_by(User.username == username).first()
+        existing_user = User.query.filter(
+            User.username == request.form.get("username")).first()
+        
         if existing_user:
-            if check_password_hash(User.password, password):
-                fl.login_user(existing_user)  # login user
-                session["user"] = request.form.get('username')  # Store username in session
-                flash(f"{'username'}, you're now logged in. Happy Hiking")
-                return redirect(url_for("home"))
+            if check_password_hash(
+                    existing_user.password,
+                    request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash(f"{'username'}, you're now logged in. Happy Hiking"
+                      .format(request.form.get("username")))
+                return redirect(
+                    url_for("home"))
             else:
                 # Incorrect, redirect to login
                 flash("Invalid username and/or password, please try again")
-                return redirect(url_for("login"))  # Redirect to login page
-
+                return redirect(url_for("login"))  # redirect to login
         else:
-            # Username or password is missing
-            flash("Please enter both username and password")
+            # Username &/or password is missing
+            flash("Please enter a username and password")
             return redirect(url_for("login"))  # Redirect to login page
-
-    else:
-        # if any checks fail, stay on login page
-        return render_template("login.html")
+          
+    return render_template("login.html")
