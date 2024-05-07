@@ -96,19 +96,17 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
 
-        # Check if both username and password are present
-        if username and password:
-            # Ensure username is lowercase before querying
-            username = username.lower()
-        
-            # Check if username and password are correct
-            user = User.query.filter_by(username=username).first()
-            if user:
-                if check_password_hash(user.password, password):
-                    fl.login_user(user)  # login user
-                    session["user"] = username  # Store username in session
-                    flash(f"{username}, you're now logged in. Happy Hiking")
-                    return redirect(url_for("home"))
+        # Ensure username is lowercase before querying
+        # username = username.lower()
+                    
+        # Check if username and password are correct
+        existing_user = User.query.filter_by(User.username == username).first()
+        if existing_user:
+            if check_password_hash(User.password, password):
+                fl.login_user(existing_user)  # login user
+                session["user"] = request.form.get('username')  # Store username in session
+                flash(f"{'username'}, you're now logged in. Happy Hiking")
+                return redirect(url_for("home"))
             else:
                 # Incorrect, redirect to login
                 flash("Invalid username and/or password, please try again")
