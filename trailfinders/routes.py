@@ -1,10 +1,11 @@
-from flask import (render_template, request, redirect, url_for, flash)
+from flask import (render_template, request, redirect, url_for, flash, session)
 from werkzeug.security import generate_password_hash, check_password_hash
 from trailfinders import app, db
 from trailfinders.models import User, Hike, Category
 import flask_login as fl
+from flask_login import LoginManager
 
-login_manager = fl.LoginManager(app)
+login_manager = LoginManager(app)
 
 
 # index.html
@@ -17,6 +18,23 @@ def home():
         Renders the template for the home page.
     """
     return render_template("index.html")
+
+
+# load current user
+@login_manager.user_loader
+def get_user(id):
+    """
+    Function to load the current user.
+
+    Arguments:
+
+        id- the primary key on the User table.
+
+    Returns:
+        A user object from a query on user table.
+        Flask stores the data in session.
+    """
+    return User.query.get(int(id))
 
 
 # register.html
@@ -35,8 +53,8 @@ def register():
 
     if request.method == "POST":
         # Checking to see if username already exists
-        user_exists = User.query.filter(User.username == request.form.get
-                                        ('username').lower()).all()
+        username = request.form.get('username').lower()
+        user_exists = User.query.filter_by(username=username).first()
         # is username exists, redirect user to register
         if user_exists:
             flash("This username already exists")
@@ -55,17 +73,15 @@ def register():
         # Inform user that the registration was successful,
         # Redirect to login page
         flash("Fantastic! You're now registered, please login")
-        return redirect(url_for("home"))
+        return redirect(url_for("login"))
 
     return render_template("register.html")
 
 
-# login.html
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-    Function to login user
-    
+    Function to login the user
     Checks user is registered by checking username exists and if it does,
     check that password is correct.
 
@@ -85,31 +101,24 @@ def login():
             # Ensure username is lowercase before querying
             username = username.lower()
         
-        # Check if username and password are correct
-        user = User.query.filter_by(username=username.lower()).first()
-        if username and check_password_hash(user.password, password):
-            fl.login_user(user)  # login user
-            flash(f"Welcome {username}, you're logged in. Happy Hiking!")
-            return redirect(url_for("home"))
+            # Check if username and password are correct
+            user = User.query.filter_by(username=username).first()
+            if user:
+                if check_password_hash(user.password, password):
+                    fl.login_user(user)  # login user
+                    session["user"] = username  # Store username in session
+                    flash(f"{username}, you're now logged in. Happy Hiking")
+                    return redirect(url_for("home"))
+            else:
+                # Incorrect, redirect to login
+                flash("Invalid username and/or password, please try again")
+                return redirect(url_for("login"))  # Redirect to login page
+
         else:
-            # Incorrect, redirect to login
-            flash("Invalid username and/or password, please try again")
+            # Username or password is missing
+            flash("Please enter both username and password")
             return redirect(url_for("login"))  # Redirect to login page
+
     else:
+        # if any checks fail, stay on login page
         return render_template("login.html")
-
-
-# load current user
-@login_manager.user_loader
-def get_user(id):
-    """
-    Function to load the current user.
-
-    Arguments:
-        id- the primary key on the User table.
-
-    Returns:
-        A user object from a query on user table.
-        Flask stores the data in session.
-    """
-    return User.query.get(int(id))
