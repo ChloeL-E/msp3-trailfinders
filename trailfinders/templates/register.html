@@ -18,7 +18,7 @@
     {% endwith %}
   </div>
   <div class="form-style">
-    <!-- Login form -->
+    <!-- Register form -->
     <form method="POST" action="{{ url_for('register') }}">
       <!-- Input for username -->
       <div class="form-group">
@@ -42,7 +42,7 @@
   <div class="container">
     <!-- Users directed to register if not already registered -->
     <h2 class="director mt-3 mb-4">Already registered?</h2>
-    <a class="btn mt-3 mb-4" href="{{ url_for('login') }}">Login</a>
+    <a class="btn mt-3 mb-4" href="{{ url_for('signin') }}">Login</a>
   </div>
 </section>
 {% endblock %}

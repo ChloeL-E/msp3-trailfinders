@@ -5,15 +5,28 @@ from trailfinders.models import User, Hike, Category
 import flask_login as fl
 from flask_login import LoginManager
 
+
 # Flask_Login
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
 
+# load current user
 @login_manager.user_loader
 def load_user(user_id):
-    return Users.query.get(int(user_id))
+    """
+    Function to load the current user.
+
+    Arguments:
+
+        id- the primary key on the User table.
+
+    Returns:
+        A user object from a query on user table.
+        Flask stores the data in session.
+    """
+    return User.query.get(int(user_id))
 
 
 # index.html
@@ -26,23 +39,6 @@ def home():
         Renders the template for the home page.
     """
     return render_template("index.html")
-
-
-# load current user
-@login_manager.user_loader
-def get_user(id):
-    """
-    Function to load the current user.
-
-    Arguments:
-
-        id- the primary key on the User table.
-
-    Returns:
-        A user object from a query on user table.
-        Flask stores the data in session.
-    """
-    return User.query.get(int(id))
 
 
 # register.html
@@ -81,13 +77,13 @@ def register():
         # Inform user that the registration was successful,
         # Redirect to login page
         flash("Fantastic! You're now registered, please login")
-        return redirect(url_for("login"))
+        return redirect(url_for("signin"))
 
     return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
-def login():
+def signin():
     """
     Function to login the user
     Checks user is registered by checking username exists and if it does,
@@ -100,25 +96,31 @@ def login():
        message.
     """
     if request.method == "POST":
-        existing_user = User.query.filter(
-            User.username == request.form.get("username")).first()
-        
-        if existing_user:
-            if check_password_hash(
-                    existing_user.password,
-                    request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash(f"{'username'}, you're now logged in. Happy Hiking"
-                      .format(request.form.get("username")))
-                return redirect(
-                    url_for("home"))
-            else:
-                # Incorrect, redirect to login
-                flash("Invalid username and/or password, please try again")
-                return redirect(url_for("login"))  # redirect to login
-        else:
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+        print("Received username:", username)
+        print("Received password:", password)
+
+        if not (username and password):
             # Username &/or password is missing
             flash("Please enter a username and password")
-            return redirect(url_for("login"))  # Redirect to login page
-          
-    return render_template("login.html")
+            return redirect(url_for("signin"))  # Redirect to login page
+
+        existing_user = User.query.filter_by(username=username.lower()).first()
+
+        if existing_user:
+            if check_password_hash(existing_user.password, password):
+                session["user"] = username.lower()  # Storing username in lowercase
+                flash(f"{username}, you're now logged in. Happy Hiking")
+                return redirect(url_for("home", username=session["user"]))
+            else:
+                # Incorrect password, redirect to login
+                flash("Invalid username and/or password, please try again")
+                return redirect(url_for("signin"))  # redirect to login
+        else:
+            # Username does not exist
+            flash("Username not found, please register")
+            return redirect(url_for("register"))  # Redirect to register page
+
+    return render_template("signin.html")

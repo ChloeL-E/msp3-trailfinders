@@ -18,26 +18,26 @@
     {% endwith %}
   </div>
   <div class="form-style">
-    <!-- Login form -->
-    <form method="POST" action="{{ url_for('login') }}">
+    <!-- Signin form -->
+    <form method="POST" action="{{ url_for('signin') }}">
       <!-- Input for username -->
       <div class="form-group">
         <label class="mb-3 mt-2" for="username">Username: </label>
-        <input type="text" class="form-control" id="username" autocomplete="username" placeholder="Enter username">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" min-length="4" max-length="50" required>
       </div>
       <!-- Input for password -->
       <div class="form-group">
         <label class="mt-3 mb-3" for="password">Password: </label>
-        <input type="password" autocomplete="current-password" class="form-control" id="password" placeholder="Enter Password">
+        <input type="password" autocomplete="current-password" class="form-control" id="password" name="password" placeholder="Enter Password" min-length="6" max-length="20"required>
       </div>
-      <!-- Login button -->
+      <!-- Signin button -->
       <button type="submit" class="btn ml-auto mt-3">Login</button>
     </form>
   </div>
   <div class="container">
     <!-- Users directed to register if not already registered -->
-    <h2 class="director mt-3 mb-4 pr-2">Not yet registered?</h2>
-    <a class="btn mt-3 mb-4" href="{{ url_for('register') }}">Register</a>
+    <h2 class="director mt-3 mb-4">Already registered?</h2>
+    <a class="btn mt-3 mb-4" href="{{ url_for('signin') }}">Login</a>
   </div>
 </section>
 
