@@ -58,7 +58,7 @@
               <a class="nav-link active" aria-current="page" href="">Search Hikes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Logout</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('signout') }}">Logout</a>
             </li>
             <!-- Login/Register only shown if user not loggin in -->
             {% else %}

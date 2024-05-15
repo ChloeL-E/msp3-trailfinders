@@ -128,13 +128,13 @@ def signin():
 
 
 # logout.html
-@app.route("/logout")
+@app.route("/signout")
 @fl.login_required
-def logout():
+def signout():
     """
     Function which clears the session user.
     Redirect logged out user to home page.
     """
     fl.logout_user()  # logout user
     flash("You have successfully logged out. Come visit us again soon!")
-    return redirect(url_for("home"))  # Redirect to home
+    return render_template("logout.html")  # Redirect to home

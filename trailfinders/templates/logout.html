@@ -1,3 +1,20 @@
 {%  extends "base.html" %}
     {% block content %}
+    <header id="index-hero-image">
+        <div class="container lead">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="card index-card">
+              <h1 class="mt-1 mb-1">You have logged out</h1>
+              <p class="text-center">Come and visit again soon</p>
+              
+            </div>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div class="container">
+          <a class="btn btn-lg mt-3 register" href="{{ url_for('register') }}">Register</a>
+          <a class="btn btn-lg mt-3" href="{{ url_for('signin') }}">Login</a>
+        </div>
+      </section>
     {% endblock %}
