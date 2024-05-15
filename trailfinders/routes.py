@@ -109,7 +109,7 @@ def logout():
 #  category.html
 @app.route("/categories")
 def categories():
-    categories = list(Category.query.order_by(Category.name).all())
+    categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
 
 
@@ -128,7 +128,7 @@ def add_category():
 #  my_hikes
 @app.route("/my_hikes")
 def my_hikes():
-    hikes = list(Hike.query.order_by(Hike.title).all())
+    hikes = list(Hike.query.order_by(Hike.hike_title).all())
     return render_template("my_hikes.html", hike=hikes)
 
 

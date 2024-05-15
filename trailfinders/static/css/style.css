@@ -161,12 +161,12 @@ h2 {
 
 /*------- ADD_HIKE -------*/
 
-.icons {
+.icon {
     margin-left: 5px;
     padding: 10px;
-    height: 25px;
-    width: 25px;
-    background-color: var(--light_green);
+    height: 30px;
+    width: 30px;
+    background-color: var(--light_purple);
     border-radius: 50px;
 }
 
