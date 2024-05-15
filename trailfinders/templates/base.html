@@ -52,7 +52,7 @@
             </li>
             {% if session.user %}
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">My Hikes</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('my_hikes') }}">My Hikes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="">Search Hikes</a>

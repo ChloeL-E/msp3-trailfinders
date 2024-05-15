@@ -159,6 +159,17 @@ h2 {
     margin-right: 10px;
 }
 
+/*------- ADD_HIKE -------*/
+
+.icons {
+    margin-left: 5px;
+    padding: 10px;
+    height: 25px;
+    width: 25px;
+    background-color: var(--light_green);
+    border-radius: 50px;
+}
+
 /*------- FOOTER -------*/
 
 footer {

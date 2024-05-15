@@ -22,7 +22,7 @@ class Hike(db.Model):
     schema for Category model
     """
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String, nullable=False)
+    hike_title = db.Column(db.String, nullable=False)
     image_url = db.Column(db.String)
     distance = db.Column(db.String, nullable=False)
     elevation = db.Column(db.String, nullable=False)
@@ -45,7 +45,7 @@ class Category(db.Model):
     schema for Category model
     """
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, nullable=False)
+    category_name = db.Column(db.String, nullable=False)
     hike = db.relationship(
         'Hike', backref='categories', cascade="all, delete")
 

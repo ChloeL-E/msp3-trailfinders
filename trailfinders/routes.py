@@ -103,5 +103,35 @@ def logout():
     Redirect logged out user to home page.
     """
     session.clear()
-    flash("You have successfully logged out. Come visit us again soon!")
-    return redirect(url_for("logout"))  # Redirect to home
+    return redirect(url_for("home"))  # Redirect to home
+
+
+#  category.html
+@app.route("/categories")
+def categories():
+    categories = list(Category.query.order_by(Category.name).all())
+    return render_template("categories.html", categories=categories)
+
+
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        category = Category(category_name=request.form.get("category_name"))
+
+        # Add new category instance into db
+        db.session.add(category)
+        db.session.commit()
+        return redirect(url_for("categories"))
+    return render_template("add_category.html")
+
+
+#  my_hikes
+@app.route("/my_hikes")
+def my_hikes():
+    hikes = list(Hike.query.order_by(Hike.title).all())
+    return render_template("my_hikes.html", hike=hikes)
+
+
+@app.route("/add_hike", methods=["GET", "POST"])
+def add_hike():
+    return render_template("add_hike.html")
