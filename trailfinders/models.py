@@ -31,7 +31,8 @@ class Hike(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey
                         ("user.id", ondelete="CASCADE"), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey
-                            ("category.id", ondelete="CASCADE"), nullable=False)
+                            ("category.id", ondelete="CASCADE"),
+                            nullable=False)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string

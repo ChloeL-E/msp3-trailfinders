@@ -111,7 +111,8 @@ def signin():
 
         if existing_user:
             if check_password_hash(existing_user.password, password):
-                session["user"] = username.lower()  # Storing username in lowercase
+                # Storing username in lowercase
+                session["user"] = username.lower()
                 flash(f"{username}, you're now logged in. Happy Hiking")
                 return redirect(url_for("home", username=session["user"]))
             else:
@@ -124,3 +125,16 @@ def signin():
             return redirect(url_for("register"))  # Redirect to register page
 
     return render_template("signin.html")
+
+
+# logout.html
+@app.route("/logout")
+@fl.login_required
+def logout():
+    """
+    Function which clears the session user.
+    Redirect logged out user to home page.
+    """
+    fl.logout_user()  # logout user
+    flash("You have successfully logged out. Come visit us again soon!")
+    return redirect(url_for("home"))  # Redirect to home
