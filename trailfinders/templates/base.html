@@ -58,12 +58,12 @@
               <a class="nav-link active" aria-current="page" href="">Search Hikes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('signout') }}">Logout</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('logout') }}">Logout</a>
             </li>
             <!-- Login/Register only shown if user not loggin in -->
             {% else %}
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('signin') }}">Login</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('register') }}">Register</a>
@@ -103,7 +103,7 @@
             <h3>Join Us!</h3>
             <ul class="footer-links">
               <li><a href="{{ url_for('register') }}">Register</a></li>
-              <li><a href="{{ url_for('signin') }}">Login</a></li>
+              <li><a href="{{ url_for('login') }}">Login</a></li>
             </ul>
           </div>
           <div class="col-sm">

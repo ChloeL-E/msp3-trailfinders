@@ -77,13 +77,13 @@ def register():
         # Inform user that the registration was successful,
         # Redirect to login page
         flash("Fantastic! You're now registered, please login")
-        return redirect(url_for("signin"))
+        return redirect(url_for("login"))
 
     return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
-def signin():
+def login():
     """
     Function to login the user
     Checks user is registered by checking username exists and if it does,
@@ -105,7 +105,7 @@ def signin():
         if not (username and password):
             # Username &/or password is missing
             flash("Please enter a username and password")
-            return redirect(url_for("signin"))  # Redirect to login page
+            return redirect(url_for("login"))  # Redirect to login page
 
         existing_user = User.query.filter_by(username=username.lower()).first()
 
@@ -118,19 +118,19 @@ def signin():
             else:
                 # Incorrect password, redirect to login
                 flash("Invalid username and/or password, please try again")
-                return redirect(url_for("signin"))  # redirect to login
+                return redirect(url_for("login"))  # redirect to login
         else:
             # Username does not exist
             flash("Username not found, please register")
             return redirect(url_for("register"))  # Redirect to register page
 
-    return render_template("signin.html")
+    return render_template("login.html")
 
 
 # logout.html
 @app.route("/signout")
 @fl.login_required
-def signout():
+def logout():
     """
     Function which clears the session user.
     Redirect logged out user to home page.
