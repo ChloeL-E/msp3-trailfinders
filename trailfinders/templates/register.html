@@ -6,12 +6,12 @@
 </header>-->
 <section>
   <h1 class="text-center mt-1">Register</h1>
-  <div style="background-color:red">
+  <div>
     {% with messages = get_flashed_messages() %}
       {% if messages %}
         {% for message in messages %}
-          <div>
-            <h4 class="mt-4 text-white">{{ message }}</h4>
+          <div style="background-color:var(--green)">
+            <h4 class="mt-4 text-white text-center">{{ message }}</h4>
           </div>
         {% endfor %}
       {% endif %}
@@ -42,7 +42,7 @@
   <div class="container">
     <!-- Users directed to register if not already registered -->
     <h2 class="director mt-3 mb-4">Already registered?</h2>
-    <a class="btn mt-3 mb-4" href="{{ url_for('signin') }}">Login</a>
+    <a class="btn mt-3 mb-4" href="{{ url_for('login') }}">Login</a>
   </div>
 </section>
 {% endblock %}

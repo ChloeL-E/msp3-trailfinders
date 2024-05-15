@@ -2,31 +2,6 @@ from flask import (render_template, request, redirect, url_for, flash, session)
 from werkzeug.security import generate_password_hash, check_password_hash
 from trailfinders import app, db
 from trailfinders.models import User, Hike, Category
-import flask_login as fl
-from flask_login import LoginManager
-
-
-# Flask_Login
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = 'login'
-
-
-# load current user
-@login_manager.user_loader
-def load_user(user_id):
-    """
-    Function to load the current user.
-
-    Arguments:
-
-        id- the primary key on the User table.
-
-    Returns:
-        A user object from a query on user table.
-        Flask stores the data in session.
-    """
-    return User.query.get(int(user_id))
 
 
 # index.html
@@ -99,9 +74,6 @@ def login():
         username = request.form.get("username")
         password = request.form.get("password")
 
-        print("Received username:", username)
-        print("Received password:", password)
-
         if not (username and password):
             # Username &/or password is missing
             flash("Please enter a username and password")
@@ -109,32 +81,27 @@ def login():
 
         existing_user = User.query.filter_by(username=username.lower()).first()
 
-        if existing_user:
-            if check_password_hash(existing_user.password, password):
-                # Storing username in lowercase
-                session["user"] = username.lower()
-                flash(f"{username}, you're now logged in. Happy Hiking")
-                return redirect(url_for("home", username=session["user"]))
-            else:
-                # Incorrect password, redirect to login
-                flash("Invalid username and/or password, please try again")
-                return redirect(url_for("login"))  # redirect to login
+        if existing_user and check_password_hash(existing_user.password,
+                                                 password):
+            # Storing username in lowercase
+            session["user"] = request.form.get("username").lower()
+            flash(f"{username}, you're now logged in. Happy Hiking")
+            return redirect(url_for("home", username=session["user"]))
         else:
-            # Username does not exist
-            flash("Username not found, please register")
-            return redirect(url_for("register"))  # Redirect to register page
+            # Incorrect password, redirect to login
+            flash("Invalid username and/or password, please try again")
+            return redirect(url_for("login"))  # redirect to login
 
     return render_template("login.html")
 
 
 # logout.html
-@app.route("/signout")
-@fl.login_required
+@app.route("/logout")
 def logout():
     """
     Function which clears the session user.
     Redirect logged out user to home page.
     """
-    fl.logout_user()  # logout user
+    session.clear()
     flash("You have successfully logged out. Come visit us again soon!")
-    return render_template("logout.html")  # Redirect to home
+    return redirect(url_for("logout"))  # Redirect to home
