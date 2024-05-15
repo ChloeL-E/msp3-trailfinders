@@ -113,6 +113,7 @@ def categories():
     return render_template("categories.html", categories=categories)
 
 
+#  edit a new category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -136,6 +137,20 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
+#  delete a category
+@app.route("/delete_category/<int:category_id>", methods=["GET", "POST"])
+def delete_category(category_id):
+    current_user = User.query.filter_by(username=session["user"]).first()
+    if current_user != Category.user_id:
+        flash("You do not have permission to delete this category")
+        return redirect(url_for("categories"))
+    else:
+        category = Category.query.get_or_404(category_id)
+        db.session.delete(category)
+        db.session.commit()
+        return redirect(url_for("categories"))
+
+
 #  my_hikes
 @app.route("/my_hikes")
 def my_hikes():
@@ -143,6 +158,7 @@ def my_hikes():
     return render_template("my_hikes.html", hike=hikes)
 
 
+#  add a new hike
 @app.route("/add_hike", methods=["GET", "POST"])
 def add_hike():
     return render_template("add_hike.html")

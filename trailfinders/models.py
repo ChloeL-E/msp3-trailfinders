@@ -19,7 +19,7 @@ class User(db.Model):
 
 class Hike(db.Model):
     """
-    schema for Category model
+    schema for Hike model
     """
     id = db.Column(db.Integer, primary_key=True)
     hike_title = db.Column(db.String, nullable=False)
@@ -28,6 +28,7 @@ class Hike(db.Model):
     elevation = db.Column(db.String, nullable=False)
     difficulty = db.Column(db.String, nullable=False)
     description = db.Column(db.Text, nullable=False)
+    #  foreign key to link users- refer to user pk
     user_id = db.Column(db.Integer, db.ForeignKey
                         ("user.id", ondelete="CASCADE"), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey
