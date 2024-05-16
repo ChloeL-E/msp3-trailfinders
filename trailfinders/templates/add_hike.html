@@ -3,15 +3,15 @@
 <div class="container text-center">
     <div class="row align-items-center">
         <div class="col">
-            <h1>Add A Category <img class="icon" src="/static/media/images/icons/plus-line-icon.png"></h1>
+            <h1>Add A Hike <img class="icon" src="/static/media/images/icons/plus-line-icon.png"></h1>
         </div>
     </div>
 </div>
 <section>
     <div class="form-style">
         <!-- Form too Add a Hike -->
-        <form class="form-sizing" method="POST" action="{{ url_for('add_category') }}">
-            <!-- Hike title-->
+        <form class="form-sizing" method="POST" action="{{ url_for('add_hike') }}">
+            <!-- Hike title -->
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="hike_title">Hike Name</label>
                 <input type="text" class="form-control" id="hike_title" name="hike_title" placeholder="Name your hike"
@@ -25,39 +25,41 @@
             <!-- distance-->
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="distance">Distance(km)</label>
-                <input type="number" class="form-control" id="distance" name="distance" placeholder="Distance (km)" max-length="15"
-                required>
+                <input type="number" class="form-control" id="distance" name="distance" placeholder="Distance (km)"
+                    max-length="15" required>
             </div>
             <!-- elevation-->
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="elevation">Elevation(m)</label>
-                <input type="number" class="form-control" id="elevation" name="elevation" placeholder="Elevation(m)" max-length="15" required>
+                <input type="number" class="form-control" id="elevation" name="elevation" placeholder="Elevation(m)"
+                    max-length="15" required>
             </div>
             <!-- category_id -->
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="category_id">Choose a Category</label>
                 <select id="category_id" name="category_id" required>
                     <option value="" disabled selected>Category</option>
-                {% for category in categories %}
+                    {% for category in categories %}
                     <option value="{{ category.id }}">{{ category.category_name }}</option>
-                {% endfor %}
+                    {% endfor %}
                 </select>
             </div>
-             <!-- difficulty-->
-             <div class="form-group col-12">
+            <!-- difficulty-->
+            <div class="form-group col-12">
                 <label for="difficulty">Choose a difficulty level:</label>
                 <select id="difficulty" name="difficulty" required>
-                  <option value="Beginner">Beginner</option>
-                  <option value="Easy">Easy</option>
-                  <option value="Moderate">Moderate</option>
-                  <option value="Advanced">Advanced</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Advanced">Advanced</option>
                 </select>
             </div>
             <br>
             <!-- description-->
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="description"></label>
-                <textarea name="description" id="description" placeholder="Tell us about your hike..." rows="8" cols="55" required>
+                <textarea name="description" id="description" placeholder="Tell us about your hike..." rows="8"
+                    cols="55" required>
                 </textarea>
             </div>
             <!-- Submit button -->

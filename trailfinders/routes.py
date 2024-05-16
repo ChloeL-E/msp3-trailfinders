@@ -120,7 +120,7 @@ def add_category():
         # Get the current user
         current_user = User.query.filter_by(username=session["user"]).first()
         # Get the category name from the form
-        category_name = request.form("category_name")
+        category_name = request.form.get("category_name")
         # Create a new category with the current user's ID
         category = Category(category_name=category_name,
                             created_by=current_user.id)
@@ -183,7 +183,7 @@ def add_hike():
             return redirect(url_for("add_hike"))  # Redirect back to add_hike
         # Create a new Hike object using form data and existing category
         hike = Hike(
-            hike_title=request.form.get("title"),
+            hike_title=request.form.get("hike_title"),
             image_url=request.form.get("image_url"),
             distance=request.form.get("distance"),
             elevation=request.form.get("elevation"),
