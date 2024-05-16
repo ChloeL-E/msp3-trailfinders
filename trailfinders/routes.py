@@ -120,7 +120,7 @@ def add_category():
         # Get the current user
         current_user = User.query.filter_by(username=session["user"]).first()
         # Get the category name from the form
-        category_name = request.form.get("category_name")
+        category_name = request.form("category_name")
         # Create a new category with the current user's ID
         category = Category(category_name=category_name,
                             created_by=current_user.id)
@@ -172,22 +172,25 @@ def my_hikes():
 def add_hike():
     # list of all the categories from the db
     categories = list(Category.query.order_by(Category.category_name).all())
+    # Get the current user
+    current_user = User.query.filter_by(username=session["user"]).first()
     if request.method == "POST":
-        # Get the current user
-        current_user = User.query.filter_by(username=session["user"]).first()
-        # Get the hike title from the form
-        hike_title = request.form.get("hike_title")
-        # Create a new category with the current user's ID
-        hike = Hike(hike_title=hike_title, created_by=current_user.id)
-        # create an new hike object
+        # Create a new Hike object using form data and existing category
+        category_id = request.form.get("category_id")
+        category = Category.query.get(category_id)
+        if category is None:
+            flash("Selected category does not exist.")
+            return redirect(url_for("add_hike"))  # Redirect back to add_hike
+        # Create a new Hike object using form data and existing category
         hike = Hike(
-            hike_title=request.form.get("title"), 
-            image_url=request.form.get("image"),
+            hike_title=request.form.get("title"),
+            image_url=request.form.get("image_url"),
             distance=request.form.get("distance"),
             elevation=request.form.get("elevation"),
             difficulty=request.form.get("difficulty"),
             description=request.form.get("description"),
-            category_id=request.form.get("category_id")
+            category_id=category_id,
+            user_id=current_user.id  # Assign the current user's ID
         )
         # Add new category instance into db
         db.session.add(hike)

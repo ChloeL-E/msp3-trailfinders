@@ -3,8 +3,9 @@
 <div class="container text-center">
     <div class="row align-items-center">
         <div class="col">
-            <h1>My Hikes</h1>
-            <a class="change" href="{{ url_for('add_hike') }}">Add A Hike<img class="icon" src="/static/media/images/icons/plus-line-icon.png"></a>
+            <h1>Hikes</h1>
+            <a class="change" href="{{ url_for('add_hike') }}">Add A Hike<img class="icon"
+                    src="/static/media/images/icons/plus-line-icon.png"></a>
         </div>
     </div>
 </div>
@@ -14,10 +15,15 @@
         <div class="col">
             <div class="position-cards">
                 <div class="card card-post mt-4 mb-4" style="width: 20rem;">
-                    <img src="" class="" alt="">
+                    <img class="card-img-top" src="{{ hike.image_url }}"
+                            alt="{{ hike.hike_title }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ hike.hike_title }}</h5>
-                        <p class="card-text"></p>
+                        <p>Distance: {{ hike.distance }}</p>
+                        <p>Elevation: {{ hike.elevation }}</p>
+                        <p>Difficulty: {{ hike.difficulty }}</p>
+                        <p>Category: {{ hike.category_id }}</p>
+                        <p>Description: {{ hike.description }}</p>
                         <a href="#" class="btn">Edit</a>
                         <a href="#" class="btn">Delete</a>
                     </div>

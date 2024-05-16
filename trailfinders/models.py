@@ -23,7 +23,7 @@ class Hike(db.Model):
     """
     id = db.Column(db.Integer, primary_key=True)
     hike_title = db.Column(db.String, nullable=False)
-    image_url = db.Column(db.String)
+    image_url = db.Column(db.String(255))  # store the url of the image
     distance = db.Column(db.String, nullable=False)
     elevation = db.Column(db.String, nullable=False)
     difficulty = db.Column(db.String, nullable=False)
@@ -54,4 +54,4 @@ class Category(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self.name
+        return self.category_name
