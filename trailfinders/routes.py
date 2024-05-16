@@ -148,6 +148,7 @@ def edit_category(category_id):
 def delete_category(category_id):
     current_user = User.query.filter_by(username=session["user"]).first()
     category = Category.query.get_or_404(category_id)
+    #  defensive programming to prevent other users deleting category
     if current_user.id != category.created_by:
         flash("You do not have permission to delete this category")
         return redirect(url_for("categories"))
@@ -169,4 +170,28 @@ def my_hikes():
 #  add a new hike
 @app.route("/add_hike", methods=["GET", "POST"])
 def add_hike():
-    return render_template("add_hike.html")
+    # list of all the categories from the db
+    categories = list(Category.query.order_by(Category.category_name).all())
+    if request.method == "POST":
+        # Get the current user
+        current_user = User.query.filter_by(username=session["user"]).first()
+        # Get the hike title from the form
+        hike_title = request.form.get("hike_title")
+        # Create a new category with the current user's ID
+        hike = Hike(hike_title=hike_title, created_by=current_user.id)
+        # create an new hike object
+        hike = Hike(
+            hike_title=request.form.get("title"), 
+            image_url=request.form.get("image"),
+            distance=request.form.get("distance"),
+            elevation=request.form.get("elevation"),
+            difficulty=request.form.get("difficulty"),
+            description=request.form.get("description"),
+            category_id=request.form.get("category_id")
+        )
+        # Add new category instance into db
+        db.session.add(hike)
+        db.session.commit()
+        flash("Hike added successfully")
+        return redirect(url_for("home"))
+    return render_template("add_hike.html", categories=categories)
