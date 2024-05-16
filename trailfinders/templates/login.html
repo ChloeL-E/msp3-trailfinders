@@ -11,7 +11,7 @@
       {% if messages %}
         {% for message in messages %}
           <div  style="background-color: var(--green)">
-            <h4 class="mt-4 text-white text-center">{{ message }}</h4>
+            <h4 class="mt-4 text-white text-center">{{ message }} <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span></h4>
           </div>
         {% endfor %}
       {% endif %}

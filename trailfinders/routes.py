@@ -113,15 +113,21 @@ def categories():
     return render_template("categories.html", categories=categories)
 
 
-#  edit a new category
+# add a new category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
-        category = Category(category_name=request.form.get("category_name"))
-
+        # Get the current user
+        current_user = User.query.filter_by(username=session["user"]).first()
+        # Get the category name from the form
+        category_name = request.form.get("category_name")
+        # Create a new category with the current user's ID
+        category = Category(category_name=category_name,
+                            created_by=current_user.id)
         # Add new category instance into db
         db.session.add(category)
         db.session.commit()
+        flash("Category added successfully")
         return redirect(url_for("categories"))
     return render_template("add_category.html")
 
@@ -141,13 +147,15 @@ def edit_category(category_id):
 @app.route("/delete_category/<int:category_id>", methods=["GET", "POST"])
 def delete_category(category_id):
     current_user = User.query.filter_by(username=session["user"]).first()
-    if current_user != Category.user_id:
+    category = Category.query.get_or_404(category_id)
+    if current_user.id != category.created_by:
         flash("You do not have permission to delete this category")
         return redirect(url_for("categories"))
     else:
         category = Category.query.get_or_404(category_id)
         db.session.delete(category)
         db.session.commit()
+        flash("Category deleted successfully!")
         return redirect(url_for("categories"))
 
 

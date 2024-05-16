@@ -47,6 +47,8 @@ class Category(db.Model):
     """
     id = db.Column(db.Integer, primary_key=True)
     category_name = db.Column(db.String, nullable=False)
+    created_by = db.Column(db.Integer, db.ForeignKey('user.id'),
+                           nullable=False)
     hike = db.relationship(
         'Hike', backref='categories', cascade="all, delete")
 

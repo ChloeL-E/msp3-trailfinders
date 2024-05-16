@@ -4,9 +4,23 @@
     <div class="row align-items-center">
         <div class="col">
             <h1>Categories</h1>
-            <a href="{{ url_for('add_category') }}">Add A Category</a>
+            <a class="change" href="{{ url_for('add_category') }}">Add A Category <img class="icon" src="/static/media/images/icons/plus-line-icon.png"></a>
         </div>
     </div>
+</div>
+<div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="flash">
+        <h4 class="mt-4 text-white text-center">{{ message }}
+            <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;
+            </span>
+        </h4>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 </div>
 <section>
     <div class="row">

@@ -55,6 +55,30 @@
     font-weight: 600;
 }
 
+.nav-link.active:hover {
+    color: #37403b;
+}
+
+.flash {
+     background-color: var(--light_green);
+     font-family: "Bebas Neue";
+     padding: 2px 0 3px 0;
+     margin: 10px auto;
+}
+
+.flash h4 {
+    font-size: 35px;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    padding-right: 5px;
+}
+
 /*------- INDEX PAGE -------*/
 
 #index-hero-image {
@@ -109,6 +133,10 @@ h2 {
 
 .btn {
     background-color: var(--light_green);
+}
+
+.btn:hover {
+    background-color: var(--pale_green);
 }
 
 .search-logo {
@@ -168,6 +196,23 @@ h2 {
     width: 30px;
     background-color: var(--light_purple);
     border-radius: 50px;
+}
+
+.icon:hover {
+    background-color:#c6b7c8;
+}
+
+.change {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--dark_green);
+    cursor: pointer;
+}
+
+.change:hover {
+    color: var(--green);
 }
 
 /*------- FOOTER -------*/
