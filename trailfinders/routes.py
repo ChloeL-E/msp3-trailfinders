@@ -218,6 +218,6 @@ def edit_hike(hike_id):
         hike.category_id = request.form.get("category_id")
         hike.user_id = current_user.id  # Assign the current user's ID
         db.session.commit()
-        return redirect(url_for("categories"))
-    return render_template("edit_category.html",
+        return redirect(url_for("my_hikes"))
+    return render_template("edit_hike.html",
                            hike=hike, categories=categories)

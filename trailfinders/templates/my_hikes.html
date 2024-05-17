@@ -35,8 +35,8 @@
                         <p>Difficulty: {{ hike.difficulty }}</p>
                         <p>Category: {{ hike.category_id }}</p>
                         <p>Description: {{ hike.description }}</p>
-                        <a href="#" class="btn">Edit</a>
-                        <a href="#" class="btn">Delete</a>
+                        <a href="{{ url_for('edit_hike', hike_id=hike.id) }}" class="btn">Edit</a>
+                        <a href="" class="btn">Delete</a>
                     </div>
                 </div>
             </div>

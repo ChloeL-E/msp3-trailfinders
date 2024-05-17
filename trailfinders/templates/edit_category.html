@@ -13,12 +13,12 @@
         <form method="POST" action="{{ url_for('edit_category', category_id=category.id) }}">
             <!-- Input for edit category -->
             <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="category_name">Category Name</label>
-                <input type="text" class="form-control" id="category_name" name="category_name" placeholder="Edit category"
+                <label class="mb-3 mt-2" for="category_name">Edit Category Name</label>
+                <input type="text" class="form-control" id="category_name" name="category_name" placeholder="{{ category.category_name }}"
                     min-length="4" max-length="50" required>
             </div>
             <!-- Submit button -->
-            <button type="submit" class="btn ml-auto mt-3">Edit Category</button>
+            <button type="submit" class="btn ml-auto mt-3">Update Category</button>
         </form>
     </div>
 </section>
