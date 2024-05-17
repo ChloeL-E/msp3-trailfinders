@@ -34,6 +34,8 @@ class Hike(db.Model):
     category_id = db.Column(db.Integer, db.ForeignKey
                             ("category.id", ondelete="CASCADE"),
                             nullable=False)
+    category = db.relationship('Category', backref=db.backref
+                               ('hikes', lazy=True))
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string

@@ -10,7 +10,7 @@
 <section>
     <div class="form-style">
          <!-- Form to Edit a Hike -->
-         <form class="form-sizing" method="POST" action="{{ url_for('add_hike') }}">
+         <form class="form-sizing" method="POST" action="{{ url_for('edit_hike', hike_id=hike.id) }}">
             <!-- Hike title -->
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="hike_title">Hike Name</label>
@@ -38,9 +38,13 @@
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="category_id">Choose a Category</label>
                 <select id="category_id" name="category_id" required>
-                    <option value="" disabled selected>Category</option>
+                    <option value="" disabled>Choose a Category</option>
                     {% for category in categories %}
-                    <option value="{{ category.id }}">{{ category.category_name }}</option>
+                        {% if category.id == hike.category_id %}
+                            <option value="{{ category.id }}" selected>{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.id }}">{{ category.category_name }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
             </div>
@@ -48,6 +52,7 @@
             <div class="form-group col-12">
                 <label for="difficulty">Choose a difficulty level:</label>
                 <select id="difficulty" name="difficulty" required>
+                    <option value="{{ hike.difficulty }}">{{ hike.difficulty }}</option>
                     <option value="Beginner">Beginner</option>
                     <option value="Easy">Easy</option>
                     <option value="Moderate">Moderate</option>
@@ -57,10 +62,8 @@
             <br>
             <!-- Description-->
             <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="description"></label>
-                <textarea name="description" id="description" placeholder="Tell us about your hike..." rows="8"
-                    cols="55" required>
-                </textarea>
+                <label class="mb-3 mt-2" for="description">Describe your hike...</label>
+                <textarea name="description" id="description" rows="8" cols="55" required>{{ hike.description }}</textarea>
             </div>
             <!-- Submit button -->
             <button type="submit" class="btn ml-auto mt-3">Update Hike</button>
