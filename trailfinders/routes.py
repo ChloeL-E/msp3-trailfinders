@@ -164,7 +164,7 @@ def delete_category(category_id):
 @app.route("/my_hikes")
 def my_hikes():
     hikes = list(Hike.query.order_by(Hike.hike_title).all())
-    return render_template("my_hikes.html", hike=hikes)
+    return render_template("my_hikes.html", hikes=hikes)
 
 
 #  add a new hike
@@ -196,5 +196,28 @@ def add_hike():
         db.session.add(hike)
         db.session.commit()
         flash("Hike added successfully")
-        return redirect(url_for("home"))
+        return redirect(url_for("my_hikes"))
     return render_template("add_hike.html", categories=categories)
+
+
+#  edit a hike
+@app.route("/edit_hike/<int:hike_id>", methods=["GET", "POST"])
+def edit_hike(hike_id):
+    # list of all the categories from the db
+    categories = list(Category.query.order_by(Category.category_name).all())
+    # Get the current user
+    current_user = User.query.filter_by(username=session["user"]).first()
+    hike = Hike.query.get_or_404(hike_id)
+    if request.method == "POST":
+        hike.hike_title = request.form.get("hike_title")
+        hike.image_url = request.form.get("image_url")
+        hike.distance = request.form.get("distance")
+        hike.elevation = request.form.get("elevation")
+        hike.difficulty = request.form.get("difficulty")
+        hike.description = request.form.get("description")
+        hike.category_id = request.form.get("category_id")
+        hike.user_id = current_user.id  # Assign the current user's ID
+        db.session.commit()
+        return redirect(url_for("categories"))
+    return render_template("edit_category.html",
+                           hike=hike, categories=categories)
