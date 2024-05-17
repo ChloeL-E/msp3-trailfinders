@@ -9,9 +9,9 @@
 </div>
 <section>
     <div class="form-style">
-        <!-- ADD CATEGORY form -->
-        <form method="POST" action="{{ url_for('edit_hike', category_id=category.id) }}">
-            <!-- Input for add category -->
+        <!-- Edit Hike form -->
+        <form method="POST" action="{{ url_for('edit_hike', hike_id=hike.id) }}">
+            <!-- Input for edit hike -->
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="hike_title">Hike Name</label>
                 <input type="text" class="form-control" id="hike_title" name="hike_title" placeholder="Edit Hike"
