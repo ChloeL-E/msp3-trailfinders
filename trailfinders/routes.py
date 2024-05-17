@@ -128,7 +128,6 @@ def add_category():
         # Add new category instance into db
         db.session.add(category)
         db.session.commit()
-        flash("Category added successfully")
         return redirect(url_for("categories"))
     return render_template("add_category.html")
 
@@ -196,7 +195,6 @@ def add_hike():
         # Add new category instance into db
         db.session.add(hike)
         db.session.commit()
-        flash("Hike added successfully")
         return redirect(url_for("my_hikes"))
     return render_template("add_hike.html", categories=categories)
 
@@ -222,3 +220,20 @@ def edit_hike(hike_id):
         return redirect(url_for("my_hikes"))
     return render_template("edit_hike.html",
                            hike=hike, categories=categories)
+
+
+#  delete a hike
+@app.route("/delete_hike/<int:hike_id>", methods=["GET", "POST"])
+def delete_hike(hike_id):
+    current_user = User.query.filter_by(username=session["user"]).first()
+    hike = Hike.query.get_or_404(hike_id)
+    #  defensive programming to prevent other users deleting category
+    if current_user.id != hike.user.id:
+        flash("You do not have permission to delete this category")
+        return redirect(url_for("my_hikes"))
+    else:
+        hike = Hike.query.get_or_404(hike_id)
+        db.session.delete(hike)
+        db.session.commit()
+        flash("Hike deleted successfully!")
+        return redirect(url_for("my_hikes"))
