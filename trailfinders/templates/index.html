@@ -20,29 +20,27 @@
 </section>
 <section>
   <h2 class="mt-5 mb-2">Need inspiration? Check out these walks...</h2>
-  <div class="position-cards">
     <div class="row">
-      {% for hike in hikes %}
-      <div class="col">
-          <div class="position-cards">
-              <div class="card card-post mt-4 mb-4" style="width: 20rem;">
-                  <img class="card-img-top" src="{{ hike.image_url }}"
-                          alt="{{ hike.hike_title }}">
-                  <div class="card-body">
-                      <h5 class="card-title">{{ hike.hike_title }}</h5>
-                      <p>Distance: {{ hike.distance }}</p>
-                      <p>Elevation: {{ hike.elevation }}</p>
-                      <p>Difficulty: {{ hike.difficulty }}</p>
-                      <p>Category: {{ hike.category_id }}</p>
-                      <p>Description: {{ hike.description }}</p>
-                      <a href="#" class="btn">Edit</a>
-                      <a href="#" class="btn">Delete</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      {% endfor %}
-  </div>
-  </div>
+        {% for hike in hikes %}
+        <div class="col">
+            <div class="position-cards">
+                <div class="card card-post mt-4 mb-4" style="width: 20rem;">
+                    <img class="card-img-top" src="{{ hike.image_url }}"
+                            alt="{{ hike.hike_title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ hike.hike_title }}</h5>
+                        <p>Distance: {{ hike.distance }}</p>
+                        <p>Elevation: {{ hike.elevation }}</p>
+                        <p>Difficulty: {{ hike.difficulty }}</p>
+                        <p>Category: {{ hike.category.category_name }}</p>
+                        <p>Description: {{ hike.description }}</p>
+                        <a href="{{ url_for('edit_hikes', hike_id=hike.id) }}" class="btn">Edit</a>
+                        <a href="" class="btn">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </section>
 {% endblock %}

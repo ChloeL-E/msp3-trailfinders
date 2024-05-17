@@ -167,6 +167,13 @@ def my_hikes():
     return render_template("my_hikes.html", hikes=hikes)
 
 
+# Index route to display hikes
+@app.route("/index")
+def index():
+    hikes = list(Hike.query.order_by(Hike.hike_title).all())
+    return render_template("index.html", hikes=hikes)
+
+
 #  add a new hike
 @app.route("/add_hike", methods=["GET", "POST"])
 def add_hike():
