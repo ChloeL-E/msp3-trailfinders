@@ -13,7 +13,8 @@ def home():
     Returns:
         Renders the template for the home page.
     """
-    return render_template("index.html")
+    hikes = list(Hike.query.order_by(Hike.hike_title).all())
+    return render_template("index.html", hikes=hikes)
 
 
 # register.html
@@ -165,13 +166,6 @@ def delete_category(category_id):
 def my_hikes():
     hikes = list(Hike.query.order_by(Hike.hike_title).all())
     return render_template("my_hikes.html", hikes=hikes)
-
-
-# Index route to display hikes
-@app.route("/index")
-def index():
-    hikes = list(Hike.query.order_by(Hike.hike_title).all())
-    return render_template("index.html", hikes=hikes)
 
 
 #  add a new hike
