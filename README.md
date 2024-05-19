@@ -262,7 +262,7 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
 -   ### Fixed Bugs
 
-    * 
+    * Spent some time on a bug which initially appeared to be preventing data rendering on the site when trying to add a category. I had looked into the python route add_category and also the catgeory model and could not find where the bug was originating. I found that the form data was not updating to the database at all. A sqlalchemy error informed me that the username input had a null value and therefore violated the not-null contraint within the model. I found an article on [Reddit](https://www.reddit.com/r/PostgreSQL/comments/gx6mhj/sqlalchemyexcintegrityerror/) which was helpful as i realised it was a very simple error in the html- the form input did not have an action attribute. I used jinja template to direct the form to the corect filepath and the bug was fixed.
 
 - - - 
 -   ### Accessibility
@@ -321,7 +321,15 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
 -   ### Content
 
-- 
+- Code Institute was used throughout for guidance but in particular for assistance when building the CRUD functionality within the project.
+
+- For guidance relating to the login and register functionality the following resources were utilised: [The Code City](https://www.youtube.com/watch?v=lAY7nXh83fI) and [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-add-authentication-to-your-app-with-flask-login/?ref=previous_article)
+
+- [Codemy] flask series was used for assistance further understanding jinja templating.
+
+- For design improvements on the site, I wanted the navbar to disappear when the user scrolls down and reappear when scrolling up. I utilised .hide and .show within the css and added a domcontent loaded to the js file. [SheCodes](https://www.shecodes.io/athena/7982-how-to-make-a-nav-bar-show-on-scroll-up-disappear-on-scroll-down#:~:text=in%207.4%20seconds-,To%20make%20a%20nav%20bar%20menu%20show%20on%20scrolling%20upward,can%20use%20JavaScript%20and%20CSS.&text=js-,window.,you%20can%20check%20the%20window. Nabber) helped e to understand this navbar scroll behaviour and also as inspiration for button design later in the project.
+
+- [W3Schools](https://www.w3schools.com/html/html_form_elements.asp) for refresher on form styling within html/css.
 
 - Content was written by Chloe Livingstone-Evans.
 
@@ -329,9 +337,9 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
 -   ### Media Images
 
-- 
+- Credits for media images goes to Mr Adam Lowes who kindly offered his own stunning photography in use wihtin this project.
 
-- The favicon in the browser tab was created using[Favicon](https://favicon.io/logo-generator/) and instruction on implementation from [Dee Mc](https://www.youtube.com/watch?v=W809I-d9xTg&t=8s)
+- The favicon in the browser tab was created using[Favicon](https://favicon.io/logo-generator/) and instruction on implementation from [Dee Mc](https://www.youtube.com/watch?v=W809I-d9xTg&t=8s) and [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-add-authentication-to-your-app-with-flask-login/?ref=previous_article)
 
 - - - 
 
