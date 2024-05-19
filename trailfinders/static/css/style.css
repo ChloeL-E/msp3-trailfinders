@@ -156,7 +156,9 @@ h2 {
 }
 
 .card-post {
-    margin-right: 50px;
+    margin: 0 30px;
+    width: 25rem;
+    height: 40rem;
 }
 
 .card-img-top {
@@ -264,4 +266,31 @@ footer h3 {
 
 li::marker {
     content: none;
+}
+
+
+
+/*--------MEDIA Query <600px --------*/
+
+@media only screen and (max-width <600px) {
+
+    .logo {
+        height: 30px;
+        width: 30px;
+        color: var(--dark_green);
+        margin: 0;
+    }
+
+    .logo-text {
+        font-weight: 600;
+        font-size: 30px;
+        color: var(--dark_green);
+    }
+
+    .card-post {
+        margin: 0;
+        width: 100%;
+        height: fit-content;
+    }
+
 }
