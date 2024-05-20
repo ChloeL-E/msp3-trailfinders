@@ -22,18 +22,6 @@
                 <label class="mb-3 mt-2" for="image_url">Image</label>
                 <input type="text" name="image_url" id="image_url" value="{{ hike.image_url }}">
             </div>
-            <!-- Distance-->
-            <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="distance">Distance(km)</label>
-                <input type="number" class="form-control" id="distance" name="distance" value="{{ hike.distance }}"
-                    max-length="15" required>
-            </div>
-            <!-- Elevation-->
-            <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="elevation">Elevation(m)</label>
-                <input type="number" class="form-control" id="elevation" name="elevation" value="{{ hike.elevation }}"
-                    max-length="15" required>
-            </div>
             <!-- Category -->
             <div class="form-group col-12">
                 <label class="mb-3 mt-2" for="category_id">Choose a Category</label>
@@ -58,6 +46,19 @@
                     <option value="Moderate">Moderate</option>
                     <option value="Advanced">Advanced</option>
                 </select>
+            </div>
+            <br>
+            <!-- Distance-->
+            <div class="form-group col-12">
+                <label class="mb-3 mt-2" for="distance">Distance(km)</label>
+                <input type="number" class="form-control" id="distance" name="distance" value="{{ hike.distance }}"
+                    max-length="15" required>
+            </div>
+            <!-- Elevation-->
+            <div class="form-group col-12">
+                <label class="mb-3 mt-2" for="elevation">Elevation(m)</label>
+                <input type="number" class="form-control" id="elevation" name="elevation" value="{{ hike.elevation }}"
+                    max-length="15" required>
             </div>
             <br>
             <!-- Description-->

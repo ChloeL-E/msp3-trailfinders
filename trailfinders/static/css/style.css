@@ -51,8 +51,9 @@
 }
 
 .nav-link {
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: "Bebas Neue";
 }
 
 .nav-link.active:hover {
@@ -155,10 +156,17 @@ h2 {
     justify-content: center;
 }
 
-.card-post {
+.card-post-index {
     margin: 0 30px;
     width: 25rem;
     height: 40rem;
+}
+
+.card-post-categories {
+    margin: 0 30px;
+    padding: 10px;
+    width: 25rem;
+    height: fit-content;
 }
 
 .card-img-top {
@@ -215,6 +223,19 @@ h2 {
 .change:hover {
     color: var(--green);
 }
+
+.form-sizing {
+    border: 1px solid var(--dark_green);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+label{
+    font-family: "Bebas Neue";
+    font-size: 18px;
+}
+
+
 
 
 /*------- CATEGORIES -------*/
@@ -298,6 +319,11 @@ li::marker {
         max-width: 50%;
     }
 
+    .form-group,
+    .btn {
+        margin-left: 3px;
+    }
+
     .footer-links,
     .socials {
         padding-left: 0;
@@ -313,5 +339,9 @@ li::marker {
     .socials li img {
         width: 24px;
         height: 24px;
+    }
+
+    .row>* {
+        width: fit-content;
     }
 }

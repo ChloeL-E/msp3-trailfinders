@@ -13,30 +13,18 @@
         <form class="form-sizing" method="POST" action="{{ url_for('add_hike') }}">
             <!-- Hike title -->
             <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="hike_title">Hike Name</label>
+                <label class="mb-1 mt-2" for="hike_title">Hike Name</label>
                 <input type="text" class="form-control" id="hike_title" name="hike_title" placeholder="Name your hike"
                     min-length="4" max-length="75" required>
             </div>
             <!-- image-->
             <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="image_url">Image</label>
+                <label class="mb-1 mt-3" for="image_url">Add an Image</label><br>
                 <input type="text" name="image_url" id="image_url" placeholder="Image URL...">
-            </div>
-            <!-- distance-->
-            <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="distance">Distance(km)</label>
-                <input type="number" class="form-control" id="distance" name="distance" placeholder="Distance (km)"
-                    max-length="15" required>
-            </div>
-            <!-- elevation-->
-            <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="elevation">Elevation(m)</label>
-                <input type="number" class="form-control" id="elevation" name="elevation" placeholder="Elevation(m)"
-                    max-length="15" required>
             </div>
             <!-- category_id -->
             <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="category_id">Choose a Category</label>
+                <label class="mb-1 mt-3" for="category_id">Choose a Category</label><br>
                 <select id="category_id" name="category_id" required>
                     <option value="" disabled selected>Category</option>
                     {% for category in categories %}
@@ -46,7 +34,7 @@
             </div>
             <!-- difficulty-->
             <div class="form-group col-12">
-                <label for="difficulty">Choose a difficulty level:</label>
+                <label class="mb-1 mt-3" for="difficulty">Choose a difficulty level:</label><br>
                 <select id="difficulty" name="difficulty" required>
                     <option value="Beginner">Beginner</option>
                     <option value="Easy">Easy</option>
@@ -54,16 +42,29 @@
                     <option value="Advanced">Advanced</option>
                 </select>
             </div>
-            <br>
+            <!-- distance-->
+            <div class="form-group col-12">
+                <label class="mb-1 mt-3" for="distance">Distance(km)</label>
+                <input type="number" class="form-control" id="distance" name="distance" placeholder="Distance (km)"
+                    max-length="15" required>
+            </div>
+            <!-- elevation-->
+            <div class="form-group col-12">
+                <label class="mb-1 mt-3" for="elevation">Elevation(m)</label>
+                <input type="number" class="form-control" id="elevation" name="elevation" placeholder="Elevation(m)"
+                    max-length="15" required>
+            </div>
             <!-- description-->
             <div class="form-group col-12">
-                <label class="mb-3 mt-2" for="description"></label>
+                <label class="mb-1 mt-4" for="description">Describe your hike...</label>
                 <textarea name="description" id="description" placeholder="Tell us about your hike..." rows="8"
-                    cols="55" required>
+                    cols="52" required>
                 </textarea>
             </div>
             <!-- Submit button -->
-            <button type="submit" class="btn ml-auto mt-3">Add Category</button>
+            <div class="text-center">
+                <button type="submit" class="btn ml-auto mt-3 mb-2">Add Category</button>
+            </div>
         </form>
     </div>
 </section>
