@@ -13,11 +13,7 @@ def home():
     Returns:
         Renders the template for the home page.
     """
-    # hikes = list(Hike.query.order_by(Hike.hike_title).all())
-    hikes = Hike.query.all()
-    print("Session User ID:", session.get('user'))  # Debug print
-    for hike in hikes:
-        print("Hike User ID:", hike.user_id)  # Debug print
+    hikes = list(Hike.query.order_by(Hike.hike_title).all())
     return render_template("index.html", hikes=hikes)
 
 
@@ -88,9 +84,8 @@ def login():
         if existing_user and check_password_hash(existing_user.password,
                                                  password):
             # Storing username in lowercase
-            session['user'] = existing_user.id
             flash(f"{username}, you're now logged in. Happy Hiking")
-            return redirect(url_for("home", username=username))  # ["user"]
+            return redirect(url_for("home", username=username))  # ['user']
         else:
             # Incorrect password, redirect to login
             flash("Invalid username and/or password, please try again")
