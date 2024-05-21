@@ -8,10 +8,10 @@ from trailfinders.models import User, Hike, Category
 @app.route("/")
 def home():
     """
-    Home function.
+    Home function
 
     Returns:
-        Renders the template for the home page.
+    Renders the template for the home page
     """
     hikes = list(Hike.query.order_by(Hike.hike_title).all())
     return render_template("index.html", hikes=hikes)
@@ -21,14 +21,14 @@ def home():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    Function to register a new user.
+    Function to register a new user
 
-    Checks username not already in use.
-    Flashed messages will keep the user informed.
+    Checks username not already in use
+    Flashed messages will keep the user informed
     If username not already in use will create new user instance
 
     Returns:
-        Registers new user.
+        Registers new user
     """
 
     if request.method == "POST":
@@ -63,13 +63,13 @@ def login():
     """
     Function to login the user
     Checks user is registered by checking username exists and if it does,
-    check that password is correct.
+    check that password is correct
 
     Returns:
-       If both correct, will redirect to profile page.
-       If incorrect, will redirect to login page with flashed message.
+       If both correct, will redirect to profile page
+       If incorrect, will redirect to login page with flashed message
        If username does not exist will redirect to register page with flashed
-       message.
+       message
     """
     if request.method == "POST":
         username = request.form.get("username")
@@ -98,8 +98,8 @@ def login():
 @app.route("/logout")
 def logout():
     """
-    Function which clears the session user.
-    Redirect logged out user to home page.
+    Function which clears the session user
+    Redirect logged out user to home page
     """
     session.clear()
     return redirect(url_for("home"))  # Redirect to home
@@ -108,6 +108,10 @@ def logout():
 #  category.html
 @app.route("/categories")
 def categories():
+    """
+    Gets the list of categories by name
+    Renders the category template
+    """
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
 
@@ -115,6 +119,12 @@ def categories():
 # add a new category
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    """
+    Function to add a category
+    Gets the current user, the category name from the form and creates a new category with the users id
+    Adds to the Category db
+    Redirects user to categories page
+    """
     if request.method == "POST":
         # Get the current user
         current_user = User.query.filter_by(username=session["user"]).first()
@@ -133,6 +143,11 @@ def add_category():
 #  edit a category
 @app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    """
+    Function to edit a category
+    Gets the category by category id and gets the 
+    Redirect logged out user to categories
+    """
     category = Category.query.get_or_404(category_id)
     if request.method == "POST":
         category.category_name = request.form.get("category_name")
