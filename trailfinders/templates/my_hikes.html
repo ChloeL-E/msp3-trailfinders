@@ -5,7 +5,7 @@
         <div class="col">
             <h1>Hikes</h1>
             <a class="change" href="{{ url_for('add_hike') }}">Add A Hike<img class="icon"
-                    src="/static/media/images/icons/plus-line-icon.png"></a>
+                    src="/static/media/images/icons/plus-line-icon.png" alt="plus icon"></a>
         </div>
     </div>
 </div>
@@ -35,7 +35,7 @@
                         <p>Difficulty: {{ hike.difficulty }}</p>
                         <p>Category: {{ hike.category.category_name }}</p>
                         <p>Description: {{ hike.description }}</p>
-                        {% if session.user == hike.user_id %}
+                        {% if session['user_id'] == hike.user_id %}
                         <a href="{{ url_for('edit_hike', hike_id=hike.id) }}" class="btn">Edit</a>
                         <a href="{{ url_for('delete_hike', hike_id=hike.id) }}" class="btn">Delete</a>
                         {% endif %}

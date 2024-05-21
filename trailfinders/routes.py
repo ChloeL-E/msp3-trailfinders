@@ -83,9 +83,12 @@ def login():
         existing_user = User.query.filter_by(username=username.lower()).first()
         if existing_user and check_password_hash(existing_user.password,
                                                  password):
+            # Storing username in session
+            session['user'] = username
+            session['user_id'] = existing_user.id
             # Storing username in lowercase
             flash(f"{username}, you're now logged in. Happy Hiking")
-            return redirect(url_for("home", username=username))  # ['user']
+            return redirect(url_for("home", username=username))
         else:
             # Incorrect password, redirect to login
             flash("Invalid username and/or password, please try again")
@@ -121,7 +124,8 @@ def categories():
 def add_category():
     """
     Function to add a category
-    Gets the current user, the category name from the form and creates a new category with the users id
+    Gets the current user, the category name from the form and creates a new
+    category with the users id
     Adds to the Category db
     Redirects user to categories page
     """
