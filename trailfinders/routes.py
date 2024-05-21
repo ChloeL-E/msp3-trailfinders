@@ -1,4 +1,4 @@
-from flask import (render_template, request, redirect, url_for, flash, session)
+from flask import render_template, request, redirect, url_for, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from trailfinders import app, db
 from trailfinders.models import User, Hike, Category
@@ -13,7 +13,11 @@ def home():
     Returns:
         Renders the template for the home page.
     """
-    hikes = list(Hike.query.order_by(Hike.hike_title).all())
+    # hikes = list(Hike.query.order_by(Hike.hike_title).all())
+    hikes = Hike.query.all()
+    print("Session User ID:", session.get('user'))  # Debug print
+    for hike in hikes:
+        print("Hike User ID:", hike.user_id)  # Debug print
     return render_template("index.html", hikes=hikes)
 
 
@@ -81,13 +85,12 @@ def login():
             return redirect(url_for("login"))  # Redirect to login page
 
         existing_user = User.query.filter_by(username=username.lower()).first()
-
         if existing_user and check_password_hash(existing_user.password,
                                                  password):
             # Storing username in lowercase
-            session["user"] = request.form.get("username").lower()
+            session['user'] = existing_user.id
             flash(f"{username}, you're now logged in. Happy Hiking")
-            return redirect(url_for("home", username=session["user"]))
+            return redirect(url_for("home", username=username))  # ["user"]
         else:
             # Incorrect password, redirect to login
             flash("Invalid username and/or password, please try again")

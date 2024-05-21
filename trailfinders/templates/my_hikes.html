@@ -35,7 +35,7 @@
                         <p>Difficulty: {{ hike.difficulty }}</p>
                         <p>Category: {{ hike.category.category_name }}</p>
                         <p>Description: {{ hike.description }}</p>
-                        {% if session.user == hike.user.id %}
+                        {% if session.user == hike.user_id %}
                         <a href="{{ url_for('edit_hike', hike_id=hike.id) }}" class="btn">Edit</a>
                         <a href="{{ url_for('delete_hike', hike_id=hike.id) }}" class="btn">Delete</a>
                         {% endif %}
