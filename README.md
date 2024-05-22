@@ -264,6 +264,11 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
     * Spent some time on a bug which initially appeared to be preventing data rendering on the site when trying to add a category. I had looked into the python route add_category and also the catgeory model and could not find where the bug was originating. I found that the form data was not updating to the database at all. A sqlalchemy error informed me that the username input had a null value and therefore violated the not-null contraint within the model. I found an article on [Reddit](https://www.reddit.com/r/PostgreSQL/comments/gx6mhj/sqlalchemyexcintegrityerror/) which was helpful as i realised it was a very simple error in the html- the form input did not have an action attribute. I used jinja template to direct the form to the corect filepath and the bug was fixed.
 
+    * When using flask within the templates for my_hikes and index.html- trying to hide the 'edit' and 'delete' buttons to users who had not creates the hike post. I had writted {% if session.user == hike.user_id %} but after some troubleshooting i realised that i was trying to check equality between an integer and a string, hence this not working. I defined a new variable within the login function "session['user_id'] = existing_user.id" to get the session user id rather than the username. This meant that when writing {% if session['user_id'] == hike.user_id %} it was now checking for equality in two integers.
+
+    * Issue with session user not being accessed correctly. Had been trying to fix the bug above and had deleted the variable that defines the session.user from the login function. Took some time to realise that the variable needed to be readded to redefine.
+
+
 - - - 
 -   ### Accessibility
 
@@ -327,15 +332,19 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
 - For guidance when creating a responsive navbar [Stack Overflow](https://stackoverflow.com/questions/36317334/bootstrap-footer-links-full-width-and-two-column-on-mobile)
 
-- [Codemy] flask series was used for assistance further understanding jinja templating.
+- 
 
-- For design improvements on the site, I wanted the navbar to disappear when the user scrolls down and reappear when scrolling up. I utilised .hide and .show within the css and added a domcontent loaded to the js file. [SheCodes](https://www.shecodes.io/athena/7982-how-to-make-a-nav-bar-show-on-scroll-up-disappear-on-scroll-down#:~:text=in%207.4%20seconds-,To%20make%20a%20nav%20bar%20menu%20show%20on%20scrolling%20upward,can%20use%20JavaScript%20and%20CSS.&text=js-,window.,you%20can%20check%20the%20window. Nabber) helped me to understand navbar scroll behaviour and also as inspiration for button design later in the project.
+- [Codemy](https://www.youtube.com/watch?v=WqHtmz8Ibn8&list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz&index=34) flask series was used for assistance further understanding jinja templating. Particularly assisted with login functionality.
+
+- [SheCodes](https://www.shecodes.io/athena/7982-how-to-make-a-nav-bar-show-on-scroll-up-disappear-on-scroll-down#:~:text=in%207.4%20seconds-,To%20make%20a%20nav%20bar%20menu%20show%20on%20scrolling%20upward,can%20use%20JavaScript%20and%20CSS.&text=js-,window.,you%20can%20check%20the%20window. Nabber) helped me to understand navbar scroll behaviour and also as inspiration for button design later in the project. For design improvements on the site, I wanted the navbar to disappear when the user scrolls down and reappear when scrolling up. I utilised .hide and .show within the css and added a domcontent loaded to the js file. 
+
+- [Stack Exchange](https://cs50.stackexchange.com/questions/27648/how-to-get-a-value-using-flask-from-a-selected-option-in-a-drop-down-list) provided valuable information regarding flask and form input.
 
 - [W3Schools](https://www.w3schools.com/html/html_form_elements.asp) for refresher on form styling within html/css.
 
 - Content was written by Chloe Livingstone-Evans.
 
-- - - 
+- - - - 
 
 -   ### Media Images
 
