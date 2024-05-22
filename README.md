@@ -292,9 +292,15 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
     Lighthouse within the Chrome Developer Tools was used to test performance, accessibility, best practices and SEO of this website.
   
-  * [See Lighthouse report for Home page]()
-  * [See Lighthouse report for  page]()
-  * [See Lighthouse report for  page]()
+  * [See Lighthouse report for Go walking! page]()
+  * [See Lighthouse report for Login page]()
+  * [See Lighthouse report for Register page]()
+  * [See Lighthouse report for Categories page]()
+  * [See Lighthouse report for Add Category page]()
+  * [See Lighthouse report for Edit Category page]()
+  * [See Lighthouse report for Hikes page]()
+  * [See Lighthouse report for Add Hike page]()
+  * [See Lighthouse report for Edit Hike page]()
 
 - - - 
 ## Deployment
@@ -310,12 +316,12 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
 **Fork**
 1. Login or Sign Up to GitHub.
-2. Open the project [Repository]().
+2. Open the project [Repository](https://github.com/Code-Institute-Org/ci-full-template.git).
 3. Click the Fork button in the top right corner.
 
 **Clone**
 1. Login or Sign Up to GitHub.
-2. Open the project [Repository]().
+2. Open the project [Repository](https://github.com/Code-Institute-Org/ci-full-template.git).
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in the code editor of your choice and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -330,9 +336,8 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
 - For guidance relating to the login and register functionality the following resources were utilised: [The Code City](https://www.youtube.com/watch?v=lAY7nXh83fI) and [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-add-authentication-to-your-app-with-flask-login/?ref=previous_article)
 
-- For guidance when creating a responsive navbar [Stack Overflow](https://stackoverflow.com/questions/36317334/bootstrap-footer-links-full-width-and-two-column-on-mobile)
+- For guidance when creating a responsive navbar [Stack Overflow](https://stackoverflow.com/questions/36317334/bootstrap-footer-links-full-width-and-two-column-on-mobile), (https://stackoverflow.com/questions/15591620/how-to-retrieve-session-data-with-flask) for information on how to retrieve session data using flask and (https://stackoverflow.com/questions/6750017/how-to-query-database-by-id-using-sqlalchemy) refressher on how to query the datatbase
 
-- 
 
 - [Codemy](https://www.youtube.com/watch?v=WqHtmz8Ibn8&list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz&index=34) flask series was used for assistance further understanding jinja templating. Particularly assisted with login functionality.
 
@@ -341,6 +346,8 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 - [Stack Exchange](https://cs50.stackexchange.com/questions/27648/how-to-get-a-value-using-flask-from-a-selected-option-in-a-drop-down-list) provided valuable information regarding flask and form input.
 
 - [W3Schools](https://www.w3schools.com/html/html_form_elements.asp) for refresher on form styling within html/css.
+
+- [TableMagic] (https://stevecat.net/table-magic/) for creating the testing table
 
 - Content was written by Chloe Livingstone-Evans.
 
