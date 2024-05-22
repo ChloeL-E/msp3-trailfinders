@@ -136,6 +136,10 @@ h2 {
     background-color: var(--light_green);
 }
 
+.btn-delete {
+    background-color: darkred;
+}
+
 .btn:hover {
     background-color: var(--pale_green);
 }

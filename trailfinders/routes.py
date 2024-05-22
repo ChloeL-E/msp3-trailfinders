@@ -149,7 +149,9 @@ def add_category():
 def edit_category(category_id):
     """
     Function to edit a category
-    Gets the category by category id and gets the 
+    Gets the category by category id and requests the category name from the
+    form
+    Commits to db
     Redirect logged out user to categories
     """
     category = Category.query.get_or_404(category_id)
