@@ -14,12 +14,16 @@
 </header>
 <section>
   <div class="container">
+    {% if not session.user %}
     <a class="btn btn-lg mt-3 register" href="{{ url_for('register') }}">Register</a>
     <a class="btn btn-lg mt-3" href="{{ url_for('login') }}">Login</a>
+    {% else %}
+    <h2 class="mt-3">Welcome, {{ session.user }}!</h2>
+    {% endif %}
   </div>
 </section>
 <section>
-  <h2 class="mt-5 mb-2">Need inspiration? Check out these walks...</h2>
+  <h3 class="mt-3 mb-2">Need inspiration? Check out these walks...</h3>
     <div class="row">
         {% for hike in hikes %}
         <div class="col">
@@ -28,7 +32,7 @@
                     <img class="card-img-top" src="{{ hike.image_url }}"
                             alt="{{ hike.hike_title }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ hike.hike_title }}</h5>
+                        <h4 class="card-title">{{ hike.hike_title }}</h5>
                         <p>Distance: {{ hike.distance }}</p>
                         <p>Elevation: {{ hike.elevation }}</p>
                         <p>Difficulty: {{ hike.difficulty }}</p>
