@@ -155,6 +155,10 @@ def edit_category(category_id):
     Redirect logged out user to categories
     """
     category = Category.query.get_or_404(category_id)
+    current_user = User.query.filter_by(username=session["user"]).first()
+    if current_user.id != category.created_by:
+        flash("You do not have permission to edit this category")
+        return redirect(url_for("categories")) 
     if request.method == "POST":
         category.category_name = request.form.get("category_name")
         db.session.commit()
