@@ -170,6 +170,14 @@ def edit_category(category_id):
 #  delete a category
 @app.route("/delete_category/<int:category_id>", methods=["GET", "POST"])
 def delete_category(category_id):
+    """
+    Function to delete a category
+    Defines variables for current user-username and category-category id
+    Flash message if user trying to delete another users post
+    Requests the category name from the form
+    Commits to db
+    Redirect logged out user to categories
+    """
     current_user = User.query.filter_by(username=session["user"]).first()
     category = Category.query.get_or_404(category_id)
     #  defensive programming to prevent other users deleting category
@@ -187,6 +195,10 @@ def delete_category(category_id):
 #  my_hikes
 @app.route("/my_hikes")
 def my_hikes():
+    """
+    Function to get a list of hikes
+    Renders Hikes page
+    """
     hikes = list(Hike.query.order_by(Hike.hike_title).all())
     return render_template("my_hikes.html", hikes=hikes)
 
@@ -194,6 +206,12 @@ def my_hikes():
 #  add a new hike
 @app.route("/add_hike", methods=["GET", "POST"])
 def add_hike():
+    """
+    Function to add a hike
+    Gets the current user, a list of the category names from the db,
+    gets the category id and name from the form
+    
+    """
     # list of all the categories from the db
     categories = list(Category.query.order_by(Category.category_name).all())
     # Get the current user
