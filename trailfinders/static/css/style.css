@@ -139,7 +139,7 @@ h3 {
 }
 
 .btn-delete {
-    background-color: darkred;
+    background-color: #ff2c2c;
 }
 
 .btn:hover {
@@ -179,6 +179,7 @@ h2 {
     height: 250px;
     width: 100%;
     object-fit: cover;
+    
 }
 
 /*------- LOGIN -------*/
