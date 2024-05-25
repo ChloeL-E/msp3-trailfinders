@@ -177,7 +177,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 
 -   ### Features For Future Implementation
-    * 
+    *  Asking users to input an image url when adding/editing their hike posts may feel cumbersome to the user and make it less likely that this field is filled in, affecting UX and also the aesthetic of the site. It would be beneficial to connect to any API that would already have a large range of images for the user to search and select rather than having to search for the images themselves and input. 
     
 - - - 
 
