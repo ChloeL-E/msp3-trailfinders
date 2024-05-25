@@ -176,7 +176,7 @@ def delete_category(category_id):
     Flash message if user trying to delete another users post
     Requests the category name from the form
     Commits to db
-    Redirect logged out user to categories
+    Redirect user to Categories page
     """
     current_user = User.query.filter_by(username=session["user"]).first()
     category = Category.query.get_or_404(category_id)
@@ -210,14 +210,14 @@ def add_hike():
     Function to add a hike
     Gets the current user, a list of the category names from the db,
     gets the category id and name from the form
-    
+    Creates a new Hike object and commits to db
+    Renders Hikes page
     """
     # list of all the categories from the db
     categories = list(Category.query.order_by(Category.category_name).all())
     # Get the current user
     current_user = User.query.filter_by(username=session["user"]).first()
     if request.method == "POST":
-        # Create a new Hike object using form data and existing category
         category_id = request.form.get("category_id")
         category = Category.query.get(category_id)
         if category is None:
@@ -244,6 +244,13 @@ def add_hike():
 #  edit a hike
 @app.route("/edit_hike/<int:hike_id>", methods=["GET", "POST"])
 def edit_hike(hike_id):
+    """
+    Function to edit a hike
+    Gets a list of the categories and gets hike_id from db
+    Gets the current user
+    Handles POST request, updates hike details and commits chanegs to db
+    Redirects user to Hike page
+    """
     # list of all the categories from the db
     categories = list(Category.query.order_by(Category.category_name).all())
     # Get the current user
@@ -267,11 +274,19 @@ def edit_hike(hike_id):
 #  delete a hike
 @app.route("/delete_hike/<int:hike_id>", methods=["GET", "POST"])
 def delete_hike(hike_id):
+    """
+    Function to delete a hike
+    Defines variables for current user(username) and category(category id)
+    Flash message if user trying to delete another users hike post
+    Requests the hike name from the form
+    Commits to db
+    Redirect logged out user to Hikes page
+    """
     current_user = User.query.filter_by(username=session["user"]).first()
     hike = Hike.query.get_or_404(hike_id)
-    #  defensive programming to prevent other users deleting category
+    #  defensive programming to prevent other users deleting hike
     if current_user.id != hike.user.id:
-        flash("You do not have permission to delete this category")
+        flash("You do not have permission to delete this Hike")
         return redirect(url_for("my_hikes"))
     else:
         hike = Hike.query.get_or_404(hike_id)
