@@ -206,7 +206,14 @@ To deploy Trailfinders to Kerokue, take the following steps:
 4. Go to the Heroku website and create a new app by clicking the "New" button in your dashboard.
 5. Give the app and name and set the region to Eurpoe
 6. From the heroku dashboard of the new app, click on "Deploy" > "Deployment method" and select Github
+7. Confirm the link to the correct GitHub repository
+8. In the heroku dashboard for the application. click on the "settings" > "Reveal Config Vars"
+9. Set the following config vars:
 
+* to get the db url follow [CI PosgreSQL](https://dbs.ci-dbs.net/)
+10. In the Heroku dashboard, click "Deploy"
+11. In the "Manual Deployment" section, ensure the master branch is selected then click "Deploy Branch"
+11. The site is now deployed
 
 -   ### Run locally
 
