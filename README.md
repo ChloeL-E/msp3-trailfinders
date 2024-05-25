@@ -14,7 +14,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 ![Responsive Mockup]()
 
-[View the live project here.]()
+[View the live project here.](https://trailfinders-710f937aa94a.herokuapp.com/)
 
 ## Contents
 
