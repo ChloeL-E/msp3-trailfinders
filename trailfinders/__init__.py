@@ -16,7 +16,6 @@ else:
         uri = uri.replace("postgres://", "postgresql://", 1)
     app.config["SQLALCHEMY_DATABASE_URI"] = uri
 
-
 db = SQLAlchemy(app)
 
 from trailfinders import routes  # noqa
