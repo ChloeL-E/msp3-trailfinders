@@ -174,6 +174,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     *  Asking users to input an image url when adding/editing their hike posts may feel cumbersome to the user and make it less likely that this field is filled in, affecting UX and also the aesthetic of the site. It would be beneficial to connect to any API that would already have a large range of images for the user to search and select rather than having to search for the images themselves and input. 
     * A star rating system or a thumbs up/'favourited' feature would be an interesting feature to add to the hike posts so that users could interact with others' posts and this may increase engagement and build more of a sense of community within the site.
     * It would be a good idea to have a Profile page for the user to see their own hikes and perhaps a section for their 'favourited' hikes that they have seen posted by other users so that users can keep track of where they have walked and where they would like to walk in the future. This would improve user experience and the personalisation of a profile page would mean they are more likely to return to the site.
+    * I would like to implement an administrator login/role within the login functionality so that the site administartor has some control in the running of the site if required. 
     
 - - - 
 
@@ -181,11 +182,12 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 -   ### Frameworks, Libraries & Programs Used
 
-    * [Google Fonts](https://fonts.google.com/) were used to import the 'Fuzzy Bubbles' font into the style.css file which is used on all pages throughout the project. 
+    * [Google Fonts](https://fonts.google.com/) were used to import the 'Bebas Neue' and 'Noto Serif' font into the style.css file which is used on all pages throughout the project. 
     * []() was used on all pages throughout the website to add icons for aesthetic and UX purposes
     * Gitpod was the IDE used to build the project. Git was used for version control.
     * [GitHub](https://github.com/) is used to store the projects code after being pushed from Git.
     * [Balsamiq](https://balsamiq.com/) was used to create the wireframes to support in the design process.
+    * [Lucid Chart](https://lucid.app/lucidchart/c05f73cc-9dcc-4449-bd72-3098abe54692/edit?invitationId=inv_1c31fd92-4378-45d3-93c0-a252029cd87d&page=0_0#) was used to design the EDR model when planning the database
 
 - - - 
 
@@ -200,6 +202,10 @@ This website has been built using HTML, CSS, Javascript and Python.
 To deploy Trailfinders to Kerokue, take the following steps:
 1. Create a requirements.txt file using the terminal command `pip freeze > requirements.txt`
 2. Creat a Procfile with the terminal command `echo web: python app.py > Procfile`
+3. `git add` and `git commit` these changes and `git push` to GitHub
+4. Go to the Heroku website and create a new app by clicking the "New" button in your dashboard.
+5. Give the app and name and set the region to Eurpoe
+6. From the heroku dashboard of the new app, click on "Deploy" > "Deployment method" and select Github
 
 
 -   ### Run locally

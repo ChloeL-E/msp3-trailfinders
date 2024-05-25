@@ -9,7 +9,6 @@ class User(db.Model):
     username = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(63), nullable=False)
     password = db.Column(db.String(255), unique=True, nullable=False)
-    admin = db.Column(db.Boolean, default=False, nullable=False)
     hikes = db.relationship('Hike', backref='user', cascade="all, delete")
 
     def __repr__(self):
