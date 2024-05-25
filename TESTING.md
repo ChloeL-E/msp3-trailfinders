@@ -1,3 +1,74 @@
+<h1 align="center">Northern Trailfinders</h1>
+
+- - - 
+
+<h2 align="center"><img src=""></h2>
+
+# Trailfinders
+
+This project was designed for Milestone Project 3 of Code Institutes' Level 5 Diploma in Web Development.
+
+Trailfinders is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to search the North East of England for different hikes, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together. 
+
+![Responsive Mockup]()
+
+## Contents
+* [Testing](#testing)
+  * [User Experience](#user-experience-ux)
+  * [Testing Site Functionality](#testing-site-functionality)
+  * [Further Testing](#further-testing)
+  * [Fixed Bugs](#fixed-bugs)
+  * [Accessibility](#accessibility)
+
+## Testing
+
+-   ### Testing User Stories from User Experience (UX) Section
+
+    -   #### First Time User Goals
+        * 
+            1. 
+
+        * As a first time user, 
+            1. 
+
+        * As a first time user, 
+            1. 
+
+        * As a first time user, 
+            1. 
+
+        * As a first time user, 
+            1. 
+
+        * As a first time user, 
+            1. 
+
+        * As a first time user, 
+            1. 
+
+    -   #### Returning User
+        * As a returning user, 
+            1. 
+
+        * As a returning user, 
+            1. 
+
+        * As a returning user, 
+            1. 
+
+        * As a returning user, 
+            1.  
+
+    -   #### Site Administrator
+
+        * As a site administrator, 
+            1. 
+
+        * As a site administrator, 
+            1. 
+
+- - - 
+-   ### Testing site functionality
 | Feature                                                                                       | Expected Outcome                                                                                                        | Testing Performed                                                                                       | Result                                                                                       | Pass/Fail |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-----------|
 | NAVBAR                                                                                        |                                                                                                                         |                                                                                                         |                                                                                              |           |
@@ -51,3 +122,62 @@
 | Add Category button                                                                           | Submits form, takes user to Hikes page, displays data in a new Hike card                                                | Completed all form fields correctly for a walk at Blyth beach, clicked Add Hike button                  | Taken to Hikes page, new Hike card displaying the Dunstanburgh walk                          | PASS      |
 | Add Category button(without completing required fields)                                       | Stays on page, directs user to complete relevant input fields                                                           | Completed form other than Category dropdown, clicked Add Hike button                                    | Stayed on page, directed back to highlighted category dropdown                               | PASS      |
 |                                                                                               |                                                                                                                         
+
+
+
+
+Each action was tested and found to work as expected. 
+Chrome developer tools were used to identify and resolve any issues or bugs throughout the development process. 
+
+- - - 
+
+-   ###  Further Testing
+
+    * The Website was tested on Google Chrome, Microsoft Edge, Internet Explorer and Safari browsers.
+    * The website was viewed on a variety of devices such as Desktop, Laptop, Tablets and Phones using dev tools and real devices.
+    * The website was sent to friends and young family members to review the site and test it from a user perspective.
+
+- - - 
+
+-   ### Fixed Bugs
+
+    * Spent some time on a bug which initially appeared to be preventing data rendering on the site when trying to add a category. I had looked into the python route add_category and also the catgeory model and could not find where the bug was originating. I found that the form data was not updating to the database at all. A sqlalchemy error informed me that the username input had a null value and therefore violated the not-null contraint within the model. I found an article on [Reddit](https://www.reddit.com/r/PostgreSQL/comments/gx6mhj/sqlalchemyexcintegrityerror/) which was helpful as i realised it was a very simple error in the html- the form input did not have an action attribute. I used jinja template to direct the form to the corect filepath and the bug was fixed.
+
+    * When using flask within the templates for my_hikes and index.html- trying to hide the 'edit' and 'delete' buttons to users who had not creates the hike post. I had writted {% if session.user == hike.user_id %} but after some troubleshooting i realised that i was trying to check equality between an integer and a string, hence this not working. I defined a new variable within the login function "session['user_id'] = existing_user.id" to get the session user id rather than the username. This meant that when writing {% if session['user_id'] == hike.user_id %} it was now checking for equality in two integers.
+
+    * Issue with session user not being accessed correctly. Had been trying to fix the bug above and had deleted the variable that defines the session.user from the login function. Took some time to realise that the variable needed to be readded to redefine.
+
+
+- - - 
+-   ### Accessibility
+
+    -    #### Validators
+
+         * W3C Markup Validator, W3C CSS Validator Services were used to validate this project to ensure that there were no syntax errors in the project. Each file was tested through the relevant Validator.
+         * Markup Validator ![W3C Markup Validator]()
+            1. Home Page - 
+
+         * CSS Validator ![Jigsaw W3 CSS Validator]()
+            1. style.css CSS Validation - 
+         * Jshint was used to validate the Javascript
+            1. 
+        * PEP8 compliant
+
+    -    #### WAVE accessibility tool
+
+    * 
+
+    -    #### Lighthouse 
+
+    Lighthouse within the Chrome Developer Tools was used to test performance, accessibility, best practices and SEO of this website.
+  
+  * [See Lighthouse report for Go walking! page]()
+  * [See Lighthouse report for Login page]()
+  * [See Lighthouse report for Register page]()
+  * [See Lighthouse report for Categories page]()
+  * [See Lighthouse report for Add Category page]()
+  * [See Lighthouse report for Edit Category page]()
+  * [See Lighthouse report for Hikes page]()
+  * [See Lighthouse report for Add Hike page]()
+  * [See Lighthouse report for Edit Hike page]()
+
