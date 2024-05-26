@@ -83,7 +83,7 @@
 /*------- INDEX PAGE -------*/
 
 #index-hero-image {
-    /*background-size: cover;*/
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("/static/media/images/hadrianswall.webp");
