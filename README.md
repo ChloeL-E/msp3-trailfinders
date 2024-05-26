@@ -262,6 +262,9 @@ To deploy Trailfinders to Kerokue, take the following steps:
 
 - The favicon in the browser tab was created using[Favicon](https://favicon.io/logo-generator/) and instruction on implementation from [Dee Mc](https://www.youtube.com/watch?v=W809I-d9xTg&t=8s) and [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-add-authentication-to-your-app-with-flask-login/?ref=previous_article)
 
+- [Online Converter](https://www.freeconvert.com/image-converter/download) and [Cloud Convert](https://cloudconvert.com/jpg-to-webp) were utilised to convert images to next generation format. [Image Resizer](https://imageresizer.com/resize/download/66471297c607d3969b115c0e ) was used to resize images, both to improve accessibility to site.
+
+
 - - - 
 
 ## Acknowledgements
