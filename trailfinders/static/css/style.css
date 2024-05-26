@@ -9,7 +9,6 @@
 :root {
     font-family: "Noto Serif";
     --dark_green: #1f2421;
-    --light_purple: #c9b1bd;
     --green: #52796F;
     --light_green: #84A98C;
     --pale_green: #CAD2C5;
@@ -82,7 +81,22 @@
 
 /*------- INDEX PAGE -------*/
 
-#index-hero-image {
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/static/media/images/hadrianswall.webp");
+}
+
+/*#index-hero-image {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,7 +104,7 @@
     margin-top: -100px;
     height: 90vh;
     object-fit: cover;
-}
+}*/
 
 header h1,
 h1,
@@ -151,14 +165,8 @@ h3 {
     width: 20px;
 }
 
-h2 {
-    text-align: center;
-}
-
 .position-cards {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -179,24 +187,24 @@ h2 {
     height: 250px;
     width: 100%;
     object-fit: cover;
-    
+}
+
+.btn-align {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /*------- LOGIN -------*/
 
-#hero-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("/static/media/images/hadrianswall.webp");
-    margin-top: -100px;
-    height: 350px;
-    object-fit: cover;
-}
-
 .form-style {
     width: 500px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px
 }
 
 .director {
@@ -210,18 +218,18 @@ h2 {
     padding: 10px;
     height: 30px;
     width: 30px;
-    background-color: var(--light_purple);
+    background-color: var(--light_green);
     border-radius: 50px;
 }
 
 .icon:hover {
-    background-color: #c6b7c8;
+    background-color: var(--pale_green);
 }
 
 .change {
     text-decoration: none;
     font-family: var(--font-family);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--dark_green);
     cursor: pointer;
@@ -231,11 +239,11 @@ h2 {
     color: var(--green);
 }
 
-.form-sizing {
+/*.form-sizing {
     border: 1px solid var(--dark_green);
     border-radius: 5px;
     padding: 5px 10px;
-}
+}*/
 
 label{
     font-family: "Bebas Neue";
@@ -243,12 +251,12 @@ label{
 }
 
 
-
-
 /*------- CATEGORIES -------*/
 
 .card-title {
     text-decoration: underline;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 /*------- FOOTER -------*/

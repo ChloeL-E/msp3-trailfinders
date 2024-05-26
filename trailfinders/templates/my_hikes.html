@@ -29,15 +29,17 @@
                     <img class="card-img-top" src="{{ hike.image_url }}"
                             alt="{{ hike.hike_title }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ hike.hike_title }}</h5>
+                        <h2 class="card-title">{{ hike.hike_title }}</h2>
                         <p>Distance: {{ hike.distance }}</p>
                         <p>Elevation: {{ hike.elevation }}</p>
                         <p>Difficulty: {{ hike.difficulty }}</p>
                         <p>Category: {{ hike.category.category_name }}</p>
                         <p>Description: {{ hike.description }}</p>
                         {% if session['user_id'] == hike.user_id %}
+                        <div class="btn-align">
                         <a href="{{ url_for('edit_hike', hike_id=hike.id) }}" class="btn">Edit</a>
                         <a href="{{ url_for('delete_hike', hike_id=hike.id) }}" class="btn btn-delete">Delete</a>
+                        </div>
                         {% endif %}
                     </div>
                 </div>
@@ -46,5 +48,4 @@
         {% endfor %}
     </div>
 </section>
-
 {% endblock %}

@@ -1,10 +1,12 @@
 {%  extends "base.html" %}
 {% block content %}
+<div class="hero">
 <div class="container text-center">
     <div class="row align-items-center">
         <div class="col">
             <h1>Categories</h1>
-            <a class="change" href="{{ url_for('add_category') }}">Add A Category <img class="icon" src="/static/media/images/icons/plus-line-icon.png" alt="plus icon"></a>
+            <a class="change" href="{{ url_for('add_category') }}">Add A Category <img class="icon"
+                    src="/static/media/images/icons/plus-line-icon.png" alt="plus icon"></a>
         </div>
     </div>
 </div>
@@ -27,12 +29,17 @@
         {% for category in categories %}
         <div class="col-4">
             <div class="position-cards">
-                <div class="card card-post card-post-categories mt-4 mb-4" >
+                <div class="card card-post card-post-categories mt-4 mb-4">
                     <div class="card-body">
-                        <h5 class="card-title">{{ category.category_name }}</h5>
+                        <h2 class="card-title">{{ category.category_name }}</h2>
                         <p class="card-text"></p>
-                        <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn">Edit</a>
-                        <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn btn-delete">Delete</a>
+                        {% if session['user_id'] == category.created_by %}
+                        <div class="btn-align">
+                            <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn">Edit</a>
+                            <a href="{{ url_for('delete_category', category_id=category.id) }}"
+                                class="btn btn-delete">Delete</a>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -40,5 +47,6 @@
         {% endfor %}
     </div>
 </section>
+</div>
 
 {% endblock %}
