@@ -87,7 +87,6 @@ def login():
             session['user'] = username
             session['user_id'] = existing_user.id
             # Storing username in lowercase
-            flash(f"{username}, you're now logged in. Happy Hiking")
             return redirect(url_for("home", username=username))
         else:
             # Incorrect password, redirect to login
