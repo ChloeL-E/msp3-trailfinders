@@ -7,7 +7,7 @@
 
 /*------- ROOT VARIABLES -------*/
 :root {
-    font-family: "Noto Serif";
+    --font-family: "Noto Serif";
     --dark_green: #1f2421;
     --green: #52796F;
     --light_green: #84A98C;
@@ -26,13 +26,13 @@
 
 .logo-text {
     font-weight: 600;
-    font-size: 35px;
+    font-size: 30px;
     color: var(--dark_green);
 }
 
 .logo {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     color: var(--dark_green);
     margin-right: 10px
 }
@@ -123,16 +123,11 @@
 
 header h1,
 h1,
-h2,
-h3 {
+h2 {
     color: var(--dark_green);
     font-weight: 500;
     font-family: "Bebas Neue";
     text-align: center;
-}
-
-.font-change{
-    color: white;
 }
 
 .index-card {
@@ -281,6 +276,11 @@ label{
     margin-top: 110px;
 }
 
+.small-font {
+    font-family: var(--font-family);
+    font-size: 18px;
+}
+
 /*------- FOOTER -------*/
 
 footer {
@@ -289,7 +289,7 @@ footer {
     padding-left: 10px;
 }
 
-footer h4 {
+footer h3 {
     font-family: "Bebas Neue";
     font-weight: 600;
     color: var(--dark_green);
@@ -352,8 +352,9 @@ li::marker {
     }
 
     .col-xs-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 1 1 45%;
+        margin: 5px;
+        max-width: 45%;
     }
 
     .form-group,
@@ -361,8 +362,8 @@ li::marker {
         margin-left: 3px;
     }
 
-    .footer-links,
-    .socials {
+    .footer-links li,
+    .socials li {
         padding-left: 0;
         margin-left: 0;
         list-style: none;
@@ -373,10 +374,10 @@ li::marker {
         margin-bottom: 0.5rem;
     }
 
-    .socials li img {
-        width: 24px;
-        height: 24px;
-    }
+   .socials li {
+        height: 20px;
+        width: 20px;
+   }
 
     .row>* {
         width: fit-content;
