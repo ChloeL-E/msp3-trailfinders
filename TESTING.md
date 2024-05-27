@@ -165,19 +165,31 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
     -    #### WAVE accessibility tool
 
+    See the WAVE reports for:
+
+  * [Go walking! page](trailfinders/static/media/documentation_images/go_walking_wave.png)
+  * [Login page](trailfinders/static/media/documentation_images/login_wave.png)
+  * [Register page](trailfinders/static/media/documentation_images/register_wave.png)
+  * [Categories page](trailfinders/static/media/documentation_images/categpries_wave.png)
+  * [Add Category page](trailfinders/static/media/documentation_images/add_category_wave.png)
+  * [Edit Category page](trailfinders/static/media/documentation_images/edit_category_wave.png)
+  * [Hikes page](trailfinders/static/media/documentation_images/hikes_wave.png)
+  * [Add Hike page](trailfinders/static/media/documentation_images/add_hike_wave.png)
+  * [Edit Hike page](trailfinders/static/media/documentation_images/edit_hike_wave.png)
+
     * 
 
     -    #### Lighthouse 
 
     Lighthouse within the Chrome Developer Tools was used to test performance, accessibility, best practices and SEO of this website.
   
-  * [See Lighthouse report for Go walking! page]()
-  * [See Lighthouse report for Login page]()
-  * [See Lighthouse report for Register page]()
+  * [See Lighthouse report for Go walking! page](trailfinders/static/media/documentation_images/index.html_lighthouse.png)
+  * [See Lighthouse report for Login page](trailfinders/static/media/documentation_images/login_lighthouse.png)
+  * [See Lighthouse report for Register page](trailfinders/static/media/documentation_images/register_lighthouse.png)
   * [See Lighthouse report for Categories page]()
   * [See Lighthouse report for Add Category page]()
-  * [See Lighthouse report for Edit Category page]()
-  * [See Lighthouse report for Hikes page]()
+  * [See Lighthouse report for Edit Category page](trailfinders/static/media/documentation_images/edit_categoy_lighthouse.png)
+  * [See Lighthouse report for Hikes page](trailfinders/static/media/documentation_images/hikes_lighthouse.png)
   * [See Lighthouse report for Add Hike page]()
   * [See Lighthouse report for Edit Hike page]()
 
