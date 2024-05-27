@@ -187,7 +187,7 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
   * [See Lighthouse report for Login page](trailfinders/static/media/documentation_images/login_lighthouse.png)
   * [See Lighthouse report for Register page](trailfinders/static/media/documentation_images/register_lighthouse.png)
   * [See Lighthouse report for Categories page](trailfinders/static/media/documentation_images/categories_lighthouse.png)
-  * [See Lighthouse report for Add Category page]()
+  * [See Lighthouse report for Add Category page](trailfinders/static/media/documentation_images/add_category_lighthouse.png)
   * [See Lighthouse report for Edit Category page](trailfinders/static/media/documentation_images/edit_categoy_lighthouse.png)
   * [See Lighthouse report for Hikes page](trailfinders/static/media/documentation_images/hikes_lighthouse.png)
   * [See Lighthouse report for Add Hike page]()
