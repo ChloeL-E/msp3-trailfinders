@@ -26,6 +26,7 @@ This website has been built using HTML, CSS, Javascript and Python.
   * [Typography](#typography)
   * [Imagery](#imagery)
   * [Wireframes](#wireframes)
+  * [Database Schema](#database-schema)
 * [Structure](#design)
   * [Features](#features)
   * [Features For Future Implementation](#features-for-future-implementation)
@@ -111,6 +112,8 @@ This website has been built using HTML, CSS, Javascript and Python.
     * Wireframe (mobile device) - [Balsamiq (mobile device)]()
     * Wireframe - [Balsamiq wireframe]()
 
+-   ### Database Schema
+    * [EDR diagram](trailfinders/static/media/testing_images/EDR.png)
 - - - 
 
 ## Structure
@@ -119,19 +122,21 @@ This website has been built using HTML, CSS, Javascript and Python.
     * Responsive on device sizes with media screen size >280px
 
     -   #### Navigation Bar
-        * 
-        *   
+        * The navigation bar contains the site logo and title alongside links to other pages.
+        * The navbar is visible when the user lands on each page but disappears whlst the user scrolls down. As the user scrolls up, it reappears so that the user can use the navigation links if they wish. This is done using javascript. The purpose is to give the user maximum view of the page contents whilst it alway being easily accessible to the user.
+        * The navbar also has some transparency so that the hero image can be seen beneath it to some degree, this was a design choice so that the navbar doesn't block the imagery.
 
        ![Navigation Bar - desktop]()
 
-       * 
+       * The responsive navbar features a hamburger menu on medium sized devices and smaller
 
        ![Navigation Bar- mobile device ]()
 
        ![Navigation Bar- mobile device- hamburger menu open]()
 
     -   #### Background Image
-        * 
+        * The hero image was kindly donated from photographer Mr Adam Lowes for specific use on this site. It is an image of the famous Hadrians Wall. This was chosen as it is part of an iconic walk in the North East of England, where trailfinders is set.
+        * The hero image features on most pages where it adds value to the user. It was felt that the Hike and add hike pages were quite full of content as posts were added and a hero image detracted form this content rather than lifting it.
         
         ![Background image]()
 
@@ -140,24 +145,37 @@ This website has been built using HTML, CSS, Javascript and Python.
 
         ![Home page]()
 
-    -   #### 
+    -   #### Login
 
-         * 
+        ![Login]()
 
-        ![]()
+    -    #### Register
 
-    -    #### 
-         * 
+        ![Register]()
 
-         ![]()
-
-    -    #### 
+    -    #### Categories
          *  
-         ![]()
+         ![Categories]()
 
-    -    #### 
+    -    #### Add Category
          *  
-         ![]()
+         ![Add Category]()
+
+    -    #### Edit Category
+         *  
+         ![Edit Category]()
+
+    -    #### Hikes
+         *  
+         ![Hikes]()
+
+    -    #### Add Hike
+         *  
+         ![Add Hike]()
+
+    -    #### Edit Hike
+         *  
+         ![Edit Hike]()
 
     -    #### Footer
          *   
@@ -168,6 +186,10 @@ This website has been built using HTML, CSS, Javascript and Python.
           * A 404 error page was created to ensure that if, for any reason, the webpage is unavailable, the user is taken to a message page which helps to redirect them back to the website.
 
          ![404 error page]()
+
+    -    #### 500 Error Page
+         * A 500 error page was created to ensure that if, for any reason, there is an internal server error, the user is taken to a message page which helps to redirect them back to the website.
+         ![500 error page]()
 
 
 -   ### Features For Future Implementation
