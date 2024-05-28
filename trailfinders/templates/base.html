@@ -60,7 +60,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('logout') }}">Logout</a>
             </li>
-            <!-- Login/Register only shown if user not loggin in -->
+            <!-- Login/Register only shown if user not logged in -->
             {% else %}
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Login</a>
@@ -86,27 +86,27 @@
     <!-- FOOTER -->
     <footer class="mt-auto sticky-bottom sm-screens">
       <div class="row">
-        <div id="sm-screens" class="col-xs-6 col-sm-3">
+        <div class="col-xs-6 col-sm-3 sm-screens">
           <h3 class="ml-3" style="margin-left:5px;">TakeAHike</h3>
           <p class="copyright ml-3" style="margin-left:5px;">
             <span>© 2024</span>
           </p>
         </div>
-        <div id="sm-screens" class="col-xs-6 col-sm-3">
+        <div class="col-xs-6 col-sm-3 sm-screens">
           <h3>Hikes</h3>
           <ul class="footer-links">
             <li><a href="{{ url_for('categories') }}">Categories</a></li>
             <li><a href="{{ url_for('my_hikes') }}">Hikes</a></li>
           </ul>
         </div>
-        <div id="sm-screens" class="col-xs-6 col-sm-3">
+        <div  class="col-xs-6 col-sm-3 sm-screens">
           <h3>Join Us!</h3>
           <ul class="footer-links">
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('login') }}">Login</a></li>
           </ul>
         </div>
-        <div id="sm-screens" class="col-xs-6 col-sm-3">
+        <div class="col-xs-6 col-sm-3 sm-screens">
           <h3>Socials</h3>
           <div class="row">
             <ul class="socials">

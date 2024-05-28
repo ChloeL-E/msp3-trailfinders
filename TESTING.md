@@ -154,14 +154,22 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
     -    #### Validators
 
          * W3C Markup Validator, W3C CSS Validator Services were used to validate this project to ensure that there were no syntax errors in the project. Each file was tested through the relevant Validator.
-         * Markup Validator ![W3C Markup Validator]()
-            1. Home Page - 
+         * Markup Validator 
+            1. Go Walking! - ![W3C Markup Validator](trailfinders/static/media/documentation_images/index_validation.png)
+            2. Login -![W3C Markup Validator]()
+            3. Register -![W3C Markup Validator]()
+            4. Categories -![W3C Markup Validator]()
+            5. Add Categories - ![W3C Markup Validator]()
+            6. Edit Categories -![W3C Markup Validator]()
+            7. Hikes -![W3C Markup Validator]() 
+            8. Add Hikes -![W3C Markup Validator]()
+            9. Edit Hikes -![W3C Markup Validator]()
 
-         * CSS Validator ![Jigsaw W3 CSS Validator]()
-            1. style.css CSS Validation - 
+         * CSS Validator 
+            1. style.css CSS Validation - ![W3C Jigsaw Validator](trailfinders/static/media/testing_images/css_validation.png)
          * Jshint was used to validate the Javascript
-            1. 
-        * PEP8 compliant
+            1. script.js ![JShint](trailfinders/static/media/documentation_images/jshint_validation.png)
+        * PEP8 compliant ![CI Linter](trailfinders/static/media/documentation_images/python_validation.png)
 
     -    #### WAVE accessibility tool
 
@@ -181,15 +189,15 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
     -    #### Lighthouse 
 
-    Lighthouse within the Chrome Developer Tools was used to test performance, accessibility, best practices and SEO of this website.
+    Lighthouse within the Chrome Developer Tools was used to test performance, accessibility, best practices and SEO of this website. See the lighthouse reports for each page within the site:
   
-  * [See Lighthouse report for Go walking! page](trailfinders/static/media/documentation_images/index.html_lighthouse.png)
-  * [See Lighthouse report for Login page](trailfinders/static/media/documentation_images/login_lighthouse.png)
-  * [See Lighthouse report for Register page](trailfinders/static/media/documentation_images/register_lighthouse.png)
-  * [See Lighthouse report for Categories page](trailfinders/static/media/documentation_images/categories_lighthouse.png)
-  * [See Lighthouse report for Add Category page](trailfinders/static/media/documentation_images/add_category_lighthouse.png)
-  * [See Lighthouse report for Edit Category page](trailfinders/static/media/documentation_images/edit_categoy_lighthouse.png)
-  * [See Lighthouse report for Hikes page](trailfinders/static/media/documentation_images/hikes_lighthouse.png)
-  * [See Lighthouse report for Add Hike page]()
-  * [See Lighthouse report for Edit Hike page]()
+  * [Go walking! page](trailfinders/static/media/documentation_images/index.html_lighthouse.png)
+  * [Login page](trailfinders/static/media/documentation_images/login_lighthouse.png)
+  * [Register page](trailfinders/static/media/documentation_images/register_lighthouse.png)
+  * [Categories page](trailfinders/static/media/documentation_images/categories_lighthouse.png)
+  * [Add Category page](trailfinders/static/media/documentation_images/add_category_lighthouse.png)
+  * [Edit Category page](trailfinders/static/media/documentation_images/edit_categoy_lighthouse.png)
+  * [Hikes page](trailfinders/static/media/documentation_images/hikes_lighthouse.png)
+  * [Add Hike page]()
+  * [Edit Hike page]()
 
