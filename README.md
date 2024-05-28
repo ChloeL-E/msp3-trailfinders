@@ -6,9 +6,9 @@
 
 # Trailfinders
 
-This project was designed for Milestone Project 3 of Code Institutes' Diploma in Web Development.
+This project was designed for Milestone Project 3 of Code Institutes' Level 5 Diploma in Web Development.
 
-Trailfinders is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to search the North East of England for different hikes, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together. 
+Trailfinders is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to view Hikes within the North East of England that have been added by other users, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together.  
 
 This website has been built using HTML, CSS, Javascript and Python.
 
@@ -208,6 +208,8 @@ This website has been built using HTML, CSS, Javascript and Python.
     * Gitpod was the IDE used to build the project. Git was used for version control.
     * [GitHub](https://github.com/) is used to store the projects code after being pushed from Git.
     * [Balsamiq](https://balsamiq.com/) was used to create the wireframes to support in the design process.
+    * ![Jinja] - templating engine
+    * ![Pip] - tool for installing python packages
     * [Lucid Chart](https://lucid.app/lucidchart/c05f73cc-9dcc-4449-bd72-3098abe54692/edit?invitationId=inv_1c31fd92-4378-45d3-93c0-a252029cd87d&page=0_0#) was used to design the EDR model when planning the database
     * The site was deployed using Heroku and the database used alongside this was PostgreSQL fro Code Institute
     * ![Shields.io] was used for the shields used within the Readme

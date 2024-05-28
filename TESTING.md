@@ -6,9 +6,6 @@
 
 # Trailfinders
 
-This project was designed for Milestone Project 3 of Code Institutes' Level 5 Diploma in Web Development.
-
-Trailfinders is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to search the North East of England for different hikes, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together. 
 
 ![Responsive Mockup]()
 
@@ -169,7 +166,7 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
             1. style.css CSS Validation - ![W3C Jigsaw Validator](trailfinders/static/media/testing_images/css_validation.png)
          * Jshint was used to validate the Javascript
             1. script.js ![JShint](trailfinders/static/media/documentation_images/jshint_validation.png)
-        * PEP8 compliant ![CI Linter](trailfinders/static/media/documentation_images/python_validation.png)
+         * PEP8 compliant ![CI Linter](trailfinders/static/media/documentation_images/python_validation.png)
 
     -    #### WAVE accessibility tool
 
