@@ -1,4 +1,4 @@
-<h1 align="center">Northern Trailfinders</h1>
+<h1 align="center">Trailfinders</h1>
 
 - - - 
 
@@ -213,7 +213,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     * [Lucid Chart](https://lucid.app/lucidchart/c05f73cc-9dcc-4449-bd72-3098abe54692/edit?invitationId=inv_1c31fd92-4378-45d3-93c0-a252029cd87d&page=0_0#) was used to design the EDR model when planning the database
     * The site was deployed using Heroku and the database used alongside this was PostgreSQL fro Code Institute
     * ![Shields.io] was used for the shields used within the Readme
-    * ![Favicon] was used todesign the favicon for the site
+    * ![Favicon] was used to design the favicon for the site
     * ![Chrome Developer Tools]() was used throughout, to troubleshoot, solve bugs, test site features and responsiveness
     * ![amiresponsive]() was used to create the responsive screen imagery for the site
 
