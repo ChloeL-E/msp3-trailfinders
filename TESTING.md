@@ -1,4 +1,4 @@
-<h1 align="center">Northern Trailfinders</h1>
+<h1 align="center">Take a Hike</h1>
 
 - - - 
 
