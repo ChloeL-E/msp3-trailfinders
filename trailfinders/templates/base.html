@@ -84,37 +84,37 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="mt-auto sticky-bottom">
+    <footer class="mt-auto sticky-bottom sm-screens">
       <div class="row">
-        <div class="col-xs-6 col-sm-3">
+        <div id="sm-screens" class="col-xs-6 col-sm-3">
           <h3 class="ml-3" style="margin-left:5px;">TakeAHike</h3>
           <p class="copyright ml-3" style="margin-left:5px;">
             <span>© 2024</span>
           </p>
         </div>
-        <div class="col-xs-6 col-sm-3">
+        <div id="sm-screens" class="col-xs-6 col-sm-3">
           <h3>Hikes</h3>
           <ul class="footer-links">
             <li><a href="{{ url_for('categories') }}">Categories</a></li>
             <li><a href="{{ url_for('my_hikes') }}">Hikes</a></li>
           </ul>
         </div>
-        <div class="col-xs-6 col-sm-3">
+        <div id="sm-screens" class="col-xs-6 col-sm-3">
           <h3>Join Us!</h3>
           <ul class="footer-links">
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('login') }}">Login</a></li>
           </ul>
         </div>
-        <div class="col-xs-6 col-sm-3">
+        <div id="sm-screens" class="col-xs-6 col-sm-3">
           <h3>Socials</h3>
           <div class="row">
             <ul class="socials">
-              <li><a href="https://www.linkedin.com/signup"><img class="socials"
+              <li><a href="https://www.linkedin.com/signup" target="_blank"><img class="socials"
                     src="/static/media/images/icons/linkedin.svg" alt="linkedin socials link"></a></li>
-              <li><a href="https://en-gb.facebook.com/"><img class="socials"
+              <li><a href="https://en-gb.facebook.com/" target="_blank"><img class="socials"
                     src="/static/media/images/icons/facebook.svg" alt="facebook socials link"></a></li>
-              <li><a href="https://www.instagram.com/"><img class="socials"
+              <li><a href="https://www.instagram.com/" target="_blank"><img class="socials"
                     src="/static/media/images/icons/instagram.svg" alt="instagram socials link"></a></li>
             </ul>
           </div>
