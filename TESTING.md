@@ -6,8 +6,7 @@
 
 # Trailfinders
 
-
-![Responsive Mockup]()
+![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
 
 ## Contents
 * [Testing](#testing)
