@@ -227,7 +227,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 
 -   ### Deployment
-To deploy Trailfinders to Kerokue, take the following steps:
+To deploy Trailfinders to Heroku, take the following steps:
 1. Create a requirements.txt file using the terminal command `pip freeze > requirements.txt`
 2. Creat a Procfile with the terminal command `echo web: python app.py > Procfile`
 3. `git add` and `git commit` these changes and `git push` to GitHub
