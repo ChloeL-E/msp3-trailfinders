@@ -12,7 +12,7 @@ Trailfinders is for all those who love being outdoors and exploring the beauty i
 
 This website has been built using HTML, CSS, Javascript and Python.
 
-![Responsive Mockup]()
+![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
 
 [View the live project here.](https://trailfinders-710f937aa94a.herokuapp.com/)
 
