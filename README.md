@@ -141,8 +141,7 @@ This website has been built using HTML, CSS, Javascript and Python.
         ![Background image]()
 
     -   #### Home page
-        * 
-
+        
         ![Home page]()
 
     -   #### Login
@@ -154,31 +153,31 @@ This website has been built using HTML, CSS, Javascript and Python.
         ![Register]()
 
     -    #### Categories
-         *  
+         
          ![Categories]()
 
     -    #### Add Category
-         *  
+         
          ![Add Category]()
 
     -    #### Edit Category
-         *  
+          
          ![Edit Category]()
 
     -    #### Hikes
-         *  
+          * Displays Hikes from all users. Buttons to edit or delete posts are only visible to the user who created the post. 
          ![Hikes]()
 
     -    #### Add Hike
-         *  
+         * Features a form for the user to complete. Once the details are filled in correctly, including those with 'required' fields, the user can press the form buttton and will be redirected to the Hikes page where their post will be visible. 
          ![Add Hike]()
 
     -    #### Edit Hike
-         *  
+         *  Shows the same form format to the user with prepopulated data so the user can be reminded what they have written. They are free to ammend the input and can press the form button. They are redirected to the Hikes pages where they will be able to see their updates post.
          ![Edit Hike]()
 
     -    #### Footer
-         *   
+         * Responsive. Features the site Title, links to the main pages and social links.
          
          ![Footer]()
 
@@ -205,11 +204,16 @@ This website has been built using HTML, CSS, Javascript and Python.
 -   ### Frameworks, Libraries & Programs Used
 
     * [Google Fonts](https://fonts.google.com/) were used to import the 'Bebas Neue' and 'Noto Serif' font into the style.css file which is used on all pages throughout the project. 
-    * []() was used on all pages throughout the website to add icons for aesthetic and UX purposes
+    * [Bootstrap v5.3.2]() was used on all pages throughout the website to add icons for aesthetic and UX purposes
     * Gitpod was the IDE used to build the project. Git was used for version control.
     * [GitHub](https://github.com/) is used to store the projects code after being pushed from Git.
     * [Balsamiq](https://balsamiq.com/) was used to create the wireframes to support in the design process.
     * [Lucid Chart](https://lucid.app/lucidchart/c05f73cc-9dcc-4449-bd72-3098abe54692/edit?invitationId=inv_1c31fd92-4378-45d3-93c0-a252029cd87d&page=0_0#) was used to design the EDR model when planning the database
+    * The site was deployed using Heroku and the database used alongside this was PostgreSQL fro Code Institute
+    * ![Shields.io] was used for the shields used within the Readme
+    * ![Favicon] was used todesign the favicon for the site
+    * ![Chrome Developer Tools]() was used throughout, to troubleshoot, solve bugs, test site features and responsiveness
+    * ![amiresponsive]() was used to create the responsive screen imagery for the site
 
 - - - 
 
