@@ -229,7 +229,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 -   ### Deployment
 To deploy Trailfinders to Heroku, take the following steps:
 1. Create a requirements.txt file using the terminal command `pip freeze > requirements.txt`
-2. Creat a Procfile with the terminal command `echo web: python app.py > Procfile`
+2. Create a Procfile with the terminal command `echo web: python app.py > Procfile`
 3. `git add` and `git commit` these changes and `git push` to GitHub
 4. Go to the Heroku website and create a new app by clicking the "New" button in your dashboard.
 5. Give the app and name and set the region to Eurpoe
