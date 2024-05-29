@@ -57,7 +57,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     -   #### First Time User Goals
 
         1. As a first time user, I want to be able to easily navigate around the site without any errors and without the use of the back arrow in the browser.
-        2. As a first time user, i want the site to be easily accessible to me
+        2. As a first time user, i want to easily understand the purpose of the site
         3. As a first time user, I want to be able to search for a hike route.
         4. As a first time user, I want to be able to view details about the chosen route and see what other users thoughts/recommendations are.
         5. As a first time user, I want to be able to register on the site to get full access 

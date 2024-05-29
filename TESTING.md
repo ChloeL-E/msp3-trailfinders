@@ -26,28 +26,29 @@
             1. The navbar is shown at the top of the page, disappears when scrolling down and reappears when scrolling up.
             2. Links to each page are accessible through the navbar and footer on each page
         
-        * As a first time user, i want to easliy understand the purpose of the site
+        * As a first time user, i want to easily understand the purpose of the site
             1. The first page loaded to the user, regardless of whether they are logged/registered, has a card showing a succinct description of the purpose of the site
 
         * As a first time user, I want to be able to search for a hike route., 
-            1. 
+            1. From the landing page (Go Walking!) the user is prompted to scroll down the page by a title asking "Need inspiration? Check out these walks..." and below the user can view the Hikes posted by other users. 
+            2. From the Hikes page, the user can also view all of the Hikes posted
 
-        * As a first time user, I want to be able to view details about the chosen route and see what other users thoughts/recommendations are. 
-            1. 
+        * As a first time user, I want to be able to view details about any given Hike post and see what other users thoughts/recommendations are. 
+            1. When adding a Hike, users are prompted to give information that would be useful when looking for a Hike e.g. distance, elevation, difficulty level and a description. This is all visible within each Hike post for others to see
 
         * As a first time user, I want to be able to register on the site to get full access to the site 
-            1. 
+            1. Login and Register buttons prompt the user throughout the site to register and/or login as appropriate. 
+            2. A user who is not logged in will only be able to access the sites' Go walking (landing page), the login page and the register page, they cannot add nay data themselves to the site. This, again, encourages user to register and login for full site access. 
+            3. Once logged in, the navbar displays links to the Hikes and Categories pages.
 
         * As a first time user, I want to be able to quickly login to the site each time I visit. 
-            1. 
+            1. Registration to the site and login to the site are both similar forms for accessibility and improved user experience. Links in the navbar to these pages and buttons prompting Registration/Login are also available on the Go Walking Page
+            2. If the user navigates to the registration page but they have already registered, a button is available to prompt user to click to navigate to the Login page and vice versa.
+            3. If the user tries to Register but they have aready done so, a flash message will display to say the username already exists, please Login.
+            4. If the user tries to Login with the incorrect username or password a flash message will appear to inform them of this and prompt Login attempt again.
 
         * As a first time user, I want to be able to see the hikes that i have posted. 
-            1. 
-        
-        * As the site administrator, I want to ensure the user is able to navigate around the site without raising any errors
-            1. 
-
-        * As the site administrator, I want to know that any future site developments can easily be adapted/added to the site.
+            1. Once the user has completed form on the Add Hike page, the user is redirected to the Hikes page where they will see their post displayed alongside the posts added by other users. 
 
 
     -   #### Returning User
@@ -77,7 +78,11 @@
         * As the site administrator, I want to ensure user information is handled securely.
             1. 
         
-
+         * As the site administrator, I want to ensure the user is able to navigate around the site without raising any errors
+            1. 
+        
+         * As the site administrator, I want to know that any future site developments can easily be adapted/added to the site.
+            1. 
 
 - - - 
 -   ### Testing site functionality
