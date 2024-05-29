@@ -57,13 +57,14 @@ This website has been built using HTML, CSS, Javascript and Python.
     -   #### First Time User Goals
 
         1. As a first time user, I want to be able to easily navigate around the site without any errors and without the use of the back arrow in the browser.
-        2. As a first time user, I want to be able to search for a hike route.
-        3. As a first time user, I want to be able to view details about the chosen route ans see what other users thoughts/recommendations are.
-        4. As a first time user, I want to be able to register on the site to get full access and see my profile
-        5. As a first time user, I want to be able to quickly login to the site each time I visit.
-        6. As a first time user, I want to be able to add my own hikes to my profile.
-        7. As a first time user, I want to be able to edit or delete my hikes, if I want to.
-        8. As a first time user, I want to be able to comment/review and rate other users' hikes.
+        2. As a first time user, i want the site to be easily accessible to me
+        3. As a first time user, I want to be able to search for a hike route.
+        4. As a first time user, I want to be able to view details about the chosen route and see what other users thoughts/recommendations are.
+        5. As a first time user, I want to be able to register on the site to get full access 
+        6. As a first time user, I want to be able to quickly login to the site each time I visit.
+        7. As a first time user, I want to be able to see the hikes that i have posted.
+        8. As a first time user, I want to be able to edit or delete my hikes, if I want to.
+        
     
     -   #### Returning User Goals
 
@@ -193,7 +194,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 -   ### Features For Future Implementation
     *  Asking users to input an image url when adding/editing their hike posts may feel cumbersome to the user and make it less likely that this field is filled in, affecting UX and also the aesthetic of the site. It would be beneficial to connect to any API that would already have a large range of images for the user to search and select rather than having to search for the images themselves and input. 
-    * A star rating system or a thumbs up/'favourited' feature would be an interesting feature to add to the hike posts so that users could interact with others' posts and this may increase engagement and build more of a sense of community within the site.
+    * A star rating system or a thumbs up/'favourited' and comments feature would be an interesting feature to add to the hike posts so that users could interact with others' posts and this may increase engagement and build more of a sense of community within the site.
     * It would be a good idea to have a Profile page for the user to see their own hikes and perhaps a section for their 'favourited' hikes that they have seen posted by other users so that users can keep track of where they have walked and where they would like to walk in the future. This would improve user experience and the personalisation of a profile page would mean they are more likely to return to the site.
     * I would like to implement an administrator login/role within the login functionality so that the site administartor has some control in the running of the site if required. 
     
