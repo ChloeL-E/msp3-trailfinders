@@ -331,8 +331,12 @@ li::marker {
     content: none;
 }
 
+.error{
+    display:flex;
+}
+
 .error_handler {
-    margin: 0 auto;
+    
 }
 
 
