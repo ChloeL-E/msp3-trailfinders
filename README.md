@@ -278,7 +278,7 @@ To deploy Trailfinders to Heroku, take the following steps:
 
 - [TableMagic](https://stevecat.net/table-magic/) for creating the testing table
 
-- [GeeksforGeeks](https://www.geeksforgeeks.org/python-404-error-handling-in-flask/)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/python-404-error-handling-in-flask/) and [Flask](https://flask.palletsprojects.com/en/2.3.x/errorhandling/) for assistance in error handling 
 
 - Content was written by Chloe Livingstone-Evans.
 
