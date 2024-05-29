@@ -295,6 +295,7 @@ def delete_hike(hike_id):
         return redirect(url_for("my_hikes"))
 
 
+# Guidance on Error handler routes taken from Geeks for Geeks 
 @app.errorhandler(404)
 def handle_404(e):
     """

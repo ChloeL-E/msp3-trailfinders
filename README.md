@@ -219,9 +219,6 @@ This website has been built using HTML, CSS, Javascript and Python.
     * [amiresponsive](https://ui.dev/amiresponsive) was used to create the responsive screen imagery for the site
 
 - - - 
-
-
-- - - 
 ## Deployment
 
    ### Version Control
@@ -279,7 +276,9 @@ To deploy Trailfinders to Heroku, take the following steps:
 
 - [W3Schools](https://www.w3schools.com/html/html_form_elements.asp) for refresher on form styling within html/css.
 
-- [TableMagic] (https://stevecat.net/table-magic/) for creating the testing table
+- [TableMagic](https://stevecat.net/table-magic/) for creating the testing table
+
+- [GeeksforGeeks](https://www.geeksforgeeks.org/python-404-error-handling-in-flask/)
 
 - Content was written by Chloe Livingstone-Evans.
 

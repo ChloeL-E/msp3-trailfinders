@@ -364,6 +364,12 @@ li::marker {
         flex: 1 0 100%;
     }
 
+    .index-card {
+        width: 90%;
+        padding: 10px;
+        margin: 110px 10px;
+    }
+
     .card-post {
         margin: 0;
         width: 100%;
