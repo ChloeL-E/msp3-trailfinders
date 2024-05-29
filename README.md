@@ -208,14 +208,14 @@ This website has been built using HTML, CSS, Javascript and Python.
     * Gitpod was the IDE used to build the project. Git was used for version control.
     * [GitHub](https://github.com/) is used to store the projects code after being pushed from Git.
     * [Balsamiq](https://balsamiq.com/) was used to create the wireframes to support in the design process.
-    * ![Jinja] - templating engine
-    * ![Pip] - tool for installing python packages
+    * [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) - templating engine
+    * [Pip](https://pypi.org/project/pip/) - tool for installing python packages
     * [Lucid Chart](https://lucid.app/lucidchart/c05f73cc-9dcc-4449-bd72-3098abe54692/edit?invitationId=inv_1c31fd92-4378-45d3-93c0-a252029cd87d&page=0_0#) was used to design the EDR model when planning the database
     * The site was deployed using Heroku and the database used alongside this was PostgreSQL fro Code Institute
-    * ![Shields.io] was used for the shields used within the Readme
-    * ![Favicon] was used to design the favicon for the site
-    * ![Chrome Developer Tools]() was used throughout, to troubleshoot, solve bugs, test site features and responsiveness
-    * ![amiresponsive]() was used to create the responsive screen imagery for the site
+    * [Shields.io](https://shields.io/badges) was used for the shields used within the Readme
+    * [Favicon.io](https://favicon.io/) was used to design the favicon for the site
+    * [Chrome Developer Tools](https://developer.chrome.com/docs/devtools) was used throughout, to troubleshoot, solve bugs, test site features and responsiveness
+    * [amiresponsive](https://ui.dev/amiresponsive) was used to create the responsive screen imagery for the site
 
 - - - 
 
@@ -223,10 +223,10 @@ This website has been built using HTML, CSS, Javascript and Python.
 - - - 
 ## Deployment
 
--   ### Version Control
+   ### Version Control
 
 
--   ### Deployment
+   ### Deployment
 To deploy Trailfinders to Heroku, take the following steps:
 1. Create a requirements.txt file using the terminal command `pip freeze > requirements.txt`
 2. Create a Procfile with the terminal command `echo web: python app.py > Procfile`
@@ -236,7 +236,7 @@ To deploy Trailfinders to Heroku, take the following steps:
 6. From the heroku dashboard of the new app, click on "Deploy" > "Deployment method" and select Github
 7. Confirm the link to the correct GitHub repository
 8. In the heroku dashboard for the application. click on the "settings" > "Reveal Config Vars"
-9. Set the following config vars:
+9. Set the following Config Vars:![config vars](trailfinders/static/media/testing_images/config_vars.jpeg)
 
 * to get the db url follow [CI PosgreSQL](https://dbs.ci-dbs.net/)
 10. In the Heroku dashboard, click "Deploy"
@@ -261,7 +261,7 @@ To deploy Trailfinders to Heroku, take the following steps:
 
 ## Credits
 
--   ### Content
+   ### Content
 
 - Code Institute was used throughout for guidance but in particular for assistance when building the CRUD functionality within the project.
 
@@ -284,7 +284,7 @@ To deploy Trailfinders to Heroku, take the following steps:
 
 - - - - 
 
--   ### Media Images
+   ### Media Images
 
 - Credits for media images goes to Mr Adam Lowes, who kindly offered his own stunning photography in use wihtin this project.
 
