@@ -332,11 +332,14 @@ li::marker {
 }
 
 .error{
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 
 .error_handler {
-    
+    margin: 0 aut0;
 }
 
 
