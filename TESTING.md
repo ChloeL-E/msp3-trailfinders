@@ -17,51 +17,67 @@
   * [Accessibility](#accessibility)
 
 ## Testing
+-   ### User stories 
 
 -   ### Testing User Stories from User Experience (UX) Section
 
     -   #### First Time User Goals
-        * 
+        * As a first time user, I want to be able to easily navigate around the site without any errors and without the use of the back arrow in the browser.
+            1. The navbar is shown at the top of the page, disappears when scrolling down and reappears when scrolling up.
+            2. Links to each page are accessible through the navbar and footer on each page
+        
+        * As a first time user, i want to easliy understand the purpose of the site
+            1. The first page loaded to the user, regardless of whether they are logged/registered, has a card showing a succinct description of the purpose of the site
+
+        * As a first time user, I want to be able to search for a hike route., 
             1. 
 
-        * As a first time user, 
+        * As a first time user, I want to be able to view details about the chosen route and see what other users thoughts/recommendations are. 
             1. 
 
-        * As a first time user, 
+        * As a first time user, I want to be able to register on the site to get full access to the site 
             1. 
 
-        * As a first time user, 
+        * As a first time user, I want to be able to quickly login to the site each time I visit. 
             1. 
 
-        * As a first time user, 
+        * As a first time user, I want to be able to see the hikes that i have posted. 
+            1. 
+        
+        * As the site administrator, I want to ensure the user is able to navigate around the site without raising any errors
             1. 
 
-        * As a first time user, 
-            1. 
+        * As the site administrator, I want to know that any future site developments can easily be adapted/added to the site.
 
-        * As a first time user, 
-            1. 
 
     -   #### Returning User
-        * As a returning user, 
+        * As a returning user, I want to be able to easily log into the site to view my profile. 
             1. 
 
-        * As a returning user, 
+        * As a returning user, I want to be abe to keep up-to-date on other users' hikes and comments so that i can stay involved within the community. 
             1. 
 
-        * As a returning user, 
+        * As a returning user, I want to be able to continue to add, edit or delete my hikes. 
             1. 
 
-        * As a returning user, 
+        * As a returning user, I want to find that any new added information follows the design and flow of the website and is easy to access. 
             1.  
 
     -   #### Site Administrator
 
-        * As a site administrator, 
+        * As the site administrator, I want the user to be able to register and login without any difficulty or error. 
             1. 
 
-        * As a site administrator, 
+        * As the site administrator, I want to ensure a user is only able to edit or delete their own posts. 
             1. 
+        
+        * As the site administrator, I want to ensure that if any errors occur, they are handled gracefully and the user is shown quickly back to the website.
+            1. 
+        
+        * As the site administrator, I want to ensure user information is handled securely.
+            1. 
+        
+
 
 - - - 
 -   ### Testing site functionality
