@@ -1,9 +1,11 @@
 {%  extends "base.html" %}
 {% block content %}
-
-<h1>Oops! It looks like this page took a hike!</h1>
-<p class="text-center">500 Error: Internal Server Error</p>
-<p class="text-center">Please use the navigation links to return to our website or the button below...</p>
-<a class="btn btn-lg error_handler" href="{{ url_for('home') }}">Home</a>
-
+<div class="error">
+  <h1>Oops! It looks like this page took a hike!</h1>
+  <p class="text-center">500 Error: Internal Server Error</p>
+  <p class="text-center">Please use the navigation links to return to our website or the button below...</p>
+  <div class="text-center">
+    <a class="btn btn-lg error_handler" href="{{ url_for('home') }}">Home</a>
+  </div>
+</div>
 {% endblock %}
