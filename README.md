@@ -1,18 +1,17 @@
-<h1 align="center">Trailfinders</h1>
+<h1 align="center">Take a Hike</h1>
 
 - - - 
+![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
 
 <h2 align="center"><img src=""></h2>
 
-# Trailfinders
+# Take a Hike
 
 This project was designed for Milestone Project 3 of Code Institutes' Level 5 Diploma in Web Development.
 
-Trailfinders is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to view Hikes within the North East of England that have been added by other users, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together.  
+Take a Hike is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to view Hikes within the North East of England that have been added by other users, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together.  
 
 This website has been built using HTML, CSS, Javascript and Python.
-
-![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
 
 [View the live project here.](https://trailfinders-710f937aa94a.herokuapp.com/)
 
@@ -88,17 +87,15 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 -   ### Colour Scheme
 
-    * Northern Trailfinders aims to help the user explore and enjoy the stunning countryside, specifically in the North East of England. 
+    * Take a Hike aims to help the user explore and enjoy the stunning countryside, specifically in the North East of England. 
     * The themes of the site are nature, relaxation, exploration and enjoying exercising outdoors. 
-    * The colour palette was chosen for its calm and earthy tones. It was also important to make sure there was enough contrast within the palette to ensure no issues with accessibility.
+    * The colour palette was chosen for its calm and earthy tones. It was also important to make sure there was enough contrast within the palette to ensure no issues with accessibility. 
+    * Coolors was used to generate a palette suitable to the aesthtic of the site [Coolors](trailfinders/static/media/testing_images/colour_palette.png)
 
 -   ### Typography
 
-    * Noto Sans was the font chosen for the site.
+    * Bebas Neue and Noto Serif were the fonts chosen for the site. Noto serif is used for the main text content whereas Bebas Neue was chosen for the header and navbar fonts as a stand-out font
     * This font is clean, clear and easy to read online. 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 -   ### Imagery
     * Imagery has been kindly provided by Adam Lowes with consent.
