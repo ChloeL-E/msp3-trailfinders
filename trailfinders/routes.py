@@ -293,3 +293,19 @@ def delete_hike(hike_id):
         db.session.commit()
         flash("Hike deleted successfully!")
         return redirect(url_for("my_hikes"))
+
+
+@app.errorhandler(404)
+def handle_bad_request(e):
+    """ 
+    Handles 404 error, Page not Found
+    """
+    return render_template("404.html")
+
+
+@app.errorhandler(500)
+def internal_error(e):
+    """ 
+    Handles 500 error, Internal server error
+    """
+    return render_template("500.html")
