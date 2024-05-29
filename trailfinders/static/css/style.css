@@ -331,6 +331,9 @@ li::marker {
     content: none;
 }
 
+.error_handler {
+    margin: 0 auto;
+}
 
 
 /*--------MEDIA Query <600px --------*/
