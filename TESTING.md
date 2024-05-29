@@ -1,12 +1,11 @@
 <h1 align="center">Take a Hike</h1>
 
 - - - 
+![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
 
 <h2 align="center"><img src=""></h2>
 
-# Trailfinders
-
-![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
+# Take a Hike
 
 ## Contents
 * [Testing](#testing)
