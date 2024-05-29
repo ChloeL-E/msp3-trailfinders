@@ -296,16 +296,16 @@ def delete_hike(hike_id):
 
 
 @app.errorhandler(404)
-def handle_bad_request(e):
-    """ 
+def handle_404(e):
+    """
     Handles 404 error, Page not Found
     """
     return render_template("404.html")
 
 
 @app.errorhandler(500)
-def internal_error(e):
-    """ 
+def handle_500(e):
+    """
     Handles 500 error, Internal server error
     """
     return render_template("500.html")
