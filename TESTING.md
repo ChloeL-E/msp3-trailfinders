@@ -52,17 +52,18 @@
 
 
     -   #### Returning User
-        * As a returning user, I want to be able to easily log into the site to view my profile. 
-            1. 
+        * As a returning user, I want to be able to return to the site and login. 
+            1. The user can easily locate the login page from the Go Walking(landing page) or via the login button
 
-        * As a returning user, I want to be abe to keep up-to-date on other users' hikes and comments so that i can stay involved within the community. 
+        * As a returning user, I want to be abe to keep up-to-date with other users' hike posts so that i can stay involved within the community. 
             1. 
 
         * As a returning user, I want to be able to continue to add, edit or delete my hikes. 
-            1. 
+            1. A logged in user can add hikes, as well as edit and delete their own posts. An edit and delete button show on the users' own posts.
 
         * As a returning user, I want to find that any new added information follows the design and flow of the website and is easy to access. 
-            1.  
+            1. New posts get added to to same two pages within the site so new data added to the site will be easy to find
+            2. The site design is uniform throughout the site to improve user experience
 
     -   #### Site Administrator
 
