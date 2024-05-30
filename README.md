@@ -90,7 +90,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     * Take a Hike aims to help the user explore and enjoy the stunning countryside, specifically in the North East of England. 
     * The themes of the site are nature, relaxation, exploration and enjoying exercising outdoors. 
     * The colour palette was chosen for its calm and earthy tones. It was also important to make sure there was enough contrast within the palette to ensure no issues with accessibility. 
-    * Coolors was used to generate a palette suitable to the aesthtic of the site [Coolors](trailfinders/static/media/testing_images/colour_palette.png)
+    * Coolors was used to generate a palette suitable to the aesthetic of the site [Coolors](trailfinders/static/media/documentation_images/colour_palette.png)
 
 -   ### Typography
 
@@ -98,7 +98,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     * This font is clean, clear and easy to read online. 
 
 -   ### Imagery
-    * Imagery has been kindly provided by Adam Lowes with consent.
+    * Imagery has been kindly provided by north-east based photographer Mr Adam Lowes with consent.
 
 -   ### Wireframes
 
@@ -124,60 +124,75 @@ This website has been built using HTML, CSS, Javascript and Python.
         * The navbar is visible when the user lands on each page but disappears whlst the user scrolls down. As the user scrolls up, it reappears so that the user can use the navigation links if they wish. This is done using javascript. The purpose is to give the user maximum view of the page contents whilst it alway being easily accessible to the user.
         * The navbar also has some transparency so that the hero image can be seen beneath it to some degree, this was a design choice so that the navbar doesn't block the imagery.
 
-       ![Navigation Bar - desktop]()
+       ![Navigation Bar - desktop](trailfinders/static/media/documentation_images/navbar.png)
 
        * The responsive navbar features a hamburger menu on medium sized devices and smaller
 
-       ![Navigation Bar- mobile device ]()
+       ![Navigation Bar- mobile device ](trailfinders/static/media/documentation_images/navbar_mobile.png)
 
-       ![Navigation Bar- mobile device- hamburger menu open]()
+       ![Navigation Bar- mobile device- hamburger menu open](trailfinders/static/media/documentation_images/hamburger_open.png)
 
     -   #### Background Image
         * The hero image was kindly donated from photographer Mr Adam Lowes for specific use on this site. It is an image of the famous Hadrians Wall. This was chosen as it is part of an iconic walk in the North East of England, where trailfinders is set.
         * The hero image features on most pages where it adds value to the user. It was felt that the Hike and add hike pages were quite full of content as posts were added and a hero image detracted form this content rather than lifting it.
         
-        ![Background image]()
+        ![Background image](trailfinders/static/media/documentation_images/background_image.png)
 
     -   #### Home page
         
-        ![Home page]()
+        ![Home page](trailfinders/static/media/documentation_images/go_walking.png)
+        ![Home page - mobile device](trailfinders/static/media/documentation_images/go_walking_mobile.png)
 
     -   #### Login
+        * This page features a simple for for the user to input their login details. 
+        * A login button below the form inputs, indicates to the user to click to login
 
-        ![Login]()
+        ![Login](trailfinders/static/media/documentation_images/login.png)
+        ![Login-mobile](trailfinders/static/media/documentation_images/login_mobile.png)
 
     -    #### Register
 
-        ![Register]()
+        ![Register](trailfinders/static/media/documentation_images/register.png)
+        ![Register-mobile](trailfinders/static/media/documentation_images/register_mobile.jpeg)
 
     -    #### Categories
          
-         ![Categories]()
+         ![Categories](trailfinders/static/media/documentation_images/categories.jpeg)
+         ![Categories-mobile](trailfinders/static/media/documentation_images/categories-mobile.jpeg)
 
     -    #### Add Category
          
-         ![Add Category]()
+         ![Add Category](trailfinders/static/media/documentation_images/add_category.png)
+         ![Add Category-mobile](trailfinders/static/media/documentation_images/add_category-mobile.jpeg)
 
     -    #### Edit Category
           
          ![Edit Category]()
+         ![Edit Category-mobile]()
 
     -    #### Hikes
           * Displays Hikes from all users. Buttons to edit or delete posts are only visible to the user who created the post. 
+          
          ![Hikes]()
+         ![Hikes-mobile]()
 
     -    #### Add Hike
          * Features a form for the user to complete. Once the details are filled in correctly, including those with 'required' fields, the user can press the form buttton and will be redirected to the Hikes page where their post will be visible. 
+
          ![Add Hike]()
+         ![Add Hike-mobile]()
 
     -    #### Edit Hike
          *  Shows the same form format to the user with prepopulated data so the user can be reminded what they have written. They are free to ammend the input and can press the form button. They are redirected to the Hikes pages where they will be able to see their updates post.
+
+         ![Edit Hike]()
          ![Edit Hike]()
 
     -    #### Footer
          * Responsive. Features the site Title, links to the main pages and social links.
-         
-         ![Footer]()
+
+         ![Footer](trailfinders/static/media/documentation_images/footer.png)
+         ![Footer - mobile device](trailfinders/static/media/documentation_images/footer_mobile.png)
 
     -    #### 404 Error Page
           * A 404 error page was created to ensure that if, for any reason, the webpage is unavailable, the user is taken to a message page which helps to redirect them back to the website.
