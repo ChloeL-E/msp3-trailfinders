@@ -18,7 +18,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 ## Contents
 
 * [Languages Used](#languages-used)
-* [User-Experience-Design]
+* [User-Experience-Design](#user-experience-design)
     * [User Stories](#user-stories)
 * [Design](#design)
   * [Color Scheme](#color-scheme)
@@ -44,6 +44,7 @@ This website has been built using HTML, CSS, Javascript and Python.
 *  [HTML5](https://en.wikipedia.org/wiki/HTML5)
 *  [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 *  [JS](https://en.wikipedia.org/wiki/JavaScript)
+*  [Python](https://en.wikipedia.org/wiki/Python)
 
 ![HTML5](https://img.shields.io/badge/html5-orange.svg?style=for-the-badge&logo=html5&logoColor=orange&color=172416&Color=orange)![CSS](https://img.shields.io/badge/css3-blue.svg?style=for-the-badge&logo=css3&logoColor=blue&color=172416&Color=blue)![JS](https://img.shields.io/badge/javascript-yellow.svg?style=for-the-badge&logo=javascript&logoColor=yellow&color=172416&Color=yellow)![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
