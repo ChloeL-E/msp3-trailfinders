@@ -1,7 +1,7 @@
 {%  extends "base.html" %}
 {% block content %}
 <div class="container text-center">
-    <div class="row align-items-center">
+    <div class="row g-0 align-items-center">
         <div class="col">
             <h1 class="mt-3">Hikes</h1>
             <a class="change" href="{{ url_for('add_hike') }}">Add A Hike<img class="icon"
@@ -21,7 +21,7 @@
     {% endwith %}
   </div>
 <section>
-    <div class="row">
+    <div class="row g-0">
         {% for hike in hikes %}
         <div class="col">
             <div class="position-cards">
