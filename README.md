@@ -167,14 +167,14 @@ This website has been built using HTML, CSS, Javascript and Python.
 
     -    #### Edit Category
           
-         ![Edit Category]()
-         ![Edit Category-mobile]()
+         ![Edit Category](trailfinders/static/media/documentation_images/edit_cat.png)
+         ![Edit Category-mobile](trailfinders/static/media/documentation_images/edit_cat_mobile.png)
 
     -    #### Hikes
           * Displays Hikes from all users. Buttons to edit or delete posts are only visible to the user who created the post. 
-          
-         ![Hikes]()
-         ![Hikes-mobile]()
+
+         ![Hikes](trailfinders/static/media/documentation_images/hikes.png)
+         ![Hikes-mobile](trailfinders/static/media/documentation_images/hikes_mobile.png)
 
     -    #### Add Hike
          * Features a form for the user to complete. Once the details are filled in correctly, including those with 'required' fields, the user can press the form buttton and will be redirected to the Hikes page where their post will be visible. 
