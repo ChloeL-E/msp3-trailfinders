@@ -9,7 +9,7 @@
 
 This project was designed for Milestone Project 3 of Code Institutes' Level 5 Diploma in Web Development.
 
-Take a Hike is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to view Hikes within the North East of England that have been added by other users, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together.  
+Take a Hike is for all those who love being outdoors and exploring the beauty in their local area. It allows the user to view Hikes within the North East of England that have been added by others, add their own hikes and hopefully inspire more people to get outdoors and start exploring! The website offers users a platform to share their thoughts and opinions on the hikes posted and in doing so brings a community of people together.  
 
 This website has been built using HTML, CSS, Javascript and Python.
 
@@ -99,7 +99,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     * This font is clean, clear and easy to read online. 
 
 -   ### Imagery
-    * Imagery has been kindly provided by north-east based photographer Mr Adam Lowes with consent.
+    * Imagery has been kindly provided by north-east based photographer Mr Adam Lowes.
 
 -   ### Wireframes
 
@@ -112,7 +112,10 @@ This website has been built using HTML, CSS, Javascript and Python.
     * Wireframe - [Balsamiq wireframe]()
 
 -   ### Database Schema
+    * The database was designed using Lucid Chart(see credits). 
     * [EDR diagram](trailfinders/static/media/testing_images/EDR.png)
+    * There are 3 tables within this relational database: User, Hike and Category. 
+    
 - - - 
 
 ## Structure
@@ -140,33 +143,43 @@ This website has been built using HTML, CSS, Javascript and Python.
         ![Background image](trailfinders/static/media/documentation_images/background_image.png)
 
     -   #### Home page
+
+        * The home page is titles Go Walking!
+        * There includes a description of the site within the hero image section. This gives the user information about the websites purpose
+        * Scrolling further down the page, the user is shown a Register and a Login button to prompt an action to login to the site.
+        * This page also shows Hike posts to encourage the users' interest in the site.
         
         ![Home page](trailfinders/static/media/documentation_images/go_walking.png)
         ![Home page - mobile device](trailfinders/static/media/documentation_images/go_walking_mobile.png)
 
+    -    #### Register
+        * This page features a short form asking the user to complete input fields and a button to Register which submits the form
+
+        ![Register](trailfinders/static/media/documentation_images/register.png)
+        ![Register-mobile](trailfinders/static/media/documentation_images/register_mobile.jpeg)
+
     -   #### Login
+        * Same layout as the Register page for improved user experience(UX)
         * This page features a simple for for the user to input their login details. 
         * A login button below the form inputs, indicates to the user to click to login
 
         ![Login](trailfinders/static/media/documentation_images/login.png)
         ![Login-mobile](trailfinders/static/media/documentation_images/login_mobile.png)
 
-    -    #### Register
-
-        ![Register](trailfinders/static/media/documentation_images/register.png)
-        ![Register-mobile](trailfinders/static/media/documentation_images/register_mobile.jpeg)
-
     -    #### Categories
+        * This page displays any categories that users have added
          
          ![Categories](trailfinders/static/media/documentation_images/categories.jpeg)
          ![Categories-mobile](trailfinders/static/media/documentation_images/categories-mobile.jpeg)
 
     -    #### Add Category
+        * This page presents the user with an input box and a button, indiacting to the user to add a category
          
          ![Add Category](trailfinders/static/media/documentation_images/add_category.png)
          ![Add Category-mobile](trailfinders/static/media/documentation_images/add_category-mobile.jpeg)
 
     -    #### Edit Category
+        * This page is where the user can edit their own Category. They can access this page once they are logged in and press the edit button on any category which they have created. 
           
          ![Edit Category](trailfinders/static/media/documentation_images/edit_cat.png)
          ![Edit Category-mobile](trailfinders/static/media/documentation_images/edit_cat_mobile.png)
