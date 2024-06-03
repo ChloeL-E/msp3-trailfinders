@@ -21,12 +21,12 @@
       <!-- Input for username -->
       <div class="form-group">
         <label class="mb-2 mt-2" for="username">Username: </label>
-        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" min-length="4" max-length="50" required>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username"  maxlength="50" required>
       </div>
       <!-- Input for password -->
       <div class="form-group">
         <label class="mt-2 mb-2" for="password">Password: </label>
-        <input type="password" autocomplete="current-password" class="form-control" id="password" name="password" placeholder="Enter Password" min-length="6" max-length="20"required>
+        <input type="password" autocomplete="current-password" class="form-control" id="password" name="password" placeholder="Enter Password" minlength="6" maxlength="20"required>
       </div>
       <!-- Signin button -->
       <div class="text-center">
@@ -40,5 +40,5 @@
     <a class="btn mt-3 mb-4" href="{{ url_for('register') }}">Register</a>
   </div>
 </section>
-</div>
+
 {% endblock %}
