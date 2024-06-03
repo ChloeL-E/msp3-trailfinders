@@ -172,8 +172,9 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
     -    #### Validators
 
-         * W3C Markup Validator, W3C CSS Validator Services were used to validate this project to ensure that there were no syntax errors in the project. Each file was tested through the relevant Validator.
-         * Markup Validator 
+         * W3C Markup Validator was used to validate this project to ensure that there were no syntax errors in the project. Each page was tested through and found to have no error or warnings.
+         
+         * HTML Validator 
             1. Go Walking! - ![W3C Markup Validator](trailfinders/static/media/documentation_images/index_validation.png)
             2. Login -![W3C Markup Validator]()
             3. Register -![W3C Markup Validator]()
@@ -185,10 +186,17 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
             9. Edit Hikes -![W3C Markup Validator]()
 
          * CSS Validator 
+         All pages were tested using W3C jigsaw validator and passed with no errors or warnings
             1. style.css CSS Validation - ![W3C Jigsaw Validator](trailfinders/static/media/testing_images/css_validation.png)
-         * Jshint was used to validate the Javascript
+         
+         * Javascript
             1. script.js ![JShint](trailfinders/static/media/documentation_images/jshint_validation.png)
-         * PEP8 compliant ![CI Linter](trailfinders/static/media/documentation_images/python_validation.png)
+
+         * PEP8 compliant 
+            1. routes.py![CI Linter](trailfinders/static/media/documentation_images/python_validation.png)
+            2. models.py[CI Linter]()
+            3. run.py![CI Linter]()
+            4. __init__.py![CI Linter]()
 
     -    #### WAVE accessibility tool
 
