@@ -217,6 +217,6 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
   * [Add Category page](trailfinders/static/media/documentation_images/add_category_lighthouse.png)
   * [Edit Category page](trailfinders/static/media/documentation_images/edit_categoy_lighthouse.png)
   * [Hikes page](trailfinders/static/media/documentation_images/hikes_lighthouse.png)
-  * [Add Hike page]()
-  * [Edit Hike page]()
+  * [Add Hike page](trailfinders/static/media/testing_images/add_hike_lightouse.png)
+  * [Edit Hike page](trailfinders/static/media/testing_images/edit_hike_lighthouse.png)
 
