@@ -331,7 +331,7 @@ li::marker {
     content: none;
 }
 
-.error{
+.error {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -407,6 +407,10 @@ li::marker {
         margin-left: 0;
         list-style: none;
         margin-bottom: 0.5rem;
+    }
+
+    .footer-links li a,
+    footer p {
         font-size: small;
     }
 
