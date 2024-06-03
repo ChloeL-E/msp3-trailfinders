@@ -182,6 +182,7 @@ This website has been built using HTML, CSS, Javascript and Python.
         * This page is where the user can edit their own Category. They can access this page once they are logged in and press the edit button on any category which they have created. 
           
          ![Edit Category](trailfinders/static/media/documentation_images/edit_cat.png)
+         ![Edit/Delete Buttons](trailfinders/static/media/documentation_images/edit_delete.png)
          ![Edit Category-mobile](trailfinders/static/media/documentation_images/edit_cat_mobile.png)
 
     -    #### Hikes
@@ -193,14 +194,14 @@ This website has been built using HTML, CSS, Javascript and Python.
     -    #### Add Hike
          * Features a form for the user to complete. Once the details are filled in correctly, including those with 'required' fields, the user can press the form buttton and will be redirected to the Hikes page where their post will be visible. 
 
-         ![Add Hike]()
+         ![Add Hike](trailfinders/static/media/documentation_images/add_hike.png)
          ![Add Hike-mobile]()
 
     -    #### Edit Hike
          *  Shows the same form format to the user with prepopulated data so the user can be reminded what they have written. They are free to ammend the input and can press the form button. They are redirected to the Hikes pages where they will be able to see their updates post.
 
-         ![Edit Hike]()
-         ![Edit Hike]()
+         ![Edit Hike](trailfinders/static/media/documentation_images/edit_hike.png)
+         ![Edit Hike-mobile]()
 
     -    #### Footer
          * Responsive. Features the site Title, links to the main pages and social links.
