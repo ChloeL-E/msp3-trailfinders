@@ -390,15 +390,15 @@ li::marker {
         width: 100%;
     }
 
-    .mt-3 {
-        margin-top: 0.25rem !important;
-    }
-
     .form-group,
     .btn {
         margin-left: 3px;
         text-align: center;
         margin-top: 15px;
+    }
+
+    .mt-3 {
+        margin-top: 0.25rem !important;
     }
 
     footer h3 {
