@@ -390,6 +390,10 @@ li::marker {
         width: 100%;
     }
 
+    .mt-3 {
+        margin-top: 0.25rem !important;
+    }
+
     .form-group,
     .btn {
         margin-left: 3px;
