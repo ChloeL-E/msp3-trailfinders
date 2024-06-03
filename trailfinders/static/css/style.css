@@ -397,15 +397,15 @@ li::marker {
         margin-top: 15px;
     }
 
+    footer h3 {
+        font-size: medium;
+    }
+
     .footer-links li,
     .socials li {
         padding-left: 0;
         margin-left: 0;
         list-style: none;
-    }
-
-    .footer-links li,
-    .socials li {
         margin-bottom: 0.5rem;
     }
 
