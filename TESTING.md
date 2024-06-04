@@ -180,7 +180,7 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
             1. Go Walking! - ![W3C Markup Validator](trailfinders/static/media/documentation_images/index_validation.png)
             2. Login -![W3C Markup Validator]()
             3. Register -![W3C Markup Validator]()
-            4. Categories -![W3C Markup Validator]()
+            4. Categories -![W3C Markup Validator](trailfinders/static/media/testing_images/categories_validator.png)
             5. Add Categories - ![W3C Markup Validator]()
             6. Edit Categories -![W3C Markup Validator]()
             7. Hikes -![W3C Markup Validator](trailfinders/static/media/testing_images/my_hikes_validator.png) 
