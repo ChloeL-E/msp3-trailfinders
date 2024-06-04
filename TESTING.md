@@ -183,9 +183,9 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
             4. Categories -![W3C Markup Validator]()
             5. Add Categories - ![W3C Markup Validator]()
             6. Edit Categories -![W3C Markup Validator]()
-            7. Hikes -![W3C Markup Validator]() 
-            8. Add Hikes -![W3C Markup Validator]()
-            9. Edit Hikes -![W3C Markup Validator]()
+            7. Hikes -![W3C Markup Validator](trailfinders/static/media/testing_images/my_hikes_validator.png) 
+            8. Add Hikes -![W3C Markup Validator](trailfinders/static/media/testing_images/add_hike_validator.png)
+            9. Edit Hikes -![W3C Markup Validator](trailfinders/static/media/testing_images/edit_hike_validator.png)
 
          * CSS Validator 
          All pages were tested using W3C jigsaw validator and passed with no errors or warnings

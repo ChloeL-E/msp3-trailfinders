@@ -207,7 +207,7 @@ h3 {
 
 .reduce {
     font-family: var(--font-family);
-    font-size:large;
+    font-size: 20px;
 }
 
 /*------- ADD_HIKE -------*/
@@ -321,7 +321,6 @@ li::marker {
 .error_handler {
     margin: 0 aut0;
 }
-
 
 /*--------MEDIA Query <600px --------*/
 
