@@ -166,6 +166,8 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
     * When testing the responsiveness of the site, I found that the form pages e.g. add_hike, edit_hike, login, register, were'nt responsive on samll screen sizes. A quick search found a blog by Lindsay on [Medium](https://medium.com/@urchykli/nested-grids-using-bootstrap-8673b6bd7ec3)which indicated i'd forgotted to correctly nest the forms within bootstraps nested grid system. I also found [mdbootstrap](https://mdbootstrap.com/how-to/bootstrap/change-input-width#:~:text=Example%3A%20To%20change%20the%20width,form-outline%20element.) as it showed me how to easily ammedn width size of input elements in relation to parent element.
 
+    * An issue in deployment occurred when testing the site whereby the data did not appear to be being stored in the database. An error was found in the __init__.py and env.py pages. The 'database_URL' variable should have matched the configuration variable 'DB_URl' that was set in Heroku. Once the correction was updated in the local IDE to match the key in heroku, the database was accessible and the deployed site was able to store data.
+
 
 - - - 
 -   ### Accessibility
