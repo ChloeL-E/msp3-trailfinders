@@ -367,6 +367,7 @@ li::marker {
 
     .form-style {
         width: 100%;
+        padding: 10px;
     }
 
     .form-group,
