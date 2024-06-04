@@ -102,18 +102,18 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 -   ### Wireframes
 
-    * [Go Walking!]()(desktop)
-    * [Go Walking!]()(tablet device) 
-    * [Go Walking!]()(mobile device)
+    * [Go Walking!](trailfinders/static/media/documentation_images/go_walk_d_wireframe.png)(desktop)
+    * [Go Walking!](trailfinders/static/media/documentation_images/go_walk_t_wireframe.png)(tablet device) 
+    * [Go Walking!](trailfinders/static/media/documentation_images/go_walk_m_wireframe.png)(mobile device)
     * [Register]()(desktop)
     * [Register]()(tablet device) 
     * [Register]()(mobile device) 
     * [Login]()(desktop)
     * [Login]()(tablet device) 
     * [Login]()(mobile device)
-    * [Hikes]()(desktop)
-    * [Hikes]()(tablet device) 
-    * [Hikes]()(mobile device) 
+    * [Hikes](trailfinders/static/media/documentation_images/hikes_d_wireframe.png)(desktop)
+    * [Hikes](trailfinders/static/media/documentation_images/hikes_t_wireframe.png)(tablet device) 
+    * [Hikes](trailfinders/static/media/documentation_images/hikes_m_wireframe.png)(mobile device) 
     * [Add Hike](trailfinders/static/media/documentation_images/add_hike_wireframe.png)(desktop)
     * [Add Hike](trailfinders/static/media/documentation_images/add_hike_t_wireframe.png)(tablet device) 
     * [Add Hike](trailfinders/static/media/documentation_images/add_hike_m_wireframe.png)(mobile device)
@@ -148,19 +148,19 @@ This website has been built using HTML, CSS, Javascript and Python.
         * The navbar is visible when the user lands on each page but disappears whlst the user scrolls down. As the user scrolls up, it reappears so that the user can use the navigation links if they wish. This is done using javascript. The purpose is to give the user maximum view of the page contents whilst it alway being easily accessible to the user.
         * The navbar also has some transparency so that the hero image can be seen beneath it to some degree, this was a design choice so that the navbar doesn't block the imagery.
 
-       ![Navigation Bar - desktop](trailfinders/static/media/documentation_images/navbar.png)
+       [Navigation Bar - desktop](trailfinders/static/media/documentation_images/navbar.png)
 
        * The responsive navbar features a hamburger menu on medium sized devices and smaller
 
-       ![Navigation Bar- mobile device ](trailfinders/static/media/documentation_images/navbar_mobile.png)
+       [Navigation Bar- mobile device ](trailfinders/static/media/documentation_images/navbar_mobile.png)
 
-       ![Navigation Bar- mobile device- hamburger menu open](trailfinders/static/media/documentation_images/hamburger_open.png)
+       [Navigation Bar- mobile device- hamburger menu open](trailfinders/static/media/documentation_images/hamburger_open.png)
 
     -   #### Background Image
         * The hero image was kindly donated from photographer Mr Adam Lowes for specific use on this site. It is an image of the famous Hadrians Wall. This was chosen as it is part of an iconic walk in the North East of England, where trailfinders is set.
         * The hero image features on most pages where it adds value to the user. It was felt that the Hike and add hike pages were quite full of content as posts were added and a hero image detracted form this content rather than lifting it.
         
-        ![Background image](trailfinders/static/media/documentation_images/background_image.png)
+        [Background image](trailfinders/static/media/documentation_images/background_image.png)
 
     -   #### Home page
 
@@ -169,74 +169,73 @@ This website has been built using HTML, CSS, Javascript and Python.
         * Scrolling further down the page, the user is shown a Register and a Login button to prompt an action to login to the site.
         * This page also shows Hike posts to encourage the users' interest in the site.
         
-        ![Home page](trailfinders/static/media/documentation_images/go_walking.png)
-        ![Home page - mobile device](trailfinders/static/media/documentation_images/go_walking_mobile.png)
+        [Home page](trailfinders/static/media/documentation_images/go_walking.png)
+        [Home page - mobile device](trailfinders/static/media/documentation_images/go_walking_mobile.png)
 
     -    #### Register
         * This page features a short form asking the user to complete input fields and a button to Register which submits the form
 
-        ![Register](trailfinders/static/media/documentation_images/register.png)
-        ![Register-mobile](trailfinders/static/media/documentation_images/register_mobile.jpeg)
+        [Register](trailfinders/static/media/documentation_images/register.png)
+        [Register-mobile](trailfinders/static/media/documentation_images/register_mobile.jpeg)
 
     -   #### Login
         * Same layout as the Register page for improved user experience(UX)
         * This page features a simple for for the user to input their login details. 
         * A login button below the form inputs, indicates to the user to click to login
 
-        ![Login](trailfinders/static/media/documentation_images/login.png)
-        ![Login-mobile](trailfinders/static/media/documentation_images/login_mobile.png)
+        [Login](trailfinders/static/media/documentation_images/login.png)
+        [Login-mobile](trailfinders/static/media/documentation_images/login_mobile.png)
 
     -    #### Categories
         * This page displays any categories that users have added
          
-         ![Categories](trailfinders/static/media/documentation_images/categories.jpeg)
-         ![Categories-mobile](trailfinders/static/media/documentation_images/categories-mobile.jpeg)
+         [Categories](trailfinders/static/media/documentation_images/categories.jpeg)
+         [Categories-mobile](trailfinders/static/media/documentation_images/categories-mobile.jpeg)
 
     -    #### Add Category
         * This page presents the user with an input box and a button, indiacting to the user to add a category
          
-         ![Add Category](trailfinders/static/media/documentation_images/add_category.png)
-         ![Add Category-mobile](trailfinders/static/media/documentation_images/add_category-mobile.jpeg)
+         [Add Category](trailfinders/static/media/documentation_images/add_category.png)
+         [Add Category-mobile](trailfinders/static/media/documentation_images/add_category-mobile.jpeg)
 
     -    #### Edit Category
         * This page is where the user can edit their own Category. They can access this page once they are logged in and press the edit button on any category which they have created. 
           
-         ![Edit Category](trailfinders/static/media/documentation_images/edit_cat.png)
-         ![Edit/Delete Buttons](trailfinders/static/media/documentation_images/edit_delete.png)
-         ![Edit Category-mobile](trailfinders/static/media/documentation_images/edit_cat_mobile.png)
+         [Edit Category](trailfinders/static/media/documentation_images/edit_cat.png)
+         [Edit/Delete Buttons](trailfinders/static/media/documentation_images/edit_delete.png)
+         [Edit Category-mobile](trailfinders/static/media/documentation_images/edit_cat_m.png)
 
     -    #### Hikes
           * Displays Hikes from all users. Buttons to edit or delete posts are only visible to the user who created the post. 
 
-         ![Hikes](trailfinders/static/media/documentation_images/hikes.png)
-         ![Hikes-mobile](trailfinders/static/media/documentation_images/hikes_mobile.png)
+         [Hikes](trailfinders/static/media/documentation_images/hikes.png)
+         [Hikes-mobile](trailfinders/static/media/documentation_images/hikes_mobile.png)
 
     -    #### Add Hike
          * Features a form for the user to complete. Once the details are filled in correctly, including those with 'required' fields, the user can press the form buttton and will be redirected to the Hikes page where their post will be visible. 
 
-         ![Add Hike](trailfinders/static/media/documentation_images/add_hike.png)
-         ![Add Hike-mobile]()
+         [Add Hike](trailfinders/static/media/documentation_images/add_hike.png)
+         [Add Hike-mobile](trailfinders/static/media/documentation_images/add_hike_m.png)
 
     -    #### Edit Hike
          *  Shows the same form format to the user with prepopulated data so the user can be reminded what they have written. They are free to ammend the input and can press the form button. They are redirected to the Hikes pages where they will be able to see their updates post.
 
-         ![Edit Hike](trailfinders/static/media/documentation_images/edit_hike.png)
-         ![Edit Hike-mobile]()
+         [Edit Hike](trailfinders/static/media/documentation_images/edit_hike.png)
+         [Edit Hike-mobile](trailfinders/static/media/documentation_images/edit_hike_m.png)
 
     -    #### Footer
          * Responsive. Features the site Title, links to the main pages and social links.
 
-         ![Footer](trailfinders/static/media/documentation_images/footer.png)
-         ![Footer - mobile device](trailfinders/static/media/documentation_images/footer_mobile.png)
+         [Footer](trailfinders/static/media/documentation_images/footer.png)
+         [Footer - mobile device](trailfinders/static/media/documentation_images/footer_mobile.png)
 
     -    #### 404 Error Page
           * A 404 error page was created to ensure that if, for any reason, the webpage is unavailable, the user is taken to a message page which helps to redirect them back to the website.
 
-         ![404 error page]()
+         [404 error page](trailfinders/static/media/documentation_images/404_errorpage.png)
 
     -    #### 500 Error Page
          * A 500 error page was created to ensure that if, for any reason, there is an internal server error, the user is taken to a message page which helps to redirect them back to the website.
-         ![500 error page]()
 
 
 -   ### Features For Future Implementation
