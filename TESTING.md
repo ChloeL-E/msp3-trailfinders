@@ -1,24 +1,28 @@
-<h1 align="center">Take a Hike</h1>
+# Take a Hike - Testing
 
-- - - 
 ![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
 
-<h2 align="center"><img src=""></h2>
-
-# Take a Hike
 
 ## Contents
-* [Testing](#testing)
-  * [User Experience](#user-experience-ux)
+* [Manual Testing](#testing)
+  * [Testing User Stories](#testing-user-stories)
   * [Testing Site Functionality](#testing-site-functionality)
   * [Further Testing](#further-testing)
+* [Automated testing](#automated-testing)
+  * [HTML validation](#html-validation)
+  * [CSS validation](#css-validation)
+  * [Javascript validation](#javascript-validation)
+  * [Python validation](#python-validation)
+  * [WAVE Testing](#wave-testing)
+  * [Lighthouse](#lighthouse)
+* [Bugs](#bugs)
   * [Fixed Bugs](#fixed-bugs)
-  * [Accessibility](#accessibility)
 
-## Testing
--   ### User stories 
+- - - 
 
--   ### Testing User Stories from User Experience (UX) Section
+## Manual Testing 
+
+-   ### Testing User Stories
 
     -   #### First Time User Goals
         * As a first time user, I want to be able to easily navigate around the site without any errors and without the use of the back arrow in the browser.
@@ -63,7 +67,7 @@
         * As a returning user, I want to find that any new added information follows the design and flow of the website and is easy to access. 
             1. New posts get added to to same two pages within the site so new data added to the site will be easy to find
             2. The site design is uniform throughout the site to improve user experience
-
+ 
     -   #### Site Administrator
 
         * As the site administrator, I want the user to be able to register and login without any difficulty or error. 
@@ -84,8 +88,10 @@
          * As the site administrator, I want to know that any future site developments can easily be adapted/added to the site.
             1. 
 
-- - - 
+- - -
+
 -   ### Testing site functionality
+
 | Feature                                                                                       | Expected Outcome                                                                                                        | Testing Performed                                                                                       | Result                                                                                       | Pass/Fail |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|-----------|
 | NAVBAR                                                                                        |                                                                                                                         |                                                                                                         |                                                                                              |           |
@@ -141,8 +147,6 @@
 |                                                                                               |                                                                                                                         
 
 
-
-
 Each action was tested and found to work as expected. 
 Chrome developer tools were used to identify and resolve any issues or bugs throughout the development process. 
 
@@ -150,57 +154,51 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
 
 -   ###  Further Testing
 
-    * The Website was tested on Google Chrome, Microsoft Edge, Internet Explorer and Safari browsers.
-    * The website was viewed on a variety of devices such as Desktop, Laptop, Tablets and Phones using dev tools and real devices.
-    * The website was sent to friends and young family members to review the site and test it from a user perspective.
+Testing was an ongoing process throughout this project. Google Chrome Developer tools were used to ensure the app was running correctly at each stage and it supported troubleshooting of issues when the project wasnt running as expected or the design required further work. It was particularly useful when adjusting the site styling to improve responsiveness.
+
+The Website was tested on Google Chrome, Microsoft Edge, Internet Explorer and Safari browsers. The site was viewed on a variety of devices such as Desktop, Laptop, Tablets and Phones using dev tools and real devices.
+The deployed site sent to friends and young family members to review the site and test it from a user perspective.
 
 - - - 
 
--   ### Fixed Bugs
-
-    * Spent some time on a bug which initially appeared to be preventing data rendering on the site when trying to add a category. I had looked into the python route add_category and also the catgeory model and could not find where the bug was originating. I found that the form data was not updating to the database at all. A sqlalchemy error informed me that the username input had a null value and therefore violated the not-null contraint within the model. I found an article on [Reddit](https://www.reddit.com/r/PostgreSQL/comments/gx6mhj/sqlalchemyexcintegrityerror/) which was helpful and [W3Schools](https://www.w3schools.com/html/html_form_elements.asp) as I realised it was a very simple error in the html- the form input did not have an action attribute. I used jinja template to direct the form to the correct filepath and the bug was fixed.
-
-    * When using flask within the templates for my_hikes.html and index.html- trying to hide the 'edit' and 'delete' buttons to users who had not creates the hike post. I had writted {% if session.user == hike.user_id %} but after some troubleshooting using [Stack Overflow](https://stackoverflow.com/questions/17661829/how-to-compare-string-and-integer-in-python) and [codecademy](https://www.codecademy.com/learn/flask-introduction-to-python/modules/learn-python3-control-flow/cheatsheet), I realised that I was trying to check equality between an integer and a string, hence this not working. I defined a new variable within the login function "session['user_id'] = existing_user.id" to get the session user id rather than the username. This meant that when writing {% if session['user_id'] == hike.user_id %} it was now checking for equality in two integers. 
-
-    * Came upon an issue with session user not being accessed correctly. Had been trying to fix the bug above and had deleted the variable that defines the session.user from the login function. Took some time to realise that the variable needed to be readded to redefine. [Test Driven](https://testdriven.io/blog/flask-sessions/#:~:text=A%20session%20is%20used%20to,the%20session%20will%20eventually%20expire.) was helpful to increase my understanding around session user and accessing session data.
-
-    * When testing the responsiveness of the site, I found that the form pages e.g. add_hike, edit_hike, login, register, were'nt responsive on samll screen sizes. A quick search found a blog by Lindsay on [Medium](https://medium.com/@urchykli/nested-grids-using-bootstrap-8673b6bd7ec3)which indicated i'd forgotted to correctly nest the forms within bootstraps nested grid system. I also found [mdbootstrap](https://mdbootstrap.com/how-to/bootstrap/change-input-width#:~:text=Example%3A%20To%20change%20the%20width,form-outline%20element.) as it showed me how to easily ammedn width size of input elements in relation to parent element.
-
-    * An issue in deployment occurred when testing the site whereby the data did not appear to be being stored in the database. An error was found in the __init__.py and env.py pages. The 'database_URL' variable should have matched the configuration variable 'DB_URl' that was set in Heroku. Once the correction was updated in the local IDE to match the key in heroku, the database was accessible and the deployed site was able to store data.
-
+## Automated Testing 
+         
+-   ### HTML Validation 
+    [W3C](https://validator.w3.org/) Markup Validator was used to validate this project to ensure that there were no syntax errors in the project. 
+    * [Go Walking!](trailfinders/static/media/documentation_images/index_validation.png) - no errors or warnings
+    * [Login]()- no errors or warnings
+    * [Register]()- no errors or warnings
+    * [Categories](trailfinders/static/media/testing_images/categories_validator.png)- no errors or warnings
+    * [Add Categories]()- no errors or warnings
+    * [Edit Categories]()- no errors or warnings
+    * [Hikes](trailfinders/static/media/testing_images/my_hikes_validator.png) - no errors or warnings
+    * [Add Hikes](trailfinders/static/media/testing_images/add_hike_validator.png)- no errors or warnings
+    * [Edit Hikes](trailfinders/static/media/testing_images/edit_hike_validator.png)- no errors or warnings
 
 - - - 
--   ### Accessibility
 
-    -    #### Validators
+-   ### CSS Validation 
+    All pages were tested using [W3C jigsaw css validator](https://jigsaw.w3.org/css-validator/) 
+    * [style.css](trailfinders/static/media/testing_images/css_validation.png)- no errors or warnings
 
-         * W3C Markup Validator was used to validate this project to ensure that there were no syntax errors in the project. Each page was tested through and found to have no error or warnings.
-         
-         * HTML Validator 
-            1. Go Walking! - ![W3C Markup Validator](trailfinders/static/media/documentation_images/index_validation.png)
-            2. Login -![W3C Markup Validator]()
-            3. Register -![W3C Markup Validator]()
-            4. Categories -![W3C Markup Validator](trailfinders/static/media/testing_images/categories_validator.png)
-            5. Add Categories - ![W3C Markup Validator]()
-            6. Edit Categories -![W3C Markup Validator]()
-            7. Hikes -![W3C Markup Validator](trailfinders/static/media/testing_images/my_hikes_validator.png) 
-            8. Add Hikes -![W3C Markup Validator](trailfinders/static/media/testing_images/add_hike_validator.png)
-            9. Edit Hikes -![W3C Markup Validator](trailfinders/static/media/testing_images/edit_hike_validator.png)
+- - - 
+    
+-   ### Javascript Validation
+    [Jshint](https://jshint.com/) was utilised as the javascript validation tool
+    * [script.js](trailfinders/static/media/documentation_images/jshint_validation.png)
 
-         * CSS Validator 
-         All pages were tested using W3C jigsaw validator and passed with no errors or warnings
-            1. style.css CSS Validation - ![W3C Jigsaw Validator](trailfinders/static/media/testing_images/css_validation.png)
-         
-         * Javascript
-            1. script.js ![JShint](trailfinders/static/media/documentation_images/jshint_validation.png)
+- - - 
 
-         * PEP8 compliant 
-            1. routes.py![CI Linter](trailfinders/static/media/documentation_images/python_validation.png)
-            2. models.py[CI Linter]()
-            3. run.py![CI Linter]()
-            4. __init__.py![CI Linter]()
+-   ### Python Validation
+    PEP8 compliant.[CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the python code.
+    * [routes.py](trailfinders/static/media/testing_images/routes_validation.png) 
+    * [models.py]()
+    * [run.py]()
+    * [__init__.py!]()
 
-    -    #### WAVE accessibility tool
+- - -
+
+-   ### WAVE Testing
 
     See the WAVE reports for:
 
@@ -214,9 +212,9 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
   * [Add Hike page](trailfinders/static/media/documentation_images/add_hike_wave.png)
   * [Edit Hike page](trailfinders/static/media/documentation_images/edit_hike_wave.png)
 
-    * 
+- - -
 
-    -    #### Lighthouse 
+-   ### Lighthouse 
 
     Lighthouse within the Chrome Developer Tools was used to test performance, accessibility, best practices and SEO of this website. See the lighthouse reports for each page within the site:
   
@@ -229,4 +227,24 @@ Chrome developer tools were used to identify and resolve any issues or bugs thro
   * [Hikes page](trailfinders/static/media/documentation_images/hikes_lighthouse.png)
   * [Add Hike page](trailfinders/static/media/testing_images/add_hike_lightouse.png)
   * [Edit Hike page](trailfinders/static/media/testing_images/edit_hike_lighthouse.png)
+
+  - - -
+
+## Bugs
+
+-   ### Fixed Bugs
+
+    * Spent some time on a bug which initially appeared to be preventing data rendering on the site when trying to add a category. I had looked into the python route add_category and also the catgeory model and could not find where the bug was originating. I found that the form data was not updating to the database at all. A sqlalchemy error informed me that the username input had a null value and therefore violated the not-null contraint within the model. I found an article on [Reddit](https://www.reddit.com/r/PostgreSQL/comments/gx6mhj/sqlalchemyexcintegrityerror/) which was helpful and [W3Schools](https://www.w3schools.com/html/html_form_elements.asp) as I realised it was a very simple error in the html- the form input did not have an action attribute. I used jinja template to direct the form to the correct filepath and the bug was fixed.
+
+    * When using flask within the templates for my_hikes.html and index.html- trying to hide the 'edit' and 'delete' buttons to users who had not creates the hike post. I had writted {% if session.user == hike.user_id %} but after some troubleshooting using [Stack Overflow](https://stackoverflow.com/questions/17661829/how-to-compare-string-and-integer-in-python) and [codecademy](https://www.codecademy.com/learn/flask-introduction-to-python/modules/learn-python3-control-flow/cheatsheet), I realised that I was trying to check equality between an integer and a string, hence this not working. I defined a new variable within the login function "session['user_id'] = existing_user.id" to get the session user id rather than the username. This meant that when writing {% if session['user_id'] == hike.user_id %} it was now checking for equality in two integers. 
+
+    * Came upon an issue with session user not being accessed correctly. Had been trying to fix the bug above and had deleted the variable that defines the session.user from the login function. Took some time to realise that the variable needed to be readded to redefine. [Test Driven](https://testdriven.io/blog/flask-sessions/#:~:text=A%20session%20is%20used%20to,the%20session%20will%20eventually%20expire.) was helpful to increase my understanding around session user and accessing session data.
+
+    * When testing the responsiveness of the site, I found that the form pages e.g. add_hike, edit_hike, login, register, were'nt responsive on samll screen sizes. A quick search found a blog by Lindsay on [Medium](https://medium.com/@urchykli/nested-grids-using-bootstrap-8673b6bd7ec3)which indicated i'd forgotted to correctly nest the forms within bootstraps nested grid system. I also found [mdbootstrap](https://mdbootstrap.com/how-to/bootstrap/change-input-width#:~:text=Example%3A%20To%20change%20the%20width,form-outline%20element.) as it showed me how to easily ammedn width size of input elements in relation to parent element.
+
+    * An issue in deployment occurred when testing the site whereby the data did not appear to be being stored in the database. An error was found in the __init__.py and env.py pages. The 'database_URL' variable should have matched the configuration variable 'DB_URl' that was set in Heroku. Once the correction was updated in the local IDE to match the key in heroku, the database was accessible and the deployed site was able to store data.
+
+- - - 
+
+
 
