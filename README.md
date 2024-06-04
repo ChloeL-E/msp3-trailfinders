@@ -102,13 +102,34 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 -   ### Wireframes
 
-    * Home Page (desktop) Wireframe - [Balsamiq wireframe]()
-    * Home Page (mobile device) Wireframe - [Balsamiq Home Page (mobile device) wireframe]()
-    * Wireframe - [Balsamiq  wireframe]()
-    * Wireframe - [Balsamiq wireframe]()
-    * Wireframe (desktop)- [Balsamiq wireframe]()
-    * Wireframe (mobile device) - [Balsamiq (mobile device)]()
-    * Wireframe - [Balsamiq wireframe]()
+    * [Go Walking!]()(desktop)
+    * [Go Walking!]()(tablet device) 
+    * [Go Walking!]()(mobile device)
+    * [Register]()(desktop)
+    * [Register]()(tablet device) 
+    * [Register]()(mobile device) 
+    * [Login]()(desktop)
+    * [Login]()(tablet device) 
+    * [Login]()(mobile device)
+    * [Hikes]()(desktop)
+    * [Hikes]()(tablet device) 
+    * [Hikes]()(mobile device) 
+    * [Add Hike](trailfinders/static/media/documentation_images/add_hike_wireframe.png)(desktop)
+    * [Add Hike](trailfinders/static/media/documentation_images/add_hike_t_wireframe.png)(tablet device) 
+    * [Add Hike](trailfinders/static/media/documentation_images/add_hike_m_wireframe.png)(mobile device)
+    * [Edit Hike](trailfinders/static/media/documentation_images/edit_hike_d_wireframe.png)(desktop)
+    * [Edit Hike](trailfinders/static/media/documentation_images/edit_hike_t_wireframe.png)(tablet device) 
+    * [Edit Hike]()(mobile device)
+    * [Categories]()(desktop)
+    * [Categories]()(tablet device) 
+    * [Categories]()(mobile device) 
+    * [Add Category](trailfinders/static/media/documentation_images/add_cat_d_wireframe.png)(desktop)
+    * [Add Category](trailfinders/static/media/documentation_images/add_cat_t_wireframe.png)(tablet device) 
+    * [Add Category](trailfinders/static/media/documentation_images/add_cat_m_wireframe.png)(mobile device)
+    * [Edit Category](trailfinders/static/media/documentation_images/edit_cat_d_wireframe.png)(desktop)
+    * [Edit Category]()(tablet device) 
+    * [Edit Category]()(mobile device)
+
 
 -   ### Database Schema
     * The database was designed using Lucid Chart(see credits). 
