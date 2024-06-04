@@ -23,7 +23,7 @@
   </div>
 </section>
 <section>
-  <h3 class="mt-3 mb-2">Need inspiration? Check out these walks...</h3>
+  <h2 class="mt-3 mb-2">Need inspiration? Check out these walks...</h2>
     <div class="row g-0">
         {% for hike in hikes %}
         <div class="col">
@@ -32,7 +32,7 @@
                     <img class="card-img-top" src="{{ hike.image_url }}"
                             alt="{{ hike.hike_title }}">
                     <div class="card-body">
-                        <h2 class="card-title">{{ hike.hike_title }}</h2>
+                        <h3 class="card-title">{{ hike.hike_title }}</h3>
                         <p>Distance: {{ hike.distance }}</p>
                         <p>Elevation: {{ hike.elevation }}</p>
                         <p>Difficulty: {{ hike.difficulty }}</p>
