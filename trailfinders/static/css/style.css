@@ -100,30 +100,9 @@
     height: 43vh;
 }
 
-/*#categories-hero:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);  The transparent overlay 
-    pointer-events: none;  Ensures the overlay does not interfere with any user interactions *
-}*/
-
-/*#index-hero-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("/static/media/images/hadrianswall.webp");
-    margin-top: -100px;
-    height: 90vh;
-    object-fit: cover;
-}*/
-
-header h1,
 h1,
-h2 {
+h2,
+h3 {
     color: var(--dark_green);
     font-weight: 500;
     font-family: "Bebas Neue";
@@ -224,6 +203,13 @@ h2 {
     margin-right: 10px;
 }
 
+/*------- HIKEs -------*/
+
+.reduce {
+    font-family: var(--font-family);
+    font-size:large;
+}
+
 /*------- ADD_HIKE -------*/
 
 .icon {
@@ -242,7 +228,7 @@ h2 {
 .change {
     text-decoration: none;
     font-family: var(--font-family);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     color: var(--dark_green);
     cursor: pointer;
@@ -251,12 +237,6 @@ h2 {
 .change:hover {
     color: var(--green);
 }
-
-/*.form-sizing {
-    border: 1px solid var(--dark_green);
-    border-radius: 5px;
-    padding: 5px 10px;
-}*/
 
 label {
     font-family: "Bebas Neue";
@@ -294,7 +274,7 @@ footer {
     padding-left: 10px;
 }
 
-footer h3 {
+footer h4 {
     font-family: "Bebas Neue";
     font-weight: 600;
     color: var(--dark_green);
@@ -401,7 +381,7 @@ li::marker {
         margin-top: 0.25rem !important;
     }
 
-    footer h3 {
+    footer h4 {
         font-size: medium;
     }
 
