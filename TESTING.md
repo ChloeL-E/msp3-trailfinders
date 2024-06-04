@@ -166,7 +166,7 @@ The deployed site sent to friends and young family members to review the site an
 -   ### HTML Validation 
     [W3C](https://validator.w3.org/) Markup Validator was used to validate this project to ensure that there were no syntax errors in the project. 
     * [Go Walking!](trailfinders/static/media/documentation_images/index_validation.png) - no errors or warnings
-    * [Login]()- no errors or warnings
+    * [Login](trailfinders/static/media/testing_images/login_validator.png)- no errors or warnings
     * [Register]()- no errors or warnings
     * [Categories](trailfinders/static/media/testing_images/categories_validator.png)- no errors or warnings
     * [Add Categories]()- no errors or warnings
