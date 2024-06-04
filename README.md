@@ -77,10 +77,9 @@ This website has been built using HTML, CSS, Javascript and Python.
 
         1. As the site administrator, I want the user to be able to register and login without any difficulty or error.
         2. As the site administrator, I want to ensure a user is only able to edit or delete their own posts.
-        3. As the site administrator, I want to ensure the user is able to navigate around the site without raising any errors.
-        4. As the site administrator, I want to ensure that if any errors occur, they are handled gracefully and the user is shown quickly back to the website.
-        5. As the site administrator, I want to ensure user information is handled securely.
-        6. As the site administrator, I want to know that any future site developments can easily be adapted/added to the site.
+        3. As the site administrator, I want to ensure that if any errors occur, they are handled gracefully and the user is shown quickly back to the website.
+        4. As the site administrator, I want to ensure user information is handled securely.
+        5. As the site administrator, I want to ensure the user is able to navigate around the site without use of the back button in the browser.
 
 - - - 
 
@@ -223,7 +222,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     *  Asking users to input an image url when adding/editing their hike posts may feel cumbersome to the user and make it less likely that this field is filled in, affecting UX and also the aesthetic of the site. It would be beneficial to connect to any API that would already have a large range of images for the user to search and select rather than having to search for the images themselves and input. 
     * A star rating system or a thumbs up/'favourited' and comments feature would be an interesting feature to add to the hike posts so that users could interact with others' posts and this may increase engagement and build more of a sense of community within the site.
     * It would be a good idea to have a Profile page for the user to see their own hikes and perhaps a section for their 'favourited' hikes that they have seen posted by other users so that users can keep track of where they have walked and where they would like to walk in the future. This would improve user experience and the personalisation of a profile page would mean they are more likely to return to the site.
-    * I would like to implement an administrator login/role within the login functionality so that the site administartor has some control in the running of the site if required. 
+    * I would like to implement an administrator login/role within the login functionality so that the site administrator has some control in the running of the site if required and be able to edit/delete any posts on the site. This would be useful if there was, for example, something written that was offensive or inappropriate. 
     
 - - - 
 
@@ -306,6 +305,8 @@ To deploy Trailfinders to Heroku, take the following steps:
 - [TableMagic](https://stevecat.net/table-magic/) for creating the testing table
 
 - [GeeksforGeeks](https://www.geeksforgeeks.org/python-404-error-handling-in-flask/) and [Flask](https://flask.palletsprojects.com/en/2.3.x/errorhandling/) for assistance in error handling 
+
+- [Katrina Kirschs'](https://blog.hubspot.com/marketing/hero-image) blog on Hubspot was helpful when designing the layout of the website and decisions around styling of the hero image.
 
 - Content was written by Chloe Livingstone-Evans.
 

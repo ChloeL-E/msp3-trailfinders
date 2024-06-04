@@ -56,13 +56,21 @@
 
     -   #### Returning User
         * As a returning user, I want to be able to return to the site and login. 
-            1. The user can easily locate the login page from the Go Walking(landing page) or via the login button
+            1. The user can easily locate the login page from the Go Walking(index.html) or via the login button
+            2. The user can then login with their username and password and click the login button. Providing they input the correct details, they will then be redirected to the home page and access the full site.
+            3. If the user inouts their details incorrectly they will stay on the login page, they be notified via a flash message which informs them of the mistake and to try again
 
         * As a returning user, I want to be abe to keep up-to-date with other users' hike posts so that i can stay involved within the community. 
-            1. 
+            1. The user can access all of the hikes posted by other users on both the Go Walking!(index.html) page and the 'Hikes' page.
+            2. Each Hike posted by a user is displayed in alphabetical order of title 
 
         * As a returning user, I want to be able to continue to add, edit or delete my hikes. 
-            1. A logged in user can add hikes, as well as edit and delete their own posts. An edit and delete button show on the users' own posts.
+            1. A logged in user can add hikes, as well as edit and delete their own hike posts. An edit and delete button show on the users' own posts.
+            2. If the user is not the author of a post the edit/delete buttons will not show. 
+
+        * As a returning user, I want to be able to continue to add, edit or delete my categories.
+            1. A logged in user can add categories, as well as edit and delete their own category posts. An edit and delete button show on the users' own posts.
+            2. If the user is not the author of a post the edit/delete buttons will not show. 
 
         * As a returning user, I want to find that any new added information follows the design and flow of the website and is easy to access. 
             1. New posts get added to to same two pages within the site so new data added to the site will be easy to find
@@ -71,22 +79,24 @@
     -   #### Site Administrator
 
         * As the site administrator, I want the user to be able to register and login without any difficulty or error. 
-            1. 
+            1. The functionality of the register and login functions has been tested and found to have no errors.
+            2. When the user registers, their details are stored in the database. When the user logs in, the datat is retrieveed from the database and if the users' input matches the data stored under that username, then are directed to the full site.
+            3. If the user accidentally inputs the wrong data, they are shown a flash message to inform them of the mistake and to ask them to try again
 
         * As the site administrator, I want to ensure a user is only able to edit or delete their own posts. 
-            1. 
+            1. A logged in user can add hikes and add categories, as well as edit and delete their own hike and category posts. An edit and delete button show on the users' own posts.
+            2. If the user is not the author of a post the edit/delete buttons will not show.  
         
         * As the site administrator, I want to ensure that if any errors occur, they are handled gracefully and the user is shown quickly back to the website.
-            1. 
+            1. 404 and 500 error pages have been added. Depending if the error is an internal server error or if the page cannot be found, the error page will show. These pages give the user a short explanation and ask for them to follow the directions to return to the site. The can do this by either clicking the button below the message to return to the Go Walking! page or utilise the links in the navigation bar/footer.
         
         * As the site administrator, I want to ensure user information is handled securely.
-            1. 
+            1. Passwords are hashed so that when they aree encrytped and stored in the database in this encrypted form. 
         
-         * As the site administrator, I want to ensure the user is able to navigate around the site without raising any errors
-            1. 
+         * As the site administrator, I want to ensure the user is able to navigate around the site without use of the back button in the browser.
+            1. The user can easily access links to each site page within the navbar as well as relevant links in the footer.
+            2. Buttons are also used within each page as a call to action for the user, guiding them easily through the site
         
-         * As the site administrator, I want to know that any future site developments can easily be adapted/added to the site.
-            1. 
 
 - - -
 
@@ -167,10 +177,10 @@ The deployed site sent to friends and young family members to review the site an
     [W3C](https://validator.w3.org/) Markup Validator was used to validate this project to ensure that there were no syntax errors in the project. 
     * [Go Walking!](trailfinders/static/media/documentation_images/index_validation.png) - no errors or warnings
     * [Login](trailfinders/static/media/testing_images/login_validator.png)- no errors or warnings
-    * [Register]()- no errors or warnings
+    * [Register](trailfinders/static/media/testing_images/register_validation.png)- no errors or warnings
     * [Categories](trailfinders/static/media/testing_images/categories_validator.png)- no errors or warnings
-    * [Add Categories]()- no errors or warnings
-    * [Edit Categories]()- no errors or warnings
+    * [Add Categories](trailfinders/static/media/testing_images/add_category_validation.png)- no errors or warnings
+    * [Edit Categories](trailfinders/static/media/testing_images/edit_category_validation.png)- no errors or warnings
     * [Hikes](trailfinders/static/media/testing_images/my_hikes_validator.png) - no errors or warnings
     * [Add Hikes](trailfinders/static/media/testing_images/add_hike_validator.png)- no errors or warnings
     * [Edit Hikes](trailfinders/static/media/testing_images/edit_hike_validator.png)- no errors or warnings
@@ -192,9 +202,9 @@ The deployed site sent to friends and young family members to review the site an
 -   ### Python Validation
     PEP8 compliant.[CI Python Linter](https://pep8ci.herokuapp.com/) was used to validate the python code.
     * [routes.py](trailfinders/static/media/testing_images/routes_validation.png) 
-    * [models.py]()
-    * [run.py]()
-    * [__init__.py!]()
+    * [models.py](trailfinders/static/media/testing_images/models_validation.png)
+    * [run.py](trailfinders/static/media/testing_images/run_validation.png)
+    * [__init__.py!](trailfinders/static/media/testing_images/init_validtion.png)
 
 - - -
 
@@ -236,13 +246,14 @@ The deployed site sent to friends and young family members to review the site an
 
     * Spent some time on a bug which initially appeared to be preventing data rendering on the site when trying to add a category. I had looked into the python route add_category and also the catgeory model and could not find where the bug was originating. I found that the form data was not updating to the database at all. A sqlalchemy error informed me that the username input had a null value and therefore violated the not-null contraint within the model. I found an article on [Reddit](https://www.reddit.com/r/PostgreSQL/comments/gx6mhj/sqlalchemyexcintegrityerror/) which was helpful and [W3Schools](https://www.w3schools.com/html/html_form_elements.asp) as I realised it was a very simple error in the html- the form input did not have an action attribute. I used jinja template to direct the form to the correct filepath and the bug was fixed.
 
-    * When using flask within the templates for my_hikes.html and index.html- trying to hide the 'edit' and 'delete' buttons to users who had not creates the hike post. I had writted {% if session.user == hike.user_id %} but after some troubleshooting using [Stack Overflow](https://stackoverflow.com/questions/17661829/how-to-compare-string-and-integer-in-python) and [codecademy](https://www.codecademy.com/learn/flask-introduction-to-python/modules/learn-python3-control-flow/cheatsheet), I realised that I was trying to check equality between an integer and a string, hence this not working. I defined a new variable within the login function "session['user_id'] = existing_user.id" to get the session user id rather than the username. This meant that when writing {% if session['user_id'] == hike.user_id %} it was now checking for equality in two integers. 
+    * When using flask within the templates for my_hikes.html and index.html- trying to hide the 'edit' and 'delete' buttons to users who had not creates the hike post. I had writted {% if session.user == hike.user_id %} but after some troubleshooting using [Stack Overflow](https://stackoverflow.com/questions/17661829/how-to-compare-string-and-integer-in-python) and [codecademy](https://www.codecademy.com/learn/flask-introduction-to-python/modules/learn-python3-control-flow/cheatsheet), I realised that I was trying to check equality between an integer and a string, hence this not working. I defined a new variable within the login function `session['user_id'] = existing_user.id` to get the session user id rather than the username. This meant that when writing `{% if session['user_id'] == hike.user_id %}` it was now checking for equality in two integers. 
 
     * Came upon an issue with session user not being accessed correctly. Had been trying to fix the bug above and had deleted the variable that defines the session.user from the login function. Took some time to realise that the variable needed to be readded to redefine. [Test Driven](https://testdriven.io/blog/flask-sessions/#:~:text=A%20session%20is%20used%20to,the%20session%20will%20eventually%20expire.) was helpful to increase my understanding around session user and accessing session data.
 
     * When testing the responsiveness of the site, I found that the form pages e.g. add_hike, edit_hike, login, register, were'nt responsive on samll screen sizes. A quick search found a blog by Lindsay on [Medium](https://medium.com/@urchykli/nested-grids-using-bootstrap-8673b6bd7ec3)which indicated i'd forgotted to correctly nest the forms within bootstraps nested grid system. I also found [mdbootstrap](https://mdbootstrap.com/how-to/bootstrap/change-input-width#:~:text=Example%3A%20To%20change%20the%20width,form-outline%20element.) as it showed me how to easily ammedn width size of input elements in relation to parent element.
 
-    * An issue in deployment occurred when testing the site whereby the data did not appear to be being stored in the database. An error was found in the __init__.py and env.py pages. The 'database_URL' variable should have matched the configuration variable 'DB_URl' that was set in Heroku. Once the correction was updated in the local IDE to match the key in heroku, the database was accessible and the deployed site was able to store data.
+    * An issue in deployment occurred when testing the site whereby the data did not appear to be being stored in the database. An error was found in the __init__.py and env.py pages. The variable called 'database_URL' should have matched the configuration variable 'DB_URl' that was set in Heroku, the values for both of these were correct. Once the correction was updated in the local IDE to match the key in heroku, the database was accessible and the deployed site was able to store data. This created another error- I then needed to login to Heroku in the local IDE command line. The password was copied and pasted from the API, this post on [Stack Overflow](https://stackoverflow.com/questions/68105084/not-able-to-log-in-to-heroku-account-from-command-line) was helpful in this case.
+    This appeared to get the app up and running but when i next logged in and atttempted to run the app locally, there was another SQLAlchemy error which appeared to indicate that the app was struggling to locate the database- on further investigation it was that i needed to `unset PGHOTADDR` so that the app could run on the correct host.
 
 - - - 
 
