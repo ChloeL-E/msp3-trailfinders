@@ -1,6 +1,6 @@
 # Take a Hike - Testing
 
-![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
+![Responsive Mockup](trailfinders/static/media/documentation_images/mockup_generator.png)
 
 
 ## Contents

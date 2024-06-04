@@ -1,7 +1,7 @@
 <h1 align="center">Take a Hike</h1>
 
 - - - 
-![Responsive Mockup](trailfinders/static/media/testing_images/screen_display.png)
+![Responsive Mockup](trailfinders/static/media/documentation_images/mockup_generator.png)
 
 <h2 align="center"><img src=""></h2>
 
@@ -157,7 +157,7 @@ This website has been built using HTML, CSS, Javascript and Python.
        [Navigation Bar- mobile device- hamburger menu open](trailfinders/static/media/documentation_images/hamburger_open.png)
 
     -   #### Background Image
-        * The hero image was kindly donated from photographer Mr Adam Lowes for specific use on this site. It is an image of the famous Hadrians Wall. This was chosen as it is part of an iconic walk in the North East of England, where trailfinders is set.
+        * The hero image was kindly donated from photographer Mr Adam Lowes for specific use on this site. It is an image of the famous Hadrians Wall. This was chosen as it is part of an iconic walk in the North East of England, where Take A Hike is set.
         * The hero image features on most pages where it adds value to the user. It was felt that the Hike and add hike pages were quite full of content as posts were added and a hero image detracted form this content rather than lifting it.
         
         [Background image](trailfinders/static/media/documentation_images/background_image.png)
