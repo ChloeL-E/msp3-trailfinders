@@ -119,7 +119,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     * [Add Hike](trailfinders/static/media/documentation_images/add_hike_m_wireframe.png)(mobile device)
     * [Edit Hike](trailfinders/static/media/documentation_images/edit_hike_d_wireframe.png)(desktop)
     * [Edit Hike](trailfinders/static/media/documentation_images/edit_hike_t_wireframe.png)(tablet device) 
-    * [Edit Hike]()(mobile device)
+    * [Edit Hike](trailfinders/static/media/documentation_images/edit_hike_m_wireframe.png)(mobile device)
     * [Categories]()(desktop)
     * [Categories]()(tablet device) 
     * [Categories]()(mobile device) 
