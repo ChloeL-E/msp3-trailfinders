@@ -22,3 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
         prevScrollPos = currentScrollPos;
     });
 });
+
+/**
+ *  Dynamic year display-CodexWorld
+ *  Gets the element by id and inserts the current year
+ */
+const year = document.querySelector('#get-year').innerHTML = new Date().getFullYear();
+
+
