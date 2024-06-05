@@ -310,6 +310,7 @@ def handle_404(e):
     """
     return render_template("404.html"), 404
 
+
 # 500
 @app.errorhandler(500)
 def handle_500(e):
