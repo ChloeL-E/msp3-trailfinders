@@ -271,16 +271,23 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 
    ### Deployment
-To deploy Trailfinders to Heroku, take the following steps:
+To deploy Take A Hike to Heroku, take the following steps:
 1. Create a requirements.txt file using the terminal command `pip freeze > requirements.txt`
-2. Create a Procfile with the terminal command `echo web: python app.py > Procfile`
-3. `git add` and `git commit` these changes and `git push` to GitHub
-4. Go to the Heroku website and create a new app by clicking the "New" button in your dashboard.
-5. Give the app and name and set the region to Eurpoe
+2. Create a Procfile with the terminal command `echo web: python app.py > Procfile`. Ensure you use a capital 'P' for this file.
+3. `git add` and `git commit` these changes and `git push` to GitHub repository
+4. Go to the Heroku website and login. Create a new app by clicking the "New" button in your dashboard.
+5. Give the app and name and set the region to Europe(or your closest region)
 6. From the heroku dashboard of the new app, click on "Deploy" > "Deployment method" and select Github
 7. Confirm the link to the correct GitHub repository
 8. In the heroku dashboard for the application. click on the "settings" > "Reveal Config Vars"
-9. Set the following Config Vars:![config vars](trailfinders/static/media/testing_images/config_vars.jpeg)
+9. Set the following Config Vars:
+| Key          | Value        |
+|--------------|--------------|
+| DATABASE_URL | postgrasql   |
+| IP           | 0.0.0.0      |
+| PORT         | 5000         |
+| SECRET_KEY   | thesecretkey |
+(this is an example, actual env variable not disclosed to maintain security)
 
 * to get the db url follow [CI PosgreSQL](https://dbs.ci-dbs.net/)
 10. In the Heroku dashboard, click "Deploy"
@@ -291,15 +298,19 @@ To deploy Trailfinders to Heroku, take the following steps:
 
 **Fork**
 1. Login or Sign Up to GitHub.
-2. Open the project [Repository](https://github.com/Code-Institute-Org/ci-full-template.git).
+2. Open the project [Repository](https://github.com/ChloeL-E/msp3-trailfinders.git).
 3. Click the Fork button in the top right corner.
+4. You should now have a copy of the repository in your Github
 
-**Clone**
+**Local Clone**
 1. Login or Sign Up to GitHub.
-2. Open the project [Repository](https://github.com/Code-Institute-Org/ci-full-template.git).
+2. Open the project [Repository](https://github.com/ChloeL-E/msp3-trailfinders.git).
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
-4. Open the terminal in the code editor of your choice and change the current working directory to the location you want to use for the cloned directory.
+4. Open the terminal in the code editor of your choice and change the current working directory to the location you want to use for the cloned directory. 
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+6. Set up the working environment (not necessary if using the CI Gitpod template as this is already set up for you)
+7. Run `pip install -r requirements.txt` in the terminal to install the packages
+8. Everything should now be set up locally
 
 - - - 
 
