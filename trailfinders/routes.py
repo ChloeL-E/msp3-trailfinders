@@ -93,7 +93,7 @@ def login():
         else:
             # Incorrect password, redirect to login
             flash("Invalid username and/or password, please try again")
-            return redirect(url_for("login")) 
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -161,7 +161,7 @@ def edit_category(category_id):
         flash("You do not have permission to edit this category")
         return redirect(url_for("categories"))
     if request.method == "POST":
-        # get the catgeory name from the form, update category name and commit to DB
+        # get the catgeory name from the form, update category name and commit
         category.category_name = request.form.get("category_name")
         db.session.commit()
         return redirect(url_for("categories"))
@@ -269,7 +269,7 @@ def edit_hike(hike_id):
         hike.description = request.form.get("description")
         hike.category_id = request.form.get("category_id")
         hike.user_id = current_user.id  # Assign the current user's ID
-        db.session.commit() # commit changes to DB
+        db.session.commit()  # commit changes to DB
         return redirect(url_for("my_hikes"))
     return render_template("edit_hike.html",
                            hike=hike, categories=categories)
@@ -315,6 +315,6 @@ def handle_404(e):
 @app.errorhandler(500)
 def handle_500(e):
     """
-    Handles 500 error, Internal server error 
+    Handles 500 error, Internal server error
     """
     return render_template("500.html"), 500
