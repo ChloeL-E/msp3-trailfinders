@@ -301,7 +301,7 @@ def handle_404(e):
     """
     Handles 404 error, Page not Found
     """
-    return render_template("404.html")
+    return render_template("404.html"), 404
 
 
 @app.errorhandler(500)
@@ -309,4 +309,4 @@ def handle_500(e):
     """
     Handles 500 error, Internal server error
     """
-    return render_template("500.html")
+    return render_template("500.html"), 500

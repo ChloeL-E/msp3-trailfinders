@@ -287,6 +287,7 @@ To deploy Take A Hike to Heroku, take the following steps:
 | IP           | 0.0.0.0      |
 | PORT         | 5000         |
 | SECRET_KEY   | thesecretkey |
+
 (this is an example, actual env variable not disclosed to maintain security)
 
 * to get the db url follow [CI PosgreSQL](https://dbs.ci-dbs.net/)
@@ -328,6 +329,8 @@ To deploy Take A Hike to Heroku, take the following steps:
 - [Codemy](https://www.youtube.com/watch?v=WqHtmz8Ibn8&list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz&index=34) flask series was used for assistance further understanding jinja templating. Particularly assisted with login functionality.
 
 - [SheCodes](https://www.shecodes.io/athena/7982-how-to-make-a-nav-bar-show-on-scroll-up-disappear-on-scroll-down#:~:text=in%207.4%20seconds-,To%20make%20a%20nav%20bar%20menu%20show%20on%20scrolling%20upward,can%20use%20JavaScript%20and%20CSS.&text=js-,window.,you%20can%20check%20the%20window. Nabber) helped me to understand navbar scroll behaviour and also as inspiration for button design later in the project. For design improvements on the site, I wanted the navbar to disappear when the user scrolls down and reappear when scrolling up. I utilised .hide and .show within the css and added a domcontent loaded to the js file. 
+
+- [CodexWorld](https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/#:~:text=Create%20a%20Date%20object%20and,and%20update%20each%20year%20automatically.) reminded me how to get the current year using javascript for the footer so that the year updates to current year. This will mean that going forward I do not need to update myself manually. 
 
 - [Stack Exchange](https://cs50.stackexchange.com/questions/27648/how-to-get-a-value-using-flask-from-a-selected-option-in-a-drop-down-list) provided valuable information regarding flask and form input.
 
