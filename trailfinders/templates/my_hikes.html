@@ -1,17 +1,20 @@
 {%  extends "base.html" %}
 {% block content %}
+<!-- Page title -->
 <div class="container text-center">
     <div class="row g-0 align-items-center">
         <div class="col">
             <h1 class="mt-3">Hikes</h1>
             <h2 class="reduce">Want to add your own hike?</h2>
             <br>
+            <!-- Link to add a hike page -->
             <a class="change" href="{{ url_for('add_hike') }}">Add A Hike<img class="icon"
                     src="/static/media/images/icons/plus-line-icon.png" alt="plus icon"></a>
         </div>
     </div>
 </div>
 <div>
+  <!-- Flash message -->
     {% with messages = get_flashed_messages() %}
       {% if messages %}
         {% for message in messages %}
@@ -23,6 +26,7 @@
     {% endwith %}
   </div>
 <section>
+  <!-- Displays hike posts -->
     <div class="row g-0">
         {% for hike in hikes %}
         <div class="col">
@@ -37,6 +41,7 @@
                         <p>Difficulty: {{ hike.difficulty }}</p>
                         <p>Category: {{ hike.category.category_name }}</p>
                         <p>{{ hike.description }}</p>
+                        <!-- Edit/delete buttons shown only if user is the author of the post -->
                         {% if session['user_id'] == hike.user_id %}
                         <div class="btn-align">
                         <a href="{{ url_for('edit_hike', hike_id=hike.id) }}" class="btn">Edit</a>

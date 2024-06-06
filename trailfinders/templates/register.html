@@ -1,11 +1,12 @@
 {%  extends "base.html" %}
 
 {% block content %}
-
+<!-- Hero image and page title -->
 <div id="categories-hero" class="hero"></div>
 <section>
   <h1 class="text-center mt-1">Register</h1>
   <div>
+    <!-- Flash message -->
     {% with messages = get_flashed_messages() %}
       {% if messages %}
         {% for message in messages %}

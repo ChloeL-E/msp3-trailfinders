@@ -1,5 +1,6 @@
 {%  extends "base.html" %}
 {% block content %}
+<!-- Heor image and page heading -->
 <div id="categories-hero" class="hero"></div>
     <div class="container text-center">
         <div class="row g-0 align-items-center">
@@ -11,6 +12,7 @@
         </div>
     </div>
     <div>
+        <!-- Flash message -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
@@ -25,6 +27,7 @@
         {% endwith %}
     </div>
     <section>
+        <!-- Card display for category -->
         <div class="row g-0">
             {% for category in categories %}
             <div class="col-12 col-md-4">
@@ -33,8 +36,7 @@
                         <div class="card-body">
                             <h2 class="card-title">{{ category.category_name }}</h2>
                             <p class="card-text"></p>
-                            {{ session['user_id'] }}
-                            {{ category.created_by }}
+                            <!-- Edit/delete buttons from user unless they are the category creator -->
                             {% if session['user_id'] == category.created_by %}
                             <div class="btn-align">
                                 <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn">Edit</a>
