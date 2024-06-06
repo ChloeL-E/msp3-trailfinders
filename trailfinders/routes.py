@@ -41,7 +41,8 @@ def register():
             return redirect(url_for("register"))
         # Create a new instance of a user
         new_user = User(
-            username=request.form.get('username'),
+            #  username=request.form.get('username'),
+            username=username,
             email=request.form.get('email'),
             password=generate_password_hash(request.form.get('password'))
         )
