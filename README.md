@@ -144,6 +144,7 @@ This website has been built using HTML, CSS, Javascript and Python.
     * Responsive on device sizes with media screen size >280px
 
     -   #### Navigation Bar
+
         * The navigation bar contains the site logo and title alongside links to other pages.
         * The navbar is visible when the user lands on each page but disappears whlst the user scrolls down. As the user scrolls up, it reappears so that the user can use the navigation links if they wish. This is done using javascript. The purpose is to give the user maximum view of the page contents whilst it alway being easily accessible to the user.
         * The navbar also has some transparency so that the hero image can be seen beneath it to some degree, this was a design choice so that the navbar doesn't block the imagery.
@@ -157,6 +158,7 @@ This website has been built using HTML, CSS, Javascript and Python.
        [Navigation Bar- mobile device- hamburger menu open](trailfinders/static/media/documentation_images/hamburger_open.png)
 
     -   #### Background Image
+
         * The hero image was kindly donated from photographer Mr Adam Lowes for specific use on this site. It is an image of the famous Hadrians Wall. This was chosen as it is part of an iconic walk in the North East of England, where Take A Hike is set.
         * The hero image features on most pages where it adds value to the user. It was felt that the Hike and add hike pages were quite full of content as posts were added and a hero image detracted form this content rather than lifting it.
         
@@ -170,15 +172,18 @@ This website has been built using HTML, CSS, Javascript and Python.
         * This page also shows Hike posts to encourage the users' interest in the site.
         
         [Home page](trailfinders/static/media/documentation_images/go_walking.png)
+
         [Home page - mobile device](trailfinders/static/media/documentation_images/go_walking_mobile.png)
 
-    -    #### Register
+    -   #### Register
+
         * This page features a short form asking the user to complete input fields and a button to Register which submits the form
 
         [Register](trailfinders/static/media/documentation_images/register.png)
         [Register-mobile](trailfinders/static/media/documentation_images/register_mobile.jpeg)
 
     -   #### Login
+
         * Same layout as the Register page for improved user experience(UX)
         * This page features a simple for for the user to input their login details. 
         * A login button below the form inputs, indicates to the user to click to login
@@ -186,55 +191,55 @@ This website has been built using HTML, CSS, Javascript and Python.
         [Login](trailfinders/static/media/documentation_images/login.png)
         [Login-mobile](trailfinders/static/media/documentation_images/login_mobile.png)
 
-    -    #### Categories
+    -   #### Categories
         * This page displays any categories that users have added
          
          [Categories](trailfinders/static/media/documentation_images/categories.jpeg)
          [Categories-mobile](trailfinders/static/media/documentation_images/categories-mobile.jpeg)
 
-    -    #### Add Category
+    -   #### Add Category
         * This page presents the user with an input box and a button, indiacting to the user to add a category
          
          [Add Category](trailfinders/static/media/documentation_images/add_category.png)
          [Add Category-mobile](trailfinders/static/media/documentation_images/add_category-mobile.jpeg)
 
-    -    #### Edit Category
+    -   #### Edit Category
         * This page is where the user can edit their own Category. They can access this page once they are logged in and press the edit button on any category which they have created. 
           
          [Edit Category](trailfinders/static/media/documentation_images/edit_cat.png)
          [Edit/Delete Buttons](trailfinders/static/media/documentation_images/edit_delete.png)
          [Edit Category-mobile](trailfinders/static/media/documentation_images/edit_cat_m.png)
 
-    -    #### Hikes
+    -   #### Hikes
           * Displays Hikes from all users. Buttons to edit or delete posts are only visible to the user who created the post. 
 
          [Hikes](trailfinders/static/media/documentation_images/hikes.png)
          [Hikes-mobile](trailfinders/static/media/documentation_images/hikes_mobile.png)
 
-    -    #### Add Hike
+    -   #### Add Hike
          * Features a form for the user to complete. Once the details are filled in correctly, including those with 'required' fields, the user can press the form buttton and will be redirected to the Hikes page where their post will be visible. 
 
          [Add Hike](trailfinders/static/media/documentation_images/add_hike.png)
          [Add Hike-mobile](trailfinders/static/media/documentation_images/add_hike_m.png)
 
-    -    #### Edit Hike
+    -   #### Edit Hike
          *  Shows the same form format to the user with prepopulated data so the user can be reminded what they have written. They are free to ammend the input and can press the form button. They are redirected to the Hikes pages where they will be able to see their updates post.
 
          [Edit Hike](trailfinders/static/media/documentation_images/edit_hike.png)
          [Edit Hike-mobile](trailfinders/static/media/documentation_images/edit_hike_m.png)
 
-    -    #### Footer
+    -   #### Footer
          * Responsive. Features the site Title, links to the main pages and social links.
 
          [Footer](trailfinders/static/media/documentation_images/footer.png)
          [Footer - mobile device](trailfinders/static/media/documentation_images/footer_mobile.png)
 
-    -    #### 404 Error Page
+    -   #### 404 Error Page
           * A 404 error page was created to ensure that if, for any reason, the webpage is unavailable, the user is taken to a message page which helps to redirect them back to the website.
 
          [404 error page](trailfinders/static/media/documentation_images/404_errorpage.png)
 
-    -    #### 500 Error Page
+    -   #### 500 Error Page
          * A 500 error page was created to ensure that if, for any reason, there is an internal server error, the user is taken to a message page which helps to redirect them back to the website.
 
 
@@ -252,13 +257,13 @@ This website has been built using HTML, CSS, Javascript and Python.
 
     * [Google Fonts](https://fonts.google.com/) were used to import the 'Bebas Neue' and 'Noto Serif' font into the style.css file which is used on all pages throughout the project. 
     * [Bootstrap v5.3.2]() was used on all pages throughout the website to add icons for aesthetic and UX purposes
-    * Gitpod was the IDE used to build the project. Git was used for version control.
+    * [Gitpod](https://www.gitpod.io/) was the IDE used to build the project. Git was used for version control.
     * [GitHub](https://github.com/) is used to store the projects code after being pushed from Git.
     * [Balsamiq](https://balsamiq.com/) was used to create the wireframes to support in the design process.
     * [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) - templating engine
     * [Pip](https://pypi.org/project/pip/) - tool for installing python packages
     * [Lucid Chart](https://lucid.app/lucidchart/c05f73cc-9dcc-4449-bd72-3098abe54692/edit?invitationId=inv_1c31fd92-4378-45d3-93c0-a252029cd87d&page=0_0#) was used to design the EDR model when planning the database
-    * The site was deployed using Heroku and the database used alongside this was PostgreSQL fro Code Institute
+    * The site was deployed using [Heroku](https://www.heroku.com) and the database used alongside this was PostgreSQL fro Code Institute
     * [Shields.io](https://shields.io/badges) was used for the shields used within the Readme
     * [Favicon.io](https://favicon.io/) was used to design the favicon for the site
     * [Chrome Developer Tools](https://developer.chrome.com/docs/devtools) was used throughout, to troubleshoot, solve bugs, test site features and responsiveness
@@ -267,10 +272,8 @@ This website has been built using HTML, CSS, Javascript and Python.
 - - - 
 ## Deployment
 
-   ### Version Control
+-   ### Version Control
 
-
-   ### Deployment
 To deploy Take A Hike to Heroku, take the following steps:
 1. Create a requirements.txt file using the terminal command `pip freeze > requirements.txt`
 2. Create a Procfile with the terminal command `echo web: python app.py > Procfile`. Ensure you use a capital 'P' for this file.
@@ -281,19 +284,20 @@ To deploy Take A Hike to Heroku, take the following steps:
 7. Confirm the link to the correct GitHub repository
 8. In the heroku dashboard for the application. click on the "settings" > "Reveal Config Vars"
 9. Set the following Config Vars:
-| Key          | Value        |
-|--------------|--------------|
-| DATABASE_URL | postgrasql   |
-| IP           | 0.0.0.0      |
-| PORT         | 5000         |
-| SECRET_KEY   | thesecretkey |
 
-(this is an example, actual env variable not disclosed to maintain security)
+|   | Key            | Value          |   |
+|---|----------------|----------------|---|
+|   | DATABASE_URL   | postgresql     |   |
+|   | IP             | 0.0.0.0        |   |
+|   | PORT           | 5000           |   |
+|   | SECRET_KEY     | thesecretkey   |   |
 
-* to get the db url follow [CI PosgreSQL](https://dbs.ci-dbs.net/)
+(this is an example, actual env variable not disclosed to maintain security. To get the db url follow [CI PosgreSQL](https://dbs.ci-dbs.net/))
+
 10. In the Heroku dashboard, click "Deploy"
 11. In the "Manual Deployment" section, ensure the master branch is selected then click "Deploy Branch"
 11. The site is now deployed
+
 
 -   ### Run locally
 
