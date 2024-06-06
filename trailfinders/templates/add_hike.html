@@ -1,5 +1,6 @@
 {%  extends "base.html" %}
 {% block content %}
+<!-- Hero image and headings -->
 <div class="hero">
     <div class="container text-center margin-top">
         <div class="row g-0 align-items-center">
@@ -10,6 +11,7 @@
         </div>
     </div>
     <div>
+        <!-- Flash message -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
