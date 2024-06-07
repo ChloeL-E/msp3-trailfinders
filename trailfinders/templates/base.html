@@ -52,7 +52,7 @@
             </li>
             {% if session.user %}
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('my_hikes') }}">Hikes</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('my_hikes') }}">My Hikes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('categories') }}">Categories</a>
@@ -97,7 +97,7 @@
           <h4>Hikes</h4>
           <ul class="footer-links">
             <li><a href="{{ url_for('categories') }}">Categories</a></li>
-            <li><a href="{{ url_for('my_hikes') }}">Hikes</a></li>
+            <li><a href="{{ url_for('my_hikes') }}"> My Hikes</a></li>
           </ul>
         </div>
         <!-- Register and login links -->
