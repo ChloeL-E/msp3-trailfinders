@@ -287,7 +287,7 @@ To deploy Take A Hike to Heroku, take the following steps:
 
 |   | Key            | Value          |   |
 |---|----------------|----------------|---|
-|   | DATABASE_URL   | postgresql     |   |
+|   | DB_URL         | postgresql     |   |
 |   | IP             | 0.0.0.0        |   |
 |   | PORT           | 5000           |   |
 |   | SECRET_KEY     | thesecretkey   |   |
@@ -297,6 +297,13 @@ To deploy Take A Hike to Heroku, take the following steps:
 10. In the Heroku dashboard, click "Deploy"
 11. In the "Manual Deployment" section, ensure the master branch is selected then click "Deploy Branch"
 11. The site is now deployed
+12. To connect to the database click the more button on the Heroku dashboard and select run console.
+13. Type python3 and once the interpreter opens, run the following:
+```bash
+from trailfinders import db
+db.create_all()
+exit()
+```
 
 
 -   ### Run locally
