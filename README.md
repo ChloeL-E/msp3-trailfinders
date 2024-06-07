@@ -3,7 +3,6 @@
 - - - 
 ![Responsive Mockup](trailfinders/static/media/documentation_images/mockup_generator.png)
 
-<h2 align="center"><img src=""></h2>
 
 # Take a Hike
 
