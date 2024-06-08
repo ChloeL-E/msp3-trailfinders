@@ -30,6 +30,7 @@ This website has been built using HTML, CSS, Javascript and Python.
   * [Features For Future Implementation](#features-for-future-implementation)
 * [Technologies Used](#technologies-used)
   * [ Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+* [Testing](#Testing)
 * [Deployment](#deployment)
   * [Version Control](#version-control)
   * [Run locally](#run-locally)
@@ -282,6 +283,13 @@ There are 11 pages which make up the full site and are extended from a base temp
     * [amiresponsive](https://ui.dev/amiresponsive) was used to create the responsive screen imagery for the site
 
 - - - 
+
+## Testing
+
+Extensive testing was carried out on this project. Please review [Testing.md](TESTING.md) for all testing performed.
+
+- - - 
+
 ## Deployment
 
 -   ### Version Control
