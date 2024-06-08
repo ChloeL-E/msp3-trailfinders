@@ -1,29 +1,30 @@
 {%  extends "base.html" %}
 {% block content %}
 <!-- Hero image and headings -->
-<section>
+
 <div class="hero">
-    <div class="container text-center margin-top">
-        <div class="row g-0 align-items-center">
-            <div class="col">
-                <h1 class="mt-6">Add A Hike</h1>
-                <h2 class="small-font">Complete the form to share your hike</h2>
+    <section>
+        <div class="container text-center margin-top">
+            <div class="row g-0 align-items-center">
+                <div class="col">
+                    <h1 class="mt-6">Add A Hike</h1>
+                    <h2 class="small-font">Complete the form to share your hike</h2>
+                </div>
             </div>
         </div>
-    </div>
-    <div>
-        <!-- Flash message -->
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div style="background-color: var(--green)">
-            <h4 class="mt-4 text-white text-center">{{ message }} <span class="close-btn"
-                    onclick="this.parentElement.style.display='none';">&times;</span></h4>
+        <div>
+            <!-- Flash message -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <div style="background-color: var(--green)">
+                <h4 class="mt-4 text-white text-center">{{ message }} <span class="close-btn"
+                        onclick="this.parentElement.style.display='none';">&times;</span></h4>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
         </div>
-        {% endfor %}
-        {% endif %}
-        {% endwith %}
-    </div>
         <div class="container">
             <div class="row g-0">
                 <div class="form-style col-12">

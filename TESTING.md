@@ -51,7 +51,7 @@
             4. If the user tries to Login with the incorrect username or password a flash message will appear to inform them of this and prompt Login attempt again.
 
         * As a first time user, I want to be able to see the hikes that i have posted. 
-            1. Once the user has completed form on the Add Hike page, the user is redirected to the Hikes page where they will see their post displayed alongside the posts added by other users. 
+            1. Once the user has completed form on the Add Hike page, the user is redirected to the Hikes page where they will see their own posts displayed like a profile page. 
 
 
     -   #### Returning User
