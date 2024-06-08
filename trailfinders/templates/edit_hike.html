@@ -32,7 +32,7 @@
                     <div class="form-group w-100">
                         <label class="mb-1 mt-2" for="hike_title">Hike Name</label>
                         <input type="text" class="form-control" id="hike_title" name="hike_title"
-                        value="{{ hike.hike_title }}" min-length="4" max-length="75" required>
+                        value="{{ hike.hike_title }}" minlength="4" maxlength="75" required>
                     </div>
                     <!-- image-->
                     <div class="form-group w-100">
@@ -52,7 +52,7 @@
                     <!-- difficulty-->
                     <div class="form-group w-100">
                         <label class="mb-1 mt-3" for="difficulty">Choose a difficulty level:</label><br>
-                        <select id="difficulty" name="difficulty" required>
+                        <select id="difficulty" name="difficulty" value="" required>
                             <option value="Beginner">Beginner</option>
                             <option value="Easy">Easy</option>
                             <option value="Moderate">Moderate</option>
@@ -63,13 +63,13 @@
                     <div class="form-group w-100">
                         <label class="mb-1 mt-3" for="distance">Distance(km)</label>
                         <input type="number" class="form-control" id="distance" name="distance"
-                        value="{{ hike.distance }}" max-length="15" required>
+                        value="{{ hike.distance }}" required>
                     </div>
                     <!-- elevation-->
                     <div class="form-group w-100">
                         <label class="mb-1 mt-3" for="elevation">Elevation(m)</label>
                         <input type="number" class="form-control" id="elevation" name="elevation"
-                        value="{{ hike.elevation }}" max-length="15" required>
+                        value="{{ hike.elevation }}" required>
                     </div>
                     <!-- description-->
                     <div class="form-group w-100">
