@@ -139,6 +139,19 @@ This website has been built using HTML, CSS, Javascript and Python.
 
 ## Structure
 
+There are 11 pages which make up the full site and are extended from a base template:
+* Go Walking! page (index.html)
+* Register page (register.html)
+* Login page (login.html)
+* Category page (category.html)
+* Add Category page (add_category.html)
+* Edit Category page (edit_category.html)
+* My Hikes page (my_hikes.html)
+* Add Hike page (add_hike.html)
+* Edit Hike page (edit_hike.html)
+* 404 error page (404.html)
+* 500 error page (500.html)
+
 -   ### Features
     * Responsive on device sizes with media screen size >280px
 
