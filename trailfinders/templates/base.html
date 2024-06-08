@@ -101,6 +101,7 @@
           </ul>
         </div>
         <!-- Register and login links -->
+        {% if not session.user %}
         <div  class="col-xs-6 col-sm-3 sm-screens">
           <h4>Join Us!</h4>
           <ul class="footer-links">
@@ -108,6 +109,7 @@
             <li><a href="{{ url_for('login') }}">Login</a></li>
           </ul>
         </div>
+        {% endif %}
         <!-- Social links -->
         <div class="col-xs-6 col-sm-3 sm-screens">
           <h4>Socials</h4>
