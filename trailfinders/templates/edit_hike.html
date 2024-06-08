@@ -32,12 +32,12 @@
                     <div class="form-group w-100">
                         <label class="mb-1 mt-2" for="hike_title">Hike Name</label>
                         <input type="text" class="form-control" id="hike_title" name="hike_title"
-                        placeholder="{{ hike.hike_title }}" min-length="4" max-length="75" required>
+                        value="{{ hike.hike_title }}" min-length="4" max-length="75" required>
                     </div>
                     <!-- image-->
                     <div class="form-group w-100">
                         <label class="mb-1 mt-3" for="image_url">Add an Image</label><br>
-                        <input type="text" name="image_url" id="image_url" placeholder="{{ hike.image_url }}">
+                        <input type="text" name="image_url" id="image_url" value="{{ hike.image_url }}">
                     </div>
                     <!-- category_id -->
                     <div class="form-group w-100">
@@ -63,19 +63,19 @@
                     <div class="form-group w-100">
                         <label class="mb-1 mt-3" for="distance">Distance(km)</label>
                         <input type="number" class="form-control" id="distance" name="distance"
-                        placeholder="{{ hike.distance }}" max-length="15" required>
+                        value="{{ hike.distance }}" max-length="15" required>
                     </div>
                     <!-- elevation-->
                     <div class="form-group w-100">
                         <label class="mb-1 mt-3" for="elevation">Elevation(m)</label>
                         <input type="number" class="form-control" id="elevation" name="elevation"
-                        placeholder="{{ hike.elevation }}" max-length="15" required>
+                        value="{{ hike.elevation }}" max-length="15" required>
                     </div>
                     <!-- description-->
                     <div class="form-group w-100">
                         <label class="mb-1 mt-4" for="description">Describe your hike...</label>
                         <br>
-                        <textarea name="description" id="description" rows="5" placeholder="{{ hike.description }}" required></textarea>
+                        <textarea name="description" id="description" rows="5" required>{{ hike.description }}</textarea>
                     </div>
                     <!-- Submit button -->
                     <div class="text-center">
